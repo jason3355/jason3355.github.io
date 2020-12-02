@@ -1,0 +1,251 @@
+body{
+    background-color: #e4f5d1;
+}
+
+.root-body{
+    width: 1900px;
+    align-items: center;
+    display: flex;
+    justify-content: center;        
+}
+.root-body-b{
+    width: 950px;
+    display: flex;
+}
+
+.root-1 {
+    width: 320px;     
+    background-color: #52796f;
+}
+
+.root-name{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;    
+}
+
+.ph > img{
+    width: 100%;
+}
+
+.ph{
+    display: flex;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.root1-word{
+    font-size: 20px;
+    width: 100%;
+}
+
+.root1-word-2{
+    line-height: 30px;
+}
+
+.root1-word-2 > p1{
+    line-height: 30px;
+}
+
+.root1-word-2 > hr{
+    width: 100%;
+    border: none;
+    height: 2px;
+    background-image: linear-gradient(to right, rgb(17, 185, 237), rgb(255, 249, 47));
+}
+
+.root-img > a{
+    text-decoration:none ;
+    color: blue;
+}
+
+.root1-word-2{
+    padding-left:35px;
+    padding-right:35px;
+}
+
+.root1-word-2 > span{
+    color: brown;
+}
+
+.root-2{
+    width: 720px;    
+    justify-content: center;    
+    background-color:#cad2c5; 
+    font-family: "微軟正黑體";
+    font-size: 15px; 
+}
+
+.root-2 > div{
+    padding-left: 25px;
+    width: 580px;
+}
+
+.root-stu{
+    font-size: 15px;
+    width: 550px;
+}
+
+.root-stu > div > div > p1{
+    font-size: 20px;
+}
+
+.root-stu > div > div > p{
+    font-size: 10px;
+    
+}
+
+.stu-word-1{
+    padding-top:50px ;
+}
+
+
+.stu-word-2{
+    padding-top:16px ;
+}
+
+.stu-word-2 > div{
+    width: 50px;
+    height: 65px;
+}
+
+.stu-word-3{
+    padding-top:30px ;
+}
+
+.stu-word{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stu-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+}
+
+.root-skills > div > p{
+    font-size: 15px;
+}
+
+.root-skills{
+    width: 550px;    
+}
+
+.root-skills-2 {
+    width: 95%;
+    height: 25px;
+    background-color: grey;
+    text-align: right;    
+}
+
+.HTML、CSS{
+    animation-name: HTML;    
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes HTML{
+    from{
+        widows: 0%;
+    }
+
+    to{
+        width: 60%;
+    }
+}
+
+.C{
+    animation-name: C;    
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes C{
+    from{
+        widows: 0%;
+    }
+
+    to{
+        width: 68%;
+    }
+}
+
+.JAVA{
+    animation-name: JAVA;    
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes JAVA{
+    from{
+        widows: 0%;
+    }
+
+    to{
+        width: 76%;
+    }
+}
+
+.Python{
+    animation-name: Python;    
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes Python{
+    from{
+        widows: 0%;
+    }
+
+    to{
+        width: 70%;
+    }
+}
+
+.HTML、CSS {width: 0%; height: 100%; background-color:#648b8f;}
+.C {width: 0%;height: 100%; background-color: #4a6c70;}
+.JAVA {width: 0%; height: 100%; background-color: #62a070;}
+.Python {width: 0%; height: 100%; background-color: #5e9685;}
+
+.root-life{
+    width: 550px;    
+}
+
+.root-img2{
+    display: flex;    
+    align-items: center;
+    flex-wrap: wrap;
+
+    
+}
+
+.root-img2 > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.g > div{
+    width: 250px;
+}
+
+.g{
+    width: 270px;
+}
+
+.root-award{
+    width: 550px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
