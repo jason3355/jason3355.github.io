@@ -1,0 +1,24 @@
+.root-body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.root-body >div{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    height: 680px;
+    flex-wrap: wrap;
+}
+
+.imgg{
+    display: flex;
+    justify-content: center;
+    width: 1000px;    
+}
+
+.imgg > img{
+    width: 100%;
+
+}
