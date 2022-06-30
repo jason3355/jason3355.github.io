@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品頁面</title>
+    <link rel="stylesheet" href="/css/hamburger.css">
+    <link rel="stylesheet" href="/css/demander_product.css">
+    <link rel="stylesheet" href="/css/background.css">
+    <link rel="icon" href="/Img/logo.ico" type="image/x-icon"/><!--分頁LOGO-->
+    
+</head>
+<body>
+    <header class="header"> 
+        <input type="checkbox" id="check">           
+        <label for="check" class="check">
+            ☰
+        </label>
+        <nav class="manu"> 
+            <ul>                
+                    <li>
+                        <a href="/Index.html">首頁</a>
+                    </li>
+                    <li>
+                        <a href="/html/all_product.html">所有商品</a>
+                    </li>
+                    <li>
+                        <a href="##">需求管理</a>
+                    </li>
+                    <li>
+                        <a href="##">需求車</a>
+                    </li>
+                    <li>
+                        <a href="##">願望清單</a>
+                    </li>
+                    <li>
+                        <a href="/html/demander/Dbasic.html">會員資料</a>
+                    </li>
+                    <li>
+                        <a href="##">市場分析</a>
+                    </li>                                   
+            </ul> 
+        </nav>          
+            <div class="header-menu-logo">
+                <a href="../Index/Index.html" class="logo-a">
+                <div>
+                    <img src="../Img/wincube.png">
+                </div>
+                </a> 
+            </div>   
+            <div class="search">                
+                <input type="search" class="search-search">
+                <button class="search-btn" type="button">
+                    搜尋
+                </button>
+            </div>   
+    </header>
+    <marquee direction="right" height="30" scrollamount="10" behavior="scroll">5/29伺服器測試</marquee>
+    <div class="body-1">
+        <div class="profile">  
+            <div class="photo">
+                <div class="photo-top">
+                    <div>
+                        <img src="/Img/logo.ico">                            
+                    </div>
+                </div>
+                <div class="photo-button">
+                    <div>
+                        <img src="/Img/logo.ico">
+                    </div>
+                    <div>
+                        <img src="/Img/logo.ico">
+                    </div>
+                    <div>
+                        <img src="/Img/logo.ico">
+                    </div> 
+                    <div>
+                        <img src="/Img/logo.ico">
+                    </div>  
+                    <div>
+                        <img src="/Img/logo.ico">
+                    </div>
+                    <div>
+                        <img src="/Img/logo.ico">
+                    </div>
+                    <div>
+                        <img src="/Img/logo.ico">
+                    </div>
+                    <div>
+                        <img src="/Img/logo.ico">
+                    </div> 
+                    <div>
+                        <img src="/Img/logo.ico">
+                    </div>  
+                    <div>
+                        <img src="/Img/logo.ico">
+                    </div>    
+                </div>
+            </div>
+            <div class="profile-1">
+                <form action="##">
+                <div class="profile-2">                    
+                        <div class="product-name"> <!--名稱-->
+                                <label>條紋舒適沙發</label>                                
+                        </div>
+                        <div class="product-type"> <!--類別-->
+                                <label>類別</label>                                
+                                <label>家具</label>                                
+                        </div>
+                        <div class="product-price"> <!--單價-->
+                                <label>金額</label>                                 
+                                <label>899元</label>                       
+                        </div>   
+                        <div class="cargo"> <!--運送方式-->
+                            <label>運送方式</label>                            
+                            <div class="give">
+                                <input type="radio" id="home_give" name="132">
+                                <label for="home_give">宅配</label>
+                            </div>
+                            <div class="give">
+                                <input type="radio" id="shop_give" name="132">
+                                <label for="shop_give">到店自取</label>
+                            </div>
+                        </div>                      
+                        <div class="product-spe"> <!--規格-->                            
+                            <label>規格</label>  
+                            <div class="spe">                                    
+                                <div class="spe-pro" id="pro"><!--規格屬性-->                                         
+                                     <div class="pro">
+                                        <input type="radio" name="color" id="color1">  
+                                        <label for="color1">藍色</label>          
+                                    </div>                                       
+                                     <div class="pro">
+                                        <input type="radio" name="color" id="color2">  
+                                        <label for="color2">紅色</label>          
+                                    </div>                                       
+                                </div>                                    
+                            </div>                                                 
+                        </div>
+                        <div class="product-volume"> <!--體積-->                            
+                                <label>體積</label>                                
+                                <div>
+                                    長：200cm
+                                    寬：50cm
+                                    高：80cm
+                                </div>                                                                                   
+                        </div>
+                        <div class="amount">
+                            <div>
+                                <button type="button" class="add" onclick="add()">
+                                    +
+                                </button>
+                                <input type="text" value="1" class="amount" id="amount">
+                                <button type="button" class="less" onclick="less()">
+                                    -
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-intro" id="product-intro"> <!--商品介紹-->                            
+                            <label>商品介紹</label>                            
+                            <p>
+                                我們是木匠之家，是公益性質的二手店，任何人都能提供我們二手物，
+                                我們都會有專業的師傅進行修復，大家可以放心。
+                                舒適沙發是由民眾捐贈給予我們，再進行修復後的樣子。
+                            </p>
+                        </div>
+                                            
+                </div>  
+                <div class="product_btn">
+                    <button type="button">
+                        加入需求車
+                    </button>                            
+                    <button type="button">
+                        加入願望清單
+                    </button>
+                </div>
+            </form>              
+            </div>
+        </div>
+    </div>    
+</body>
+<script>
+function add(){
+    let x = document.getElementById("amount").value;   
+    document.getElementById("amount").value=Number(x)+1;
+}
+function less(){
+    let x = document.getElementById("amount").value; 
+    if(Number(x)==1){        
+    } 
+    else{
+        document.getElementById("amount").value=Number(x)-1;
+    }
+}
+</script>
+</html>

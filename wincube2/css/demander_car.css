@@ -1,0 +1,170 @@
+body{
+    margin: 0%;
+}
+.body-1{
+    width: 100%;
+    margin: auto;
+}
+.profile{
+    width: 650px;
+    padding-top: 30px;
+    margin: auto;
+}
+.all_choose{
+    padding-left: 10px;
+}
+.demander{
+    margin: auto;
+    display: flex;
+    width: 700px;
+    border: 1px solid black;
+}
+.demander > div{
+    padding: 10px;
+}
+.choose{
+    display: flex;
+    align-items: center;
+}
+.img{
+    width:100px
+}
+.img > img{
+    width: 100%;
+}
+.name{
+    display: flex;
+    align-items: center;
+}
+.amount{
+    width: 100px;
+    display: flex;
+    align-items:flex-end;
+}
+.amount > div{
+    height: 30px;
+    display: flex;    
+}
+.amount1{
+    width: 50px;
+}
+.trash{    
+    width: 38px;
+    display: flex;
+    align-items:flex-end;
+}
+.trash > button > img{
+    width: 100%;
+}
+.option{
+    display: flex;
+    align-items: flex-end;
+}
+
+@media screen and (min-width:550px) and (max-width:1024px) {
+    .body-1{
+        width: 100%;
+        margin: auto;
+    }
+    .profile{
+        margin-top: 30px;
+    }
+    .demander{
+        margin: auto;
+        display: flex;
+        width: 500px;
+        border: 1px solid black;
+    }
+    .demander > div{
+        padding: 10px 0 5px 0; 
+    }
+    .img{
+        width:50px;
+        margin: auto
+    }
+    .img > img{
+        width: 100%;
+    }
+    .name{
+        display: flex;
+        align-items: center;
+    }
+    .amount{
+        width: 100px;
+        display: flex;
+        align-items:flex-end;
+    }
+    .amount > div{        
+        height: 30px;
+        display: flex;    
+    }
+    .amount1{
+        width: 50px;
+    }
+    .trash{    
+        width: 38px;
+        display: flex;
+        align-items:flex-end;
+    }
+    .trash > button > img{
+        width: 100%;
+    }
+    .option{
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .body-1{
+        width: 100%;
+        margin: auto;
+    }
+    .profile{
+        margin-top: 30px;
+    }
+    .demander{
+        margin: auto;
+        display: block;
+        width: 100%;
+        border: 1px solid black;
+    }
+    .demander > div{
+        padding: 10px 0 5px 0;        
+    }
+    .img{
+        width:200px;
+        margin: auto
+    }
+    .img > img{
+        width: 100%;
+    }
+    .name{
+        display: flex;
+        align-items: center;
+    }
+    .amount{
+        width: 40px;
+        display: flex;
+        align-items:flex-end;
+    }
+    .amount > div{        
+        height: 30px;
+        display: flex;    
+    }
+    .amount1{
+        width: 30px;
+    }
+    .trash{    
+        width: 38px;
+        display: flex;
+        align-items:flex-end;
+    }
+    .trash > button > img{
+        width: 100%;
+    }
+    .option{
+        display: flex;
+        align-items: flex-end;
+    }
+}
