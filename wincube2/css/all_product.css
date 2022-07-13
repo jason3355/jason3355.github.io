@@ -4,6 +4,7 @@ body{
 .body-1{
     margin: auto;
     width: 1000px;
+    min-height: 100%;
 }
 .product-type{
     width: 50px;

@@ -4,11 +4,30 @@ body{
 .body-1{
     width: 100%;
     margin: auto;
+    min-height: 100%;
 }
 .profile{
     width: 650px;
     padding-top: 30px;
     margin: auto;
+}
+.title{
+    display: flex;
+    width: 100%;
+}
+.title > div{
+    text-align: center;    
+}
+.product-name{
+    width: 150px;
+    padding-right: 30px;
+}
+.product-amount{
+    width: 200px;
+}
+.product-give{
+    width: 100px;
+    padding-left: 30px;
 }
 .all_choose{
     padding-left: 10px;
@@ -39,7 +58,7 @@ body{
 .amount{
     width: 100px;
     display: flex;
-    align-items:flex-end;
+    align-items:flex-end;    
 }
 .amount > div{
     height: 30px;
@@ -52,6 +71,7 @@ body{
     width: 38px;
     display: flex;
     align-items:flex-end;
+    margin-left: 10px;
 }
 .trash > button > img{
     width: 100%;
@@ -65,14 +85,38 @@ body{
     .body-1{
         width: 100%;
         margin: auto;
+        font-size: 12px;
     }
     .profile{
+        width: 500px;
         margin-top: 30px;
+    }
+    .title{
+        display: flex;
+        width: 100%;
+    }
+    .title > div{
+        text-align: center;    
+    }
+    .product-name{
+        width: 50px;
+        padding-right: 30px;
+    }
+    .product-amount{
+        width: 150px;
+        /* margin-left: 50px; */
+    }
+    .product-give{
+        width: 100px;
+        padding-left: 30px;
+    }
+    .all_choose{
+        padding-left: 0px;
     }
     .demander{
         margin: auto;
         display: flex;
-        width: 500px;
+        width: 100%;
         border: 1px solid black;
     }
     .demander > div{
@@ -80,7 +124,6 @@ body{
     }
     .img{
         width:50px;
-        margin: auto
     }
     .img > img{
         width: 100%;
@@ -90,7 +133,8 @@ body{
         align-items: center;
     }
     .amount{
-        width: 100px;
+        width: 50px;
+        margin-left: 10px;
         display: flex;
         align-items:flex-end;
     }
@@ -105,6 +149,7 @@ body{
         width: 38px;
         display: flex;
         align-items:flex-end;
+        margin-left: 60px;
     }
     .trash > button > img{
         width: 100%;
@@ -121,7 +166,30 @@ body{
         margin: auto;
     }
     .profile{
+        width: 100%;
         margin-top: 30px;
+    }
+    .title{
+        display: flex;
+        width: 100%;
+    }
+    .title > div{
+        text-align: center;    
+    }
+    .product-name{
+        width: 100px;
+        padding-right: 30px;
+    }
+    .product-amount{
+        width: 150px;
+        /* margin-left: 50px; */
+    }
+    .product-give{
+        width: 100px;
+        padding-left: 30px;
+    }
+    .all_choose{
+        padding-left: 0px;
     }
     .demander{
         margin: auto;
@@ -133,7 +201,7 @@ body{
         padding: 10px 0 5px 0;        
     }
     .img{
-        width:200px;
+        width:100px;
         margin: auto
     }
     .img > img{

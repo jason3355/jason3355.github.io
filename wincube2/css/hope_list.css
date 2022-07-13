@@ -3,6 +3,7 @@ body{
 }
 .body-1{
     margin: auto;
+    min-height: 100%;
     width: 1000px;
 }
 .all-product{

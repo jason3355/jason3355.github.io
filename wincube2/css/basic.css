@@ -6,6 +6,7 @@ body{
 
 /* profile */
 .profile{
+    min-height: 100%;
     width: 450px;
     padding-top:20px;
     margin: auto;        
@@ -66,6 +67,43 @@ body{
 .profile-button > div > button:active{
     transform: translateY(3px);
 }
+
+footer{
+    font-size: 18px;
+    margin-top: 30px;
+    padding-top:30px ;
+    background-color: bisque;
+}
+
+.footer{
+    display: flex;
+}
+
+.footer-link > div{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.footer-link > div >a{
+    color: black;
+    text-decoration: none;
+    padding: 0 10px 0 10px;
+}
+
+.footer-img{
+    width: 70px;
+}
+
+.footer-img > img{
+    width: 100%;
+}
+
+.footer-footer{
+    display: flex;
+    justify-content: center;
+}
+
 /* Phone */
 @media screen and (max-width:550px){
     body{
