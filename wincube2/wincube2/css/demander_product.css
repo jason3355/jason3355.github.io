@@ -1,0 +1,616 @@
+body{
+    margin: 0px;
+    font-size: 18px;
+}
+.body-1{
+    width: 100%;
+    min-height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* profile */
+.profile{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.profile > div {
+    width: 500px;
+    padding: 0px 50px 0px 50px;
+}
+.photo{
+    width: 400px;
+}
+.photo-top{    
+    border: solid black 1px;   
+    width: 100%;
+}
+.photo-top > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.photo-button{
+    border: solid black 1px;
+    width: 100%;
+    /* display: flex;
+    justify-content: center; */
+}
+.photo-button > div{ 
+    display: inline-block;   
+    width: 80px;
+    margin: 5px;
+    cursor: pointer;    
+}
+.photo-button > div > img{
+    border: solid black 1px;
+    width: 100%;
+}
+.profile-1{
+    width: 500px;    
+}
+.profile-2{
+    border: 1px solid black;
+    padding:0 0 50px 10px;
+    margin-bottom: 30px;    
+}
+.profile-2 > div {   
+    display: flex;
+    margin: 10px 0px 10px 0px;
+}
+div > label{
+    display: flex;
+    width: 110px;
+}
+.product-name{    
+    width: 100%;
+    justify-content: center;
+    font-size: 36px;
+}
+.product-name > label{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+.product-type{
+    width: 250px;   
+}
+.product-price{
+    width: 250px;
+}
+.cargo{
+    width: 350px;
+}
+.cargo > label{
+    width: 100px;
+}
+.give{
+    display: flex;
+    width: 100px;
+    padding-top: 5px;
+    font-size: 18px;
+}
+.product-spe > label{
+    width: 100px;
+}
+.spe{
+    width: 300px;
+}
+.div_space{
+    padding-right: 50px;
+}
+.spe-pro{
+    width: 100%;
+    display: flex;
+}
+.spe-pro > label{
+    width: 110px;
+}
+.pro{
+    display: flex;
+    width: 100px;
+}
+.product-volume > label{
+    width: 100px;
+}
+.amount{
+    width: 250px;
+    display: flex;
+}
+.amount > div{
+    width: 150px;
+    display: flex;
+}
+.add,.less{
+    width: 30px;
+    height: 30px;
+}
+#amount{
+    width: 50px;
+    text-align: center;
+    border: 0.5px solid rgba(0, 0, 0, 0.397);
+    border-left: 0px;
+    border-right: 0px;
+}
+.product-intro > label{
+    min-width: 100px;
+}
+.product-intro >p{
+    width: 350px;
+    margin-top: 10px;
+}
+.product_btn{
+    display: flex;
+    justify-content:center ;
+}
+.product_btn > button{
+    width: 100px;
+    height: 40px;
+    margin: 0 10px 0 10px;
+}
+
+@media screen and (max-width:550px){
+    .body-1{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .search{
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+    .search > div{
+        padding-top: 10px;
+        width: 50px;
+    }
+    .search > div > img{
+        width: 100%;
+    }
+    .search-search{
+        margin:23px 10px 0px 0px;
+        width: 150px;
+        height: 30px;
+    }
+    /* profile */
+    .profile{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .profile > div {
+        width: 300px;
+        padding:0 0 30px 0;
+    }
+    .photo{
+        width: 200px;
+    }
+    .photo-top{    
+        border: solid black 1px;   
+        width: 100%;
+    }
+    .photo-top > div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .photo-button{
+        border: solid black 1px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .photo-button > div{ 
+        display: inline-block;   
+        width: 80px;
+        margin: 5px;
+        cursor: pointer;    
+    }
+    .photo-button > div > img{
+        border: solid black 1px;
+        width: 100%;
+    }
+    .profile-1{
+        width: 500px;    
+    }
+    .profile-2{
+        border: 1px solid black;
+        padding-left:0px;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+    .profile-2 > div {   
+        display: flex;
+        margin: 10px 0px 10px 0px;
+    }
+    div > label{
+        display: flex;
+        width: 110px;
+    }
+    .product-name{    
+        width: 100%;
+        justify-content: center;
+        font-size: 36px;
+    }
+    .product-name > label{
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+    }
+    .product-type{
+        width: 250px;   
+    }
+    .product-price{
+        width: 250px;
+    }
+    .cargo{
+        width:250px;
+    }
+    .cargo > label{
+        width: 100px;
+    }
+    .give{
+        display: flex;
+        width: 100px;
+        padding-top: 5px;
+        font-size: 18px;
+    }
+    .product-spe > label{
+        width: 100px;
+    }
+    .spe{
+        width: 300px;
+    }
+    .div_space{
+        padding-right: 50px;
+    }
+    .spe-pro{
+        width: 100%;
+        display: flex;
+    }
+    .spe-pro > label{
+        width: 110px;
+    }
+    .pro{
+        display: flex;
+        width: 100px;
+    }
+    .product-volume > label{
+        width: 100px;
+    }    
+    .product-intro > label{
+        min-width: 110px;
+    }    
+    .product_btn{
+        display: flex;
+        justify-content:center ;
+    }
+    .product_btn > button{
+        width: 100px;
+        height: 40px;
+        margin: 0 10px 0 10px;
+    }
+    
+}
+@media screen and (max-width:280px){
+    body{
+        font-size: 14px;
+    }
+    .body-1{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .search{
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+    .search > div{
+        padding-top: 10px;
+        width: 50px;
+    }
+    .search > div > img{
+        width: 100%;
+    }
+    .search-search{
+        margin:23px 10px 0px 0px;
+        width: 150px;
+        height: 30px;
+    }
+    /* profile */
+    .profile{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .profile > div {
+        width: 250px;
+        padding:0 0 30px 0;
+    }
+    .photo{
+        width: 200px;
+    }
+    .photo-top{    
+        border: solid black 1px;   
+        width: 100%;
+    }
+    .photo-top > div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .photo-button{
+        border: solid black 1px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .photo-button > div{ 
+        display: inline-block;   
+        width: 80px;
+        margin: 5px;
+        cursor: pointer;    
+    }
+    .photo-button > div > img{
+        border: solid black 1px;
+        width: 100%;
+    }
+    .profile-1{
+        width: 500px;    
+    }
+    .profile-2{
+        border: 1px solid black;
+        padding-left:0px;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+    .profile-2 > div {   
+        display: flex;
+        margin: 10px 0px 10px 0px;
+    }
+    div > label{
+        display: flex;
+        width: 110px;
+    }
+    .product-name{    
+        width: 100%;
+        justify-content: center;
+        font-size: 36px;
+    }
+    .product-name > label{
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+    }
+    .product-type{
+        width: 250px;   
+    }
+    .product-price{
+        width: 250px;
+    }
+    .cargo{
+        width:250px;
+    }
+    .cargo > label{
+        width: 100px;
+    }
+    .give{
+        display: flex;
+        width: 100px;
+        padding-top: 5px;
+        font-size: 14px;
+    }
+    .product-spe > label{
+        width: 100px;
+    }
+    .spe{
+        width: 250px;
+    }
+    .div_space{
+        padding-right: 50px;
+    }
+    .spe-pro{
+        width: 100%;
+        display: flex;
+    }
+    .spe-pro > label{
+        width: 110px;
+    }
+    .pro{
+        display: flex;
+        width: 100px;
+    }
+    .product-volume > label{
+        width: 100px;
+    }
+    .product-intro{
+        width: 250px;
+    }
+    .product-intro > label{
+        min-width: 110px;
+    }
+    .product-intro >span{
+        width: 250px;
+        margin-top: 10px;
+    }
+    .product_btn{
+        display: flex;
+        justify-content:center ;
+    }
+    .product_btn > button{
+        width: 100px;
+        height: 40px;
+        margin: 0 10px 0 10px;
+    }
+    
+}
+
+@media screen and (min-width:550px) and (max-width:1024px){
+    .body-1{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .search{
+        width: 100%;
+        display: flex;
+        justify-content: right;
+    }
+    .search > div{
+        padding-top: 10px;
+        width: 50px;
+    }
+    .search > div > img{
+        width: 100%;
+    }
+    .search-search{
+        margin:23px 10px 0px 0px;
+        width: 150px;
+        height: 30px;
+    }
+    /* profile */
+    .profile{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .profile > div {
+        width: 300px;
+        padding: 0px 50px 0px 50px;
+    }
+    .photo{
+        width: 400px;
+    }
+    .photo-top{    
+        border: solid black 1px;   
+        width: 100%;
+    }
+    .photo-top > div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .photo-button{
+        border: solid black 1px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .photo-button > div{ 
+        display: inline-block;   
+        width: 80px;
+        margin: 5px;
+        cursor: pointer;    
+    }
+    .photo-button > div > img{
+        border: solid black 1px;
+        width: 100%;
+    }
+    .profile-2{
+        border: 1px solid black;
+        padding-left: 10px;
+        margin-bottom: 30px;
+    }
+    .profile-2 > div {   
+        display: flex;
+        margin: 10px 0px 10px 0px;
+    }
+    div > label{
+        display: flex;
+        width: 110px;
+    }
+    .product-name{    
+        width: 100%;
+        justify-content: center;
+        font-size: 36px;
+    }
+    .product-name > label{
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+    }
+    .product-type{
+        width: 250px;   
+    }
+    .product-price{
+        width: 250px;
+    }
+    .cargo{
+        width: 280px;
+    }
+    .cargo > label{
+        width: 100px;
+    }
+    .give{
+        display: flex;
+        width: 100px;
+        padding-top: 5px;
+        font-size: 18px;
+    }
+    .product-spe{
+        width: 280px;
+    }
+    .product-spe > label{
+        width: 100px;
+    }
+    .spe{
+        width: 200px;
+    }
+    .div_space{
+        padding-right: 50px;
+    }
+    .spe-pro{
+        width: 100%;
+        display: flex;
+    }
+    .spe-pro > label{
+        width: 110px;
+    }
+    .pro{
+        display: flex;
+        width: 100px;
+    }
+    .product-volume > label{
+        width: 100px;
+    }
+    .product-intro{
+        width: 250px;
+    }
+    .product-intro > label{
+        min-width: 110px;
+    }
+    .product-intro >span{
+        width: 300px;
+        margin-top: 10px;
+    }
+    .product_btn{
+        display: flex;
+        justify-content:center ;
+    }
+    .product_btn > button{
+        width: 100px;
+        height: 40px;
+        margin: 0 10px 0 10px;
+    }
+
+
+}

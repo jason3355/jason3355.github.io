@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+}
+
+.body-1{
+    width: 1000px;
+    margin: auto;
+}
+
+.title > p{
+    font-size: 2.3rem;
+    text-align: center;
+    margin: 0;
+    padding-top: 30px;
+}
+
+.date{
+    font-size: 2.3rem;
+    text-align: center;
+    padding-bottom: 20px ;
+}
+
+.date > select{
+    width: 100px;
+    height: 30px;
+}
+
+.profile{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product{
+    display: flex;
+    padding: 10px 0 10px 0;
+}
+
+.product-img{
+    width: 150px;
+    border: 1px solid black;
+}
+
+.product-img >img{
+    width: 100%;
+}
+
+.product-imformation{
+    font-size: 1.4rem;
+    width: 850px;
+    background-color: #FFA4A4;
+}
+
+.product-imformation > p{
+    font-size: 1.6rem;
+}
+
+.imformation > div > div{
+    width: 300px;
+}
+
+.abc1{
+    display: flex;
+}
+
+.abc2{
+    display: flex;
+}
+
+.abc3{
+    text-align: right;
+}
+
+.abc3 >span:nth-child(1){
+    font-size: 1.2rem;
+}
+
+.abc3 >span:nth-child(2){
+    font-size: 1.6rem;
+}
