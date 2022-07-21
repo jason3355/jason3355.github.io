@@ -2,6 +2,7 @@ body{
     margin:0;
     background-image: url('../Img/background.jpg');
     background-size: 100% 100%;
+    font-size: 1.3rem;
 }
 .body{
     box-shadow: 7px 7px 15px #272727;
@@ -31,6 +32,17 @@ body{
 .title img{    
     width: 100%;
 }
+
+.select{
+    display: flex;
+    justify-content: center;
+}
+
+.select > div{
+    padding: 0 30px 0 30px;
+    cursor:pointer
+}
+
 .password{
     width: 100%;    
     justify-content: center;
@@ -73,6 +85,39 @@ button{
 .forget > div >a:visited{
     color: blue;
 }
+
+#supp{
+    background-color: #9D9D9D;
+}
+
+#deman{
+    background-color: #F0F0F0;
+}
+
+.account > input{
+    height: 20px;
+}
+
+.password > span{
+    padding-left: 40px;
+    margin-right: 10px;
+}
+
+
+.supplier{
+    display: block;    
+}
+
+.demander{
+    display: none;
+}
+
+.submit{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
 @media screen and (max-width:550px)  {
     .body{
         box-shadow: 10px 10px 10px black;

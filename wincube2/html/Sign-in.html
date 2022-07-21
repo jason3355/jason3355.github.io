@@ -14,38 +14,71 @@
             <div class="title">
                 <img src="../Img/wincube.png">
             </div>
-            <div>
-                <div class="password">
-                    <form action="##">
-                        <div>
-                            <spqn>帳號：</spqn>
-                            <input type="text" name="Account">
-                        </div>                
-                        <div>
-                            <span>密碼：</span>
-                            <input type="password" name="Password">
-                        </div>                            
-                    </form> 
+            <div class="all-submit">
+                <div class="select">
+                    <div id="supp">
+                        供給端
+                    </div>
+                    <div id="deman">
+                        需求端
+                    </div>
                 </div>
-                <div class="button">
-                    <div class="forget">
-                        <div>
-                            <a href="##">
-                                忘記密碼
-                            </a>
+                <div class="supplier" id="supplier">
+                    <input type="hidden" name="S">
+                    <div class="password">
+                        <form action="##">
+                            <div class="account">
+                                <span>電子信箱：</span>
+                                <input type="text" name="Account">
+                            </div>                
+                            <div class="password">
+                                <span>密碼：</span>
+                                <input type="password" name="Password">                                
+                            </div>  
+                            <div class="submit">
+                                <input type="submit">
+                            </div>                          
+                        </form> 
+                    </div>
+                    <div class="button">
+                        <div class="forget">
+                            <div>
+                                <a href="##">
+                                    忘記密碼
+                                </a>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+
+                <div class="demander" id="demander">
+                    <input type="hidden" name="D">
+                    <div class="password">
+                        <form action="##">
+                            <div class="account">
+                                <spqn>電子信箱：</spqn>
+                                <input type="text" name="Account">
+                            </div>                
+                            <div class="password">
+                                <span>密碼：</span>
+                                <input type="password" name="Password">
+                            </div>  
+                            <div class="submit">
+                                <input type="submit">
+                            </div>                           
+                        </form> 
+                    </div>
+                    <div class="button">
+                        <div class="forget">
+                            <div>
+                                <a href="##">
+                                    忘記密碼
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="button-1">
-                        <button type="button">
-                            <div>
-                                <span>
-                                    登入
-                                </span>
-                            </div>
-                        </button>
-                    </div>
-                    
                 </div>
+
             </div>
         </div>
     </div> 
@@ -53,7 +86,30 @@
     
     
     
-    
+    <script>
+        var sup =document.getElementById("supp");
+        var deman =document.getElementById("deman");
+        var i;
+        var j;
+        sup.onclick = function(){
+            i =document.getElementById("demander");
+            j =document.getElementById("supplier");
+            i.style.display="none";
+            j.style.display="block";
+            sup.style.backgroundColor="#9D9D9D";
+            deman.style.backgroundColor="#F0F0F0";
+        }
+        deman.onclick=function(){
+            i =document.getElementById("demander");
+            j =document.getElementById("supplier");
+            i.style.display="block";
+            j.style.display="none";
+            sup.style.backgroundColor="#F0F0F0";
+            deman.style.backgroundColor="#9D9D9D";
+        }
+
+
+    </script>
     
 </body>
 </html>

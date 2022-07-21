@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商品頁面</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/hamburger.css">
     <link rel="stylesheet" href="../../css/demander_product.css">
     <link rel="stylesheet" href="../../css/background.css">
@@ -102,27 +105,27 @@
                 <form action="##">
                 <div class="profile-2">                    
                         <div class="product-name"> <!--名稱-->
-                                <label>條紋舒適沙發</label>                                
+                                <label>條紋舒適沙發</label> 
                         </div>
                         <div class="product-type"> <!--類別-->
                                 <label>類別</label>                                
                                 <label>家具</label>                                
                         </div>
-                        <div class="product-price"> <!--單價-->
+                        <!--單價-->
+                        <!-- <div class="product-price"> 
                                 <label>金額</label>                                 
                                 <label>899元</label>                       
-                        </div>   
-                        <div class="cargo"> <!--運送方式-->
-                            <label>運送方式</label>                            
-                            <div class="give">
-                                <input type="radio" id="home_give" name="132">
-                                <label for="home_give">宅配</label>
-                            </div>
-                            <div class="give">
-                                <input type="radio" id="shop_give" name="132">
-                                <label for="shop_give">到店自取</label>
-                            </div>
-                        </div>                      
+                        </div>    -->
+                        
+                        <div class="product-volume"> <!--體積-->                            
+                                <label>體積</label>                                
+                                <div>
+                                    長：200cm
+                                    寬：50cm
+                                    高：80cm
+                                </div>                                                                                   
+                        </div>
+                                              
                         <div class="product-spe"> <!--規格-->                            
                             <label>規格</label>  
                             <div class="spe">                                    
@@ -138,15 +141,29 @@
                                 </div>                                    
                             </div>                                                 
                         </div>
-                        <div class="product-volume"> <!--體積-->                            
-                                <label>體積</label>                                
-                                <div>
-                                    長：200cm
-                                    寬：50cm
-                                    高：80cm
-                                </div>                                                                                   
+
+                        <div class="cargo"> <!--運送方式-->
+                            <label>運送方式</label>                            
+                            <div class="give">
+                                <input type="radio" id="home_give" name="132">
+                                <label for="home_give">宅配</label>
+                            </div>  
+                            <div class="give-car">
+                                <img src="../../Img/CAR.png">
+                            </div>                          
+                            <div class="give">
+                                <input type="radio" id="shop_give" name="132">
+                                <label for="shop_give">到店自取</label>
+                            </div>   
+                            <div class="give-car">
+                                <img src="../../Img/packet.png">
+                            </div>                    
                         </div>
+
                         <div class="amount">
+                            <label>
+                                數量
+                            </label>
                             <div>
                                 <button type="button" class="add" onclick="add()">
                                     +
@@ -164,8 +181,7 @@
                                 我們都會有專業的師傅進行修復，大家可以放心。
                                 舒適沙發是由民眾捐贈給予我們，再進行修復後的樣子。
                             </p>
-                        </div>
-                                            
+                        </div>                                            
                 </div>  
                 <div class="product_btn">
                     <button type="button">

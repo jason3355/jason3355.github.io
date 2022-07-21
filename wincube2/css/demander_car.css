@@ -1,5 +1,6 @@
 body{
     margin: 0%;
+    font-size: 1.4rem;
 }
 .body-1{
     width: 100%;
@@ -7,11 +8,21 @@ body{
     min-height: 100%;
 }
 .profile{
-    width: 650px;
+    width: 1000px;
     padding-top: 30px;
     margin: auto;
 }
+.profile > table{
+    margin: auto;
+    width: 100%;
+}
+
+td{
+    padding: 10px 20px 10px 20px;
+}
+
 .title{
+    background-color: rgb(235, 229, 229);
     display: flex;
     width: 100%;
 }
@@ -23,6 +34,7 @@ body{
     padding-right: 30px;
 }
 .product-amount{
+    margin-left: 100px;
     width: 200px;
 }
 .product-give{
@@ -35,8 +47,7 @@ body{
 .demander{
     margin: auto;
     display: flex;
-    width: 700px;
-    border: 1px solid black;
+    border: 1px solid rgb(214, 207, 207);
 }
 .demander > div{
     padding: 10px;
@@ -81,14 +92,25 @@ body{
     align-items: flex-end;
 }
 
+.no{
+    color: red;
+}
+
+.send-out{
+    margin-top:30px;
+    height: 30px;
+    display:flex;
+    justify-content: center;
+}
+
 @media screen and (min-width:550px) and (max-width:1024px) {
     .body-1{
         width: 100%;
         margin: auto;
-        font-size: 12px;
+        font-size: 1.4rem;
     }
     .profile{
-        width: 500px;
+        width: 90%;
         margin-top: 30px;
     }
     .title{
@@ -104,7 +126,6 @@ body{
     }
     .product-amount{
         width: 150px;
-        /* margin-left: 50px; */
     }
     .product-give{
         width: 100px;
@@ -117,13 +138,13 @@ body{
         margin: auto;
         display: flex;
         width: 100%;
-        border: 1px solid black;
+        border: 1px solid rgb(214, 207, 207);
     }
     .demander > div{
         padding: 10px 0 5px 0; 
     }
     .img{
-        width:50px;
+        width:100px;
     }
     .img > img{
         width: 100%;
@@ -146,7 +167,7 @@ body{
         width: 50px;
     }
     .trash{    
-        width: 38px;
+        width: 60px;
         display: flex;
         align-items:flex-end;
         margin-left: 60px;
@@ -155,38 +176,59 @@ body{
         width: 100%;
     }
     .option{
+        font-size: 1.2rem;
         display: flex;
         align-items: flex-end;
     }
+
+    .send-out{
+        margin-top:30px;
+        display:flex;
+        justify-content: center;
+    }
 }
 
-@media screen and (max-width:550px) {
+@media screen and (min-width:280px) and (max-width:550px) {
     .body-1{
         width: 100%;
         margin: auto;
+        font-size: 1.2rem;
+    }
+    td{
+        padding: 5px 10px 5px 10px;
     }
     .profile{
         width: 100%;
         margin-top: 30px;
+    }
+    .profile > table{
+        width: 90%;
     }
     .title{
         display: flex;
         width: 100%;
     }
     .title > div{
+        text-align: center;
+        display: flex;
+        justify-content: center;
         text-align: center;    
     }
     .product-name{
+        display: none;
+        text-align: center;
         width: 100px;
         padding-right: 30px;
     }
     .product-amount{
-        width: 150px;
-        /* margin-left: 50px; */
+        display: none;
+        width: 80px;
+        margin: 0;
     }
     .product-give{
-        width: 100px;
-        padding-left: 30px;
+        display: none;
+        width: 40px;
+        padding-left: 10px;
     }
     .all_choose{
         padding-left: 0px;
@@ -195,10 +237,12 @@ body{
         margin: auto;
         display: block;
         width: 100%;
-        border: 1px solid black;
+        padding: 10px 0 10px 0px;
+        border: 1px solid rgb(214, 207, 207);
     }
-    .demander > div{
-        padding: 10px 0 5px 0;        
+
+    .demander > td{
+        padding: 10px 0 5px 0;    
     }
     .img{
         width:100px;
@@ -217,16 +261,17 @@ body{
         align-items:flex-end;
     }
     .amount > div{        
-        height: 30px;
+        height: 20px;
         display: flex;    
     }
     .amount1{
         width: 30px;
     }
     .trash{    
-        width: 38px;
+        width: 40px; 
         display: flex;
-        align-items:flex-end;
+        justify-content: right;
+        align-items: flex-start;
     }
     .trash > button > img{
         width: 100%;
@@ -235,4 +280,108 @@ body{
         display: flex;
         align-items: flex-end;
     }
+
+    .send-out{
+        margin-top:30px;
+        display:flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:280px){
+    .body-1{
+        width: 100%;
+        margin: auto;
+        font-size: 1.2rem;
+    }
+    td{
+        padding: 5px 10px 5px 10px;
+    }
+    .profile{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .profile > table{
+        width: 90%;
+    }
+    .title{
+        display: flex;
+        width: 100%;
+    }
+    .title > div{
+        text-align: center;    
+    }
+    .product-name{
+        display: none;
+        text-align: center;
+        width: 100px;
+        padding-right: 30px;
+    }
+    .product-amount{
+        display: none;
+        width: 80px;
+        margin: 0;
+    }
+    .product-give{
+        display: none;
+        width: 40px;
+        padding-left: 10px;
+    }
+    .all_choose{
+        padding-left: 0px;
+    }
+    .demander{
+        margin: auto;
+        display: block;
+        width: 100%;
+        padding: 10px 0 10px 0px;
+        border: 1px solid rgb(214, 207, 207);
+    }
+
+    .demander > td{
+        padding: 10px 0 5px 0;    
+    }
+    .img{
+        width:100px;
+        margin: auto
+    }
+    .img > img{
+        width: 100%;
+    }
+    .name{
+        display: flex;
+        align-items: center;
+    }
+    .amount{
+        width: 40px;
+        display: flex;
+        align-items:flex-end;
+    }
+    .amount > div{        
+        height: 20px;
+        display: flex;    
+    }
+    .amount1{
+        width: 30px;
+    }
+    .trash{    
+        width: 40px; 
+        display: flex;
+        justify-content: right;
+        align-items: flex-start;
+    }
+    .trash > button > img{
+        width: 100%;
+    }
+    .option{
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .send-out{
+        margin-top:30px;
+        display:flex;
+        justify-content: center;
+    }
+
 }

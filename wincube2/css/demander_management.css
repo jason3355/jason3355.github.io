@@ -5,18 +5,30 @@ body{
     width: 1000px;
     margin: auto;
     padding-top:50px ;
-    font-size: 18px;
+    font-size: 1.4rem;
 }
+
+.title-title{
+    width: 100%;
+    text-align: center;
+}
+
+.title-title > hr{
+    width: 100%;
+}
+
+.title-title > p{
+   font-size:2.8rem
+}
+
 .title{
     width: 100%;
-    border-top: 1px solid gray;
     border-bottom: 1px solid gray ;    
     display: flex;
     height: 30px;
     align-items: center;
     justify-content: center;
     background-color: bisque;
-    
 }
 .title > div{
     padding: 0 50px 0 50px;
@@ -68,7 +80,7 @@ td{
 .product-delete > div >button{
     width: 100%;
     height: 200px;
-    background-color: red;
+    background-color: rgb(235, 198, 198);
     border:none;
     cursor: pointer;
 }

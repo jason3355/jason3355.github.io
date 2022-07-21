@@ -57,14 +57,14 @@ body{
 .profile-button > div{
     margin: 0 30px;
 }
-.profile-button > div > button{
+.profile-button > div > input{
     width: 50px;
     border-radius: 12px;
 }
-.profile-button > div > button:hover{
+.profile-button > div > input:hover{
     background-color: #ADADAD;
 }
-.profile-button > div > button:active{
+.profile-button > div > input:active{
     transform: translateY(3px);
 }
 
@@ -171,14 +171,14 @@ footer{
 .profile-button > div{
     margin: 0 30px;
 }
-.profile-button > div > button{
+.profile-button > div > input{
     width: 50px;
     border-radius: 12px;
 }
-.profile-button > div > button:hover{
+.profile-button > div > input:hover{
     background-color: #ADADAD;
 }
-.profile-button > div > button:active{
+.profile-button > div > input:active{
     transform: translateY(3px);
 }
 }

@@ -58,64 +58,94 @@
     </header>
     <div class="body-1">
         <form method='post'>
-            <div class="profile">
-                <table>
-                    <tr class="title">
-                        <td class="all_choose">
-                            <input type="checkbox" name="cc" onclick="c(this)" id="cc">
-                        </td>
-                        <td class="product-name">
-                            <span>商品名稱</span>
-                        </td>
-                        <td class="product-amount">
-                            <span>商品數量</span>
-                        </td>
-                        <td class="product-give">
-                            <span>配送方式</span>
-                        </td>
-                    </tr>
-                    <tr class="demander">
-                        <td class="choose">
-                            <input type="checkbox" name="tt" onclick="c2()">
-                        </td>
-                        <td class="img">
-                            <img src="../../Img/product.png">
-                        </td>
-                        <td class="name">
-                            <span>
-                                條紋沙發
-                            </span>
-                        </td>
-                        <td class="amount">
-                            <div>
-                                <button type="button" class="add" onclick="add()">
-                                    +
-                                </button>
-                                <input type="text" value="1" class="amount1" id="amount">
-                                <button type="button" class="less" onclick="less()">
-                                    -
-                                </button>
-                            </div>
-                        </td>
-                        <td class="trash">
-                            <button type="button">
-                                <img src="../../Img/trash-cans.png">
-                            </button>
-                        </td>
-                        <td class="option">
-                            <input type="radio" value="是,需要配送" name="yn">
-                            <label class="yes">是,需要配送</label>
-                            <input type="radio" value="否,自行前往領取" name="yn">
-                            <label class="no">否,自行前往領取</label>
-                        </td>
-                    </tr>                
-                </table>
-                <div class="send-out">
-                    <button type="button">
-                        送出
-                    </button>
+        <div class="profile">
+            <div class="title">
+                <div class="all_choose">
+                    <input type="checkbox" name="cc" onclick="c(this)" id="cc">
+                </div>
+                <div class="product-name">
+                    <span>商品名稱</span>
+                </div>
+                <div class="product-amount">
+                    <span>商品數量</span>
+                </div>
+                <div class="product-give">
+                    <span>配送方式</span>
                 </div>
             </div>
+            <div class="demander"><!--商品 -->
+                <div class="choose">
+                    <input type="checkbox" name="tt" onclick="c2()">
+                </div>
+                <div class="img">
+                    <img src="../../Img/product.png">
+                </div>
+                <div class="name">
+                    <span>
+                        條紋沙發
+                    </span>
+                </div>
+                <div class="amount">
+                    <div>
+                        <button type="button" class="add" onclick="add()">
+                            +
+                        </button>
+                        <input type="text" value="1" class="amount1" id="amount">
+                        <button type="button" class="less" onclick="less()">
+                            -
+                        </button>
+                    </div>
+                </div>
+                <div class="trash">
+                    <button type="button">
+                        <img src="../../Img/trash-cans.png">
+                    </button>
+                </div>
+                <div class="option">
+                    <input type="radio" value="是,需要配送" name="yn">
+                    <label>是,需要配送</label>
+                    <input type="radio" value="否,自行前往領取" name="yn">
+                    <label>否,自行前往領取</label>
+                </div>
+            </div>
+
+            <div class="demander"><!--商品 -->
+                <div class="choose">
+                    <input type="checkbox" name="tt" onclick="c2()">
+                </div>
+                <div class="img">
+                    <img src="../../Img/product.png">
+                </div>
+                <div class="name">
+                    <span>
+                        條紋沙發
+                    </span>
+                </div>
+                <div class="amount">
+                    <div>
+                        <button type="button" class="add" onclick="add()">
+                            +
+                        </button>
+                        <input type="text" value="1" class="amount1" id="amount">
+                        <button type="button" class="less" onclick="less()">
+                            -
+                        </button>
+                    </div>
+                </div>
+                <div class="trash">
+                    <button type="button">
+                        <img src="../../Img/trash-cans.png">
+                    </button>
+                </div>
+                <div class="option">
+                    <input type="radio" value="是,需要配送" name="yn1">
+                    <label>是,需要配送</label>
+                    <input type="radio" value="否,自行前往領取" name="yn1">
+                    <label>否,自行前往領取</label>
+                </div>
+            </div>
+
+        </div>
         </form>
     </div>
 </body>
