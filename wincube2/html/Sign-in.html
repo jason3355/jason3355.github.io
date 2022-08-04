@@ -23,10 +23,10 @@
                         需求端
                     </div>
                 </div>
-                <div class="supplier" id="supplier">
-                    <input type="hidden" name="S">
+                <div class="supplier" id="supplier">                    
                     <div class="password">
                         <form action="##">
+                            <input type="hidden" name="Sort" value="S">
                             <div class="account">
                                 <span>電子信箱：</span>
                                 <input type="text" name="Account">
@@ -51,10 +51,10 @@
                     </div>
                 </div>
 
-                <div class="demander" id="demander">
-                    <input type="hidden" name="D">
+                <div class="demander" id="demander">                    
                     <div class="password">
                         <form action="##">
+                            <input type="hidden" name="Sort" value="D">
                             <div class="account">
                                 <spqn>電子信箱：</spqn>
                                 <input type="text" name="Account">
@@ -96,16 +96,24 @@
             j =document.getElementById("supplier");
             i.style.display="none";
             j.style.display="block";
-            sup.style.backgroundColor="#9D9D9D";
-            deman.style.backgroundColor="#F0F0F0";
+            sup.setAttribute("style",
+                "background-color:#EBD3E8;box-shadow:#272727 1px 1px 1px;opacity:1;"
+            );
+            deman.setAttribute("style",
+                "background-color:#F0F0F0;box-shadow:none;opacity: 0.5;"
+            );
         }
         deman.onclick=function(){
             i =document.getElementById("demander");
             j =document.getElementById("supplier");
             i.style.display="block";
             j.style.display="none";
-            sup.style.backgroundColor="#F0F0F0";
-            deman.style.backgroundColor="#9D9D9D";
+            sup.setAttribute("style",
+                "background-color:#F0F0F0;box-shadow:none;opacity: 0.5;"
+            );
+            deman.setAttribute("style",
+                "background-color:#EBD3E8;box-shadow:#272727 1px 1px 1px;opacity:1;"
+            );
         }
 
 

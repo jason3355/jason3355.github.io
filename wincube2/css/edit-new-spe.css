@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+}
+.edit-spe{
+    margin: 0 0 10px 10px;
+    width: 500px;
+    background-color: blanchedalmond;
+    padding: 16px;
+}
+.edit-spe-name{
+    display: flex;
+}
+.edit-spe-name > span{
+    font-size: 14px;
+    width: 55px;
+}
+.edit-pro{
+    display: flex;
+    margin-bottom: 10px;
+}
+.div_space{
+    padding-right: 55.5px;
+}
+.edit-pro2{
+    width: 100%;
+    display: inline-flex;
+}
+.edit-pro > input{
+    padding: 10px 4px 10px 10px;
+}
+.edit-spe-pro{
+    margin-top: 10px;
+}
+.edit-spe-pro > span{
+    padding-right: 24px;
+    font-size: 14px;
+    width: 55px;
+}
+.edit-btn{
+    margin-top:10px ;
+    border: 1px dashed black;
+    background-color: blueviolet;
+    width: 100%;
+}
+.edit-btn:hover{
+    cursor: pointer;
+}
+
+.body-1{
+    display: flex;
+}
+
+.all-type{
+    margin: 0 0 10px 10px;
+    width: 500px;
+    background-color: blanchedalmond;
+    padding: 16px;
+}

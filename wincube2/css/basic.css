@@ -7,22 +7,29 @@ body{
 /* profile */
 .profile{
     min-height: 100%;
-    width: 450px;
+    width: 100%;
     padding-top:20px;
     margin: auto;        
 }
 .profile-picture{
-    width: 100%;  
-    padding-bottom:20px;  
+    width: 80%;  
+    padding: 20px 0 20px 0;  
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("../Img/background.jpg");
+    background-color: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
 }
 .profile-picture > div{
     width: 200px;
 }
 .profile-picture > div > img{
     width: 100%;
+    border-radius: 50%;
 }
 .profile-imformation{
     margin: auto;
@@ -49,6 +56,12 @@ body{
 .name-text{
     width: 100%;
 }
+
+.name-text > textarea{
+    max-width: 300px;
+    max-height: 500px;
+}
+
 .profile-button{
     display: flex;
     justify-content:center;
@@ -75,7 +88,7 @@ footer{
     background-color: bisque;
 }
 
-.footer{
+/* .footer{
     display: flex;
 }
 
@@ -102,7 +115,7 @@ footer{
 .footer-footer{
     display: flex;
     justify-content: center;
-}
+} */
 
 /* Phone */
 @media screen and (max-width:550px){

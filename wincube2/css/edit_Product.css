@@ -1,6 +1,20 @@
 body{
     margin: 0px;
 }
+/* 新增規格  */
+.edit-new-spe{
+    width: 200px;
+    background-color: burlywood;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+}
+.edit-new-spe > a{
+    text-decoration: none;
+    color: black;
+}
+
+/* 新增規格結束  */
 .body-1{
     width: 100%;
     min-height: 100%;

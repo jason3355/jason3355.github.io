@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增規格</title>
+
+    <link rel="stylesheet" href="../css/hamburger.css">
+    <link rel="stylesheet" href="../css/edit-new-spe.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/background.css">
+    <link rel="icon" href="../Img/logo.ico" type="image/x-icon"/><!--分頁LOGO-->
+
+</head>
+<body>
+    <header class="header"> 
+        <input type="checkbox" id="check">           
+        <label for="check" class="check">
+            ☰
+        </label>
+        <nav class="manu"> 
+            <ul>
+                <li>
+                    <a href="../SIndex.html">首頁</a>
+                </li>
+                <li>
+                    <a href="../html/all_product.html">商品管理</a>
+                </li>
+                <li>
+                    <a href="##">訂單管理</a>
+                </li>
+                <li>
+                    <a href="##">貨運管理系統</a>
+                </li>
+                <li>
+                    <a href="##">進帳資料</a>
+                </li>
+                <li>
+                    <a href="##">績效分析</a>
+                </li>
+                <li>
+                    <a href="../html/Sbasic.html">修改會員資料</a>
+                </li>    
+                                   
+            </ul> 
+        </nav>      
+            <div class="header-menu-logo">
+                <a href="../SIndex.html">
+                <div>
+                    <img src="../Img/wincube.png">
+                </div>
+                </a>
+            </div>  
+            <div class="search">                
+                <input type="search" class="search-search">
+                <button class="search-btn" type="button">
+                    搜尋
+                </button>
+            </div>        
+    </header>
+    <marquee direction="right" height="30" scrollamount="10" behavior="scroll">5/29伺服器測試</marquee>
+    <form class="body-1">
+        <div>
+            <div class="edit-spe">
+                <div class="edit-spe-name">
+                    <span>
+                        商品規格名稱
+                    </span>
+                    <input name="option-1" type="text" placeholder="請輸入規格名稱，EX:顏色">
+                </div>
+                <div class="edit-spe-pro" id="edit-pro">
+                    <span>
+                        選項
+                    </span>
+                    <div class="edit-pro">
+                        <div class="div_space">
+                        </div>
+                        <input name="option1" type="text" placeholder="請輸入規格選項，EX:藍色">
+                    </div>                                        
+                </div>
+                <div class="edit-pro-btn">
+                    <button type="button" class="edit-btn" onclick="add()">
+                        <span>
+                            增加選項
+                        </span>
+                    </button>
+                </div>
+            </div>   
+            <div class="edit-spe">
+                <div class="edit-spe-name">
+                    <span>
+                        商品規格名稱
+                    </span>
+                    <input name="option-2" type="text" placeholder="請輸入規格名稱，EX:顏色">
+                </div>
+                <div class="edit-spe-pro" id="edit-pro2">
+                    <span>
+                        選項
+                    </span>
+                    <div class="edit-pro">
+                        <div class="div_space">
+                        </div>
+                        <input name="option2" type="text" placeholder="請輸入規格選項，EX:藍色">
+                    </div>                                        
+                </div>
+                <div class="edit-pro-btn">
+                    <button type="button" class="edit-btn" onclick="add2()">
+                        <span>
+                            增加選項
+                        </span>
+                    </button>
+                </div>
+                <input type="button" name="type" onclick="edit()">
+            </div>
+        </div>
+        <div class="all-type">
+            <div class="type">
+                <label id="option-1">顏色</label>
+                <div>
+                    <label id="option-2">尺寸</label>
+                    <div>
+                        <input type="text" placeholder="請輸入金額">
+                    </div>
+                </div>
+            </div>
+            <div class="type">
+            </div>
+        </div>
+
+    </form>   
+    <script>      
+        function add(){
+            var div =document.getElementById("edit-pro");
+            var div2 =document.createElement("div");
+            div2.setAttribute("class","edit-pro");
+            div.appendChild(div2);
+            var div_space =document.createElement("div")
+            div_space.setAttribute("class","div_space");
+            div2.appendChild(div_space);
+            var input =document.createElement("input");
+            input.setAttribute("name","option1");
+            input.setAttribute("type","text");
+            input.setAttribute("placeholder","請輸入規格選項，EX:藍色");
+            div2.appendChild(input);
+        }
+        function add2(){
+            var div =document.getElementById("edit-pro2");
+            var div2 =document.createElement("div");
+            div2.setAttribute("class","edit-pro");
+            div.appendChild(div2);
+            var div_space =document.createElement("div")
+            div_space.setAttribute("class","div_space");
+            div2.appendChild(div_space);
+            var input =document.createElement("input");
+            input.setAttribute("name","option2");
+            input.setAttribute("type","text");
+            input.setAttribute("placeholder","請輸入規格選項，EX:藍色");        
+            div2.appendChild(input);
+        }
+
+        function edit(){
+            var option1=document.getElementsByName('option1');
+            var option1_1=option1[0].value;            
+
+            var option2=document.getElementsByName('option2');
+            var option2_1=option2[0].value;            
+            var tt=[];
+            for(let i=0;i<=2;i++){
+
+                
+            }
+        }
+    </script>
+</body>
+</html>
