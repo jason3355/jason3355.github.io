@@ -44,7 +44,11 @@ ul{
     background-color: rgb(252, 214, 214); 
 }
 li{
-    padding: 10px 0px 10px 0px;   
+    padding: 10px 0px 10px 0px; 
+    transition: 1s;  
+}
+li:hover{
+    background-color:rgb(87, 81, 81);
 }
 #check:checked ~ .manu{  
     transform: translateY(0%);    

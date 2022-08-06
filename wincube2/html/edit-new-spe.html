@@ -5,13 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新增規格</title>
-
     <link rel="stylesheet" href="../css/hamburger.css">
     <link rel="stylesheet" href="../css/edit-new-spe.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/background.css">
     <link rel="icon" href="../Img/logo.ico" type="image/x-icon"/><!--分頁LOGO-->
-
 </head>
 <body>
     <header class="header"> 
@@ -20,44 +18,43 @@
             ☰
         </label>
         <nav class="manu"> 
-            <ul>
-                <li>
-                    <a href="../SIndex.html">首頁</a>
-                </li>
-                <li>
-                    <a href="../html/all_product.html">商品管理</a>
-                </li>
-                <li>
-                    <a href="##">訂單管理</a>
-                </li>
-                <li>
-                    <a href="##">貨運管理系統</a>
-                </li>
-                <li>
-                    <a href="##">進帳資料</a>
-                </li>
-                <li>
-                    <a href="##">績效分析</a>
-                </li>
-                <li>
-                    <a href="../html/Sbasic.html">修改會員資料</a>
-                </li>    
-                                   
+            <ul>                
+                    <li>
+                        <a href="../html/SIndex.html">首頁</a>
+                    </li>
+                    <li>
+                        <a href="../html/all_product.html">商品管理</a>
+                    </li>
+                    <li>
+                        <a href="../html/order_management.html">訂單管理</a>
+                    </li>
+                    <li>
+                        <a href="##">貨運管理系統</a>
+                    </li>
+                    <li>
+                        <a href="../html/inaccount.html">進帳資料</a>
+                    </li>
+                    <li>
+                        <a href="##">績效分析</a>
+                    </li>
+                    <li>
+                        <a href="../html/Sbasic.html">修改會員資料</a>
+                    </li>                                   
             </ul> 
-        </nav>      
+        </nav>          
             <div class="header-menu-logo">
-                <a href="../SIndex.html">
+                <a href="../html/Sbasic.html" class="logo-a">
                 <div>
                     <img src="../Img/wincube.png">
                 </div>
-                </a>
-            </div>  
+                </a> 
+            </div>   
             <div class="search">                
                 <input type="search" class="search-search">
                 <button class="search-btn" type="button">
                     搜尋
                 </button>
-            </div>        
+            </div>   
     </header>
     <marquee direction="right" height="30" scrollamount="10" behavior="scroll">5/29伺服器測試</marquee>
     <form class="body-1">
@@ -129,7 +126,13 @@
         </div>
 
     </form>   
-    <script>      
+    <script>   
+        var n=0;
+        var m=0; 
+        window.onload = function(){
+            n=0;
+            m=0;
+        }        
         function add(){
             var div =document.getElementById("edit-pro");
             var div2 =document.createElement("div");
@@ -143,6 +146,7 @@
             input.setAttribute("type","text");
             input.setAttribute("placeholder","請輸入規格選項，EX:藍色");
             div2.appendChild(input);
+            n+=1;
         }
         function add2(){
             var div =document.getElementById("edit-pro2");
@@ -157,19 +161,32 @@
             input.setAttribute("type","text");
             input.setAttribute("placeholder","請輸入規格選項，EX:藍色");        
             div2.appendChild(input);
+            m+=1;
         }
-
         function edit(){
             var option1=document.getElementsByName('option1');
-            var option1_1=option1[0].value;            
-
+            // var option1_1=option1[0].value;
             var option2=document.getElementsByName('option2');
-            var option2_1=option2[0].value;            
+            // var option2_1=option2[0].value;          
             var tt=[];
-            for(let i=0;i<=2;i++){
-
-                
+            var rr=[];
+            var count1=0;
+            var count2=0;
+            for(let i=0;i<=n;i++){
+                tt[i]=option1[i].value;
+                count1+=1;
+                if(count1==n){
+                    n=0;
+                }
             }
+            for(let j=0;j<=m;j++){
+                rr[j]=option2[0].value;
+                count2+=1;
+                if(count2==m){
+                    m=0;
+                }
+            }
+            
         }
     </script>
 </body>
