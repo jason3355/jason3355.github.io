@@ -6,7 +6,7 @@
 .header-menu-logo{
     width: 100%;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
 }
 .header-menu-logo > a > div{
@@ -63,7 +63,6 @@ ul li a:visited{
 }
 
 .search{
-    width: 100%;
     display: flex;
     justify-content: right;
     margin-right: 30px;
@@ -81,6 +80,20 @@ ul li a:visited{
     margin-top: 10px;
     width: 50px;
     height: 30px;
+}
+
+.sign-up{
+    width: 50px;
+    padding-top: 13px;
+}
+
+.sign-up > a{
+    color: black;
+    text-decoration: none;
+}
+
+.sign-up > a:hover{
+    color:cornflowerblue;
 }
 
 @media screen and (max-width:550px){
