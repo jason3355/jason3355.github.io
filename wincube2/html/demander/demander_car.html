@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/demander_car.css">
-    <link rel="stylesheet" href="../../css/footer.css">
-    <link rel="stylesheet" href="../../css/hamburger.css">
+    <link rel="stylesheet" href="../../css/hamburgers.css">
     <link rel="stylesheet" href="../../css/background.css">
     <link rel="icon" href="../../Img/logo.ico" type="image/x-icon"/><!--分頁LOGO-->
     <title>需求車</title>
@@ -17,50 +16,40 @@
         <label for="check" class="check">
             ☰
         </label>
+        <a href="../demander/DIndex.html" class="header_logo">
+            <img src="../../Img/logo.ico">
+        </a>
         <nav class="manu"> 
-            <ul>                
-                    <li>
-                        <a href="../demander/DIndex.html">首頁</a>
-                    </li>
-                    <li>
-                        <a href="../demander/demander_allproduct.html">所有商品</a>
-                    </li>
-                    <li>
-                        <a href="../demander/demander_management.html">需求管理</a>
-                    </li>
-                    <li>
-                        <a href="../demander/demander_car.html">需求車</a>
-                    </li>
-                    <li>
-                        <a href="../demander/hope_list.html">願望清單</a>
-                    </li>
-                    <li>
-                        <a href="../demander/Dbasic.html">會員資料</a>
-                    </li>                                 
+            <ul class="manu-ul">                
+                <li><a href="../demander/demander_allproduct.html">所有商品</a></li>
+                <li><a href="../demander/demander_management.html">需求管理</a></li>
+                <li><a href="../demander/demander_car.html">需求車</a></li>
+                <li><a href="../demander/Dbasic.html">會員資料</a></li>                                 
             </ul> 
         </nav>          
             <div class="header-menu-logo">
-                <a href="../demander/DIndex.html" class="logo-a">
+                <a href="../../Index/Index.html" class="logo-a">
                 <div>
                     <img src="../../Img/wincube.png">
                 </div>
                 </a> 
-            </div> 
+            </div>  
             <div class="sign-up">
                 <form>
                     <input type="submit" name="Log out" value="登出">
                 </form>
-            </div>    
+            </div>   
             <div class="search">                
                 <input type="search" class="search-search">
-                <button class="search-btn" type="button">
-                    搜尋
-                </button>
+                <input id="search-btn" class="button-btn" type="submit" name="搜尋" value="搜尋">
             </div>   
     </header>
     <div class="body-1">
         <form method='post'>
-            <div class="profile">
+            <div class="title-title">
+                <p>需求車</p>
+            </div>            
+            <div class="profile">                
                 <table>
                     <tr class="title">
                         <td class="all_choose">
@@ -69,11 +58,22 @@
                         <td class="product-name">
                             <span>商品名稱</span>
                         </td>
+                        <td class="product-type">
+                            <span>商品類別</span>
+                        </td>
+                        <td class="product-price">
+                            <span>商品單價</span>
+                        </td>
                         <td class="product-amount">
                             <span>商品數量</span>
                         </td>
                         <td class="product-give">
                             <span>配送方式</span>
+                        </td>
+                        <td>
+                            <div class="trash-can">
+                                <input type="submit" class="submit" name="delete" value="刪除">
+                            </div>
                         </td>
                     </tr>
                     <tr class="demander">
@@ -81,12 +81,16 @@
                             <input type="checkbox" name="tt" onclick="c2()">
                         </td>
                         <td class="img">
-                            <img src="../../Img/product.png">
+                            <img src="../../Img/sofa-2.jpg">
                         </td>
                         <td class="name">
-                            <span>
-                                條紋沙發
-                            </span>
+                            <span>條紋沙發</span>
+                        </td>
+                        <td class="type">
+                            <span>家具</span>
+                        </td>
+                        <td class="price">
+                            <span>NT12000</span>
                         </td>
                         <td class="amount">
                             <div>
@@ -99,22 +103,57 @@
                                 </button>
                             </div>
                         </td>
-                        <td class="trash">
-                            <button type="button">
-                                <img src="../../Img/trash-cans.png">
-                            </button>
-                        </td>
                         <td class="option">
                             <input type="radio" value="是,需要配送" name="yn">
                             <label class="yes">是,需要配送</label>
                             <input type="radio" value="否,自行前往領取" name="yn">
                             <label class="no">否,自行前往領取</label>
                         </td>
-                    </tr>                
+                    </tr>
+                    <tr class="demander">
+                        <td class="choose">
+                            <input type="checkbox" name="tt" onclick="c2()">
+                        </td>
+                        <td class="img">
+                            <img src="../../Img/sofa-3.jpg">
+                        </td>
+                        <td class="name">
+                            <span>條紋沙發</span>
+                        </td>
+                        <td class="type">
+                            <span>家具</span>
+                        </td>
+                        <td class="price">
+                            <span>NT598</span>
+                        </td>
+                        <td class="amount">
+                            <div>
+                                <button type="button" class="add" onclick="add()">
+                                    +
+                                </button>
+                                <input type="text" value="1" class="amount1" id="amount">
+                                <button type="button" class="less" onclick="less()">
+                                    -
+                                </button>
+                            </div>
+                        </td>
+                        <td class="option">
+                            <input type="radio" value="是,需要配送" name="yn-1">
+                            <label class="yes">是,需要配送</label>
+                            <input type="radio" value="否,自行前往領取" name="yn-1">
+                            <label class="no">否,自行前往領取</label>
+                        </td>
+                    </tr>    
+                                  
                 </table>
-                <div class="send-out">
+                <!-- <div class="send-out">
                     <input type="submit" value="送出">
-                </div>
+                </div> -->
+                
+            </div>
+            <div class="sent-out-out">
+                <span>已選擇3樣</span>
+                <input type="submit" class="submit" name="sent-out" value="送出">
             </div>
         </form>
     </div>
@@ -144,8 +183,7 @@
             for(j=0;j<ch2.length;j++){
                 ch2[j].checked=false;
             }
-        }        
-        
+        }       
     }
     function c2(){
         var ch2=document.getElementsByName("tt");   
@@ -161,8 +199,7 @@
             else{
                 ch1[0].checked=false;
             }
-        }
-        
+        }        
     }
 </script>
 </html>

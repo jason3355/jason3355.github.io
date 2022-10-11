@@ -1,12 +1,11 @@
 body{
     margin: 0;
 }
-
 .body-1{
     width: 1000px;
     margin: auto;
+    padding-top: 4rem;
 }
-
 .title > p{
     font-size: 2.3rem;
     text-align: center;
@@ -14,215 +13,191 @@ body{
     padding-top: 30px;
     font-weight: bold;
 }
-
 .date{
     font-size: 2.3rem;
     text-align: center;
     padding-bottom: 20px ;
 }
-
-.date > select{
-    width: 100px;
-    height: 30px;
-}
-
 .profile{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .product{
     display: flex;
     padding: 10px 0 10px 0;
 }
-
 .product-img{
-    width: 150px;
-    border: 1px solid black;
+    width: 200px;
+    height: 200px;
     display: flex;
-    align-items: center;
+    border: 1px solid black;
 }
-
 .product-img >img{
     width: 100%;
 }
-
 .product-imformation{
     font-size: 1.4rem;
     width: 850px;
-    background-color: #FFA4A4;
+    background-color: #ece4e5;
 }
-
 .product-imformation > p{
     font-size: 1.6rem;
     font-weight: bold;
+    padding-left: 10px;
 }
-
+.imformation > div{
+    padding-left:10px ;
+}
 .imformation > div > div{
     width: 300px;
 }
-
 .abc1{
     display: flex;
 }
-
 .abc2{
     display: flex;
 }
-
 .abc3{
     text-align: right;
 }
-
 .abc3 >span:nth-child(1){
     font-size: 1.2rem;
 }
-
 .abc3 >span:nth-child(2){
     font-size: 1.6rem;
 }
-
+.date input{
+    border:  0.5px solid gray;
+    border-radius: 5px;
+    box-shadow: 1px 1px 0px #D0D0D0;
+}
 @media screen and (max-width:550px) {
     .body-1{
-        width: 100%;
+        width:300px;
         margin: auto;
-    }
-    
+    }    
     .title > p{
         font-size: 2.3rem;
         text-align: center;
         margin: 0;
         padding-top: 30px;
         font-weight: bold;
-    }
-    
+    }    
     .date{
         font-size: 2.3rem;
         text-align: center;
         padding-bottom: 20px ;
-    }
-    
+    }    
     .date > select{
         width: 100px;
         height: 30px;
-    }
-    
+    }    
     .profile{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-    }
-    
+    }    
     .product{
         display: flex;
+        flex-wrap: wrap;
         padding: 10px 0 10px 0;
-    }
-    
+    }    
     .product-img{
-        width: 20%;
-        border: 1px solid black;
-    }
-    
+        width: 300px;
+        height: 300px;
+        border: 0;
+    }    
     .product-img >img{
         width: 100%;
-    }
-    
+    }    
     .product-imformation{
-        font-size: 1.4rem;
-        width: 80%;
-        background-color: #FFA4A4;
-    }
-    
+        font-size: 12px;
+        width: 300px;
+        height: 100px;
+    }    
     .product-imformation > p{
-        font-size: 1.6rem;
+        font-size: 0.5rem;
         font-weight: bold;
-    }
-    
-    .imformation > div{
-        display: block;
-    }
-
+    }    
     .abc1-2 > span:nth-child(1){
         width: 150px;
     }
-
     .imformation > div > div{
         width: 210px;
         display: flex;
     }
-
     .imformation-in{
-        padding-top: 3px;
+        padding-top: 0;
+    }
+    .abc3{
+        margin-top: 20px;
+    }
+    .abc3 >span:nth-child(1){
+        font-size: 0.6rem;
+    }
+    .abc3 >span:nth-child(2){
+        font-size: 0.6rem;
     }
 }
 
 @media screen and (min-width:550px) and (max-width:1024px){
     .body-1{
-        width: 100%;
+        width: 500px;
         margin: auto;
-    }
-    
+    }    
     .title > p{
         font-size: 2.3rem;
         text-align: center;
         margin: 0;
         padding-top: 30px;
         font-weight: bold;
-    }
-    
+    }    
     .date{
         font-size: 2.3rem;
         text-align: center;
         padding-bottom: 20px ;
-    }
-    
+    }    
     .date > select{
         width: 100px;
         height: 30px;
-    }
-    
+    }    
     .profile{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-    }
-    
+    }    
     .product{
         display: flex;
         padding: 10px 0 10px 0;
-    }
-    
+    }    
     .product-img{
-        width: 20%;
+        width: 250px;
+        height: 200px;
         border: 1px solid black;
-    }
-    
+    }    
     .product-img >img{
         width: 100%;
-    }
-    
+    }    
     .product-imformation{
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         width: 80%;
-        background-color: #FFA4A4;
-    }
-    
+    }    
     .product-imformation > p{
         font-size: 1.6rem;
         font-weight: bold;
     }
-
     .abc1-2 > span:nth-child(1){
         width: 150px;
     }
-
     .imformation > div > div{
         width: 210px;
         display: flex;
     }
-
     .imformation-in{
-        padding-top: 3px;
+        padding: 0;
+    }
+    .abc3{
+        margin-top: 20px;
     }
 }

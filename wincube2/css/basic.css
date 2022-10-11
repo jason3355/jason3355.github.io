@@ -9,7 +9,8 @@ body{
     min-height: 100%;
     width: 100%;
     padding-top:20px;
-    margin: auto;        
+    margin-top: 5rem;
+    margin-bottom: 3rem;
 }
 .profile-picture{
     width: 80%;  
@@ -17,12 +18,34 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../Img/background.jpg");
+    background-image: url("../Img/封面.jpg");
+    background-size: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
     margin: auto;
+}
+.headshot{
+    display: flex;
+    justify-content: right;
+    margin-right: 140px;
+}
+#headshot{
+    display: flex;
+    justify-content: right;
+    cursor: pointer;
+    padding: 5px;
+    border: 0.5px solid black;
+    border-top: none;
+    margin: 0 5px 0 5px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px gray;
+}
+#headshot:active{
+    box-shadow: none;
+}
+#headshot input{
+    display: none;
 }
 .profile-picture > div{
     width: 200px;
@@ -42,26 +65,22 @@ body{
 .name{
     margin: 30px 0;
     display: flex;
-    justify-content: center;
 }
 .name-name{
-    font-size: 24px;
+    width: 150px;
+    font-size: 1.4rem;
     font-weight: bold;
-    width: 250px;
-    text-align: left;    
+    text-align: left;  
+    padding: 0 10px 0 10px;  
 }
-.name-name > span{
-    padding-left: 30px;
+.name-Certification{
+    padding-left:50px ;
+    margin-left: -45px;
 }
-.name-text{
-    width: 100%;
-}
-
 .name-text > textarea{
     max-width: 300px;
     max-height: 500px;
 }
-
 .profile-button{
     display: flex;
     justify-content:center;
@@ -71,8 +90,8 @@ body{
     margin: 0 30px;
 }
 .profile-button > div > input{
-    width: 50px;
-    border-radius: 12px;
+    width: 60px;
+    border-radius: 5px;
 }
 .profile-button > div > input:hover{
     background-color: #ADADAD;
@@ -80,118 +99,115 @@ body{
 .profile-button > div > input:active{
     transform: translateY(3px);
 }
-
 footer{
     font-size: 18px;
     margin-top: 30px;
     padding-top:30px ;
     background-color: bisque;
 }
-
-/* .footer{
-    display: flex;
-}
-
-.footer-link > div{
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-
-.footer-link > div >a{
-    color: black;
-    text-decoration: none;
-    padding: 0 10px 0 10px;
-}
-
-.footer-img{
-    width: 70px;
-}
-
-.footer-img > img{
-    width: 100%;
-}
-
-.footer-footer{
-    display: flex;
-    justify-content: center;
-} */
-
 /* Phone */
 @media screen and (max-width:550px){
     body{
         width:100%;
-        margin: 0;    
+        margin: 0;
     } 
-/* profile */
-.profile{
-    width: 100%;
-    padding-top:20px;
-    margin: auto;        
-}
-.profile-picture{
-    width: 100%;  
-    padding-bottom:20px;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.profile-picture > div{
-    width: 200px;
-}
-.profile-picture > div > img{
-    width: 100%;
-}
-.profile-imformation{
-    margin: auto;
-    width: 100%;    
-}
-.profile-imformation-1{
-    margin: auto;
-    width: 90%;
-    height: auto;
-}
-.profile-imformation-1 > form{
-    margin: auto;
-    width: 100%;
-    height: auto;
-}
-.name{
-    width: auto;
-    height: auto;
-    margin: 30px 0;
-    display: flex;
-    justify-content: center;
-}
-.name-name{
-    font-size: 24px;
-    font-weight: bold;
-    width: 100%;
-    text-align: left;    
-}
-.name-name > span{
-    padding-left: 30px;
-}
-.name-text{
-    
-    width: 100%;
-}
-.profile-button{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-}
-.profile-button > div{
-    margin: 0 30px;
-}
-.profile-button > div > input{
-    width: 50px;
-    border-radius: 12px;
-}
-.profile-button > div > input:hover{
-    background-color: #ADADAD;
-}
-.profile-button > div > input:active{
-    transform: translateY(3px);
-}
+    /* profile */
+    .profile{
+        width: 100%;
+        padding-top:20px;
+        margin: 2rem;        
+    }
+    .headshot{
+        display: flex;
+        justify-content: right;
+        margin-right: 0px;
+    }
+    #headshot{
+        display: flex;
+        justify-content: right;
+        cursor: pointer;
+        padding: 5px;
+        border: 0.5px solid black;
+        border-top: none;
+        margin: 0 5px 0 5px;
+        border-radius: 3px;
+        box-shadow: 1px 1px 3px gray;
+    }
+    #headshot:active{
+        box-shadow: none;
+    }
+    #headshot input{
+        display: none;
+    }
+    .profile-picture{
+        width: 100%;  
+        padding-bottom:20px;  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile-picture > div{
+        width: 200px;
+    }
+    .profile-picture > div > img{
+        width: 100%;
+    }
+    .profile-imformation{
+        margin: auto;
+        width: 100%;    
+    }
+    .profile-imformation-1{
+        margin: auto;
+        width: 90%;
+        height: auto;
+    }
+    .profile-imformation-1 > form{
+        margin: auto;
+        width: 100%;
+        height: auto;
+    }
+    .name{
+        width: auto;
+        height: auto;
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+    }
+    #account > div{
+        font-size: 0.8rem;
+    }
+    .name-name{
+        font-weight: bold;
+        width: 100px;
+        text-align: left;  
+        font-size: 1rem;    
+    }
+    .name-name > span{
+        padding-left: 0px;
+    }
+    .name-text{    
+        width: 100%;
+    }
+    .profile-button{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .profile-button > div{
+        margin: 0 30px;
+    }
+    .profile-button > div > input{
+        width: 50px;
+        border-radius: 12px;
+    }
+    .profile-button > div > input:hover{
+        background-color: #ADADAD;
+    }
+    .profile-button > div > input:active{
+        transform: translateY(3px);
+    }
+    .name-Certification{
+        padding-left:0px;
+        margin-left: -45px;
+    }
 }

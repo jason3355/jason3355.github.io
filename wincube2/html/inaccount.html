@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../Img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/inaccount.css">
-    <link rel="stylesheet" href="../css/hamburger.css">
+    <link rel="stylesheet" href="../css/hamburgers.css">
     <link rel="stylesheet" href="../css/background.css">
-    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/to-top.css">
+    <script src="../js/to-top.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> 
     <title>inaccount</title>
 </head>
 <body>
@@ -17,29 +19,27 @@
         <label for="check" class="check">
             ☰
         </label>
+        <a href="../html/SIndexs.html" class="header_logo">
+            <img src="../Img/logo.ico">
+        </a>
         <nav class="manu"> 
-            <ul>                
-                    <li>
-                        <a href="../html/SIndex.html">首頁</a>
-                    </li>
-                    <li>
-                        <a href="../html/all_product.html">商品管理</a>
-                    </li>
-                    <li>
-                        <a href="../html/order_management.html">訂單管理</a>
-                    </li>
-                    <li>
-                        <a href="##">貨運管理系統</a>
-                    </li>
-                    <li>
-                        <a href="../html/inaccount.html">進帳資料</a>
-                    </li>
-                    <li>
-                        <a href="##">績效分析</a>
-                    </li>
-                    <li>
-                        <a href="../html/Sbasic.html">修改會員資料</a>
-                    </li>                                   
+            <ul class="manu-ul">                
+                <li><a href="../html/all_product.html">商品管理</a></li>
+                <li class="order-manu">
+                    <span>訂單管理</span>
+                    <ul class="order-ul">
+                        <li><a href="../html/order_management.html">即時訂單資訊</a></li>
+                        <li><a href="../html/order_management.html">已完成訂單</a></li>
+                        <li><a href="../html/order_management.html">不成立訂單</a></li>
+                        <li><a href="../html/order_management.html">運送中訂單</a></li>
+                        <li><a href="../html/order_management.html">自取訂單</a></li>
+                        <li><a href="../html/order_management.html">cargo貨運管理</a></li>
+                    </ul>
+                </li>
+                <li><a href="##">貨運管理系統</a></li>
+                <li><a href="../html/inaccount.html">進帳資料</a></li>
+                <li><a href="##">績效分析</a></li>
+                <li><a href="../html/Sbasic.html">修改會員資料</a></li>                                   
             </ul> 
         </nav>          
             <div class="header-menu-logo">
@@ -48,93 +48,56 @@
                     <img src="../Img/wincube.png">
                 </div>
                 </a> 
-            </div>   
+            </div>  
             <div class="sign-up">
                 <form>
                     <input type="submit" name="Log out" value="登出">
                 </form>
-            </div>  
+            </div>   
             <div class="search">                
                 <input type="search" class="search-search">
-                <button class="search-btn" type="button">
-                    搜尋
-                </button>
+                <input class="button-btn" id="search-btn" type="submit" name="搜尋" value="搜尋">
             </div>   
     </header>
-
     <div class="body-1">
         <div class="title">
-            <p>
-                進帳資料
-            </p>
+            <p>進帳資料</p>
         </div>
         <div class="date">
-            <select>
-                <option>
-                    123
-                </option>
-            </select>
-            -
-            <select>
-                <option>
-                    123
-                </option>
-            </select>
+            <input type="date"> - <input type="date">
         </div>
         <hr>
         <div class="profile">
             <div class="product">
                 <div class="product-img">
-                    <img src="../Img/sofa.jpg">
+                    <img src="../Img/sofa-3.jpg">
                 </div>
                 <div class="product-imformation">
-                     <p>
-                        超級沙發
-                    </p>
+                     <p>超級沙發</p>
                     <div class="imformation">
                         <div class="abc1">
                             <div>
-                                <span>
-                                    商品金額：NT$
-                                </span>
-                                <span class="imformation-in">
-                                    1000<!-- 傳入這裡 -->
-                                </span>
+                                <span>商品金額：NT$</span>
+                                <span class="imformation-in">1000</span><!-- 傳入這裡 -->
                             </div>
                             <div>
-                                <span>
-                                    訂單編號：
-                                </span>
-                                <span class="imformation-in">
-                                    TY000002<!-- 傳入這裡 -->
-                                </span>
+                                <span>訂單編號：</span>
+                                <span class="imformation-in">TY000002</span><!-- 傳入這裡 -->
                             </div>
                         </div>
                         <div class="abc2">
                             <div>
-                                <span>
-                                    進帳金額：NT$
-                                </span>
-                                <span class="imformation-in">
-                                    940<!-- 傳入這裡 -->
-                                </span>
+                                <span>進帳金額：NT$</span>
+                                <span class="imformation-in">940</span><!-- 傳入這裡 -->
                             </div>
                             <div>
-                                <span>
-                                    手續費：NT$
-                                </span>
-                                <span class="imformation-in">
-                                    60<!-- 傳入這裡 -->
-                                </span>
+                                <span>手續費：NT$</span>
+                                <span class="imformation-in">60</span><!-- 傳入這裡 -->
                             </div>
                         </div>
                         <div class="abc3">
-                            <span>
-                                2022/07/30<!-- 日期傳入此處 -->
-                            </span>                            
-                            <span>
-                                NT$940<!-- 金額傳入此處 -->
-                            </span>
+                            <span>2022/07/30</span><!-- 日期傳入此處 -->                       
+                            <span>NT$940</span><!-- 金額傳入此處 -->
                         </div>
                     </div>
                 </div>
@@ -142,113 +105,68 @@
             
             <div class="product">
                 <div class="product-img">
-                    <img src="../Img/sofa.jpg">
+                    <img src="../Img/chair.jpg">
                 </div>
                 <div class="product-imformation">
-                     <p>
-                        超級沙發
-                    </p>
+                     <p>超級沙發</p>
                     <div class="imformation">
                         <div class="abc1">
                             <div>
-                                <span>
-                                    商品金額：NT$
-                                </span>
-                                <span class="imformation-in">
-                                    1000<!-- 傳入這裡 -->
-                                </span>
+                                <span>商品金額：NT$</span>
+                                <span class="imformation-in">1000</span><!-- 傳入這裡 -->
                             </div>
                             <div>
-                                <span>
-                                    訂單編號：
-                                </span>
-                                <span class="imformation-in">
-                                    TY000002<!-- 傳入這裡 -->
-                                </span>
+                                <span>訂單編號：</span>
+                                <span class="imformation-in">TY000002</span><!-- 傳入這裡 -->
                             </div>
                         </div>
                         <div class="abc2">
                             <div>
-                                <span>
-                                    進帳金額：NT$
-                                </span>
-                                <span class="imformation-in">
-                                    940<!-- 傳入這裡 -->
-                                </span>
+                                <span>進帳金額：NT$</span>
+                                <span class="imformation-in">940</span><!-- 傳入這裡 -->
                             </div>
                             <div>
-                                <span>
-                                    手續費：NT$
-                                </span>
-                                <span class="imformation-in">
-                                    60<!-- 傳入這裡 -->
-                                </span>
+                                <span>手續費：NT$</span>
+                                <span class="imformation-in">60</span><!-- 傳入這裡 -->
                             </div>
                         </div>
                         <div class="abc3">
-                            <span>
-                                2022/07/30<!-- 日期傳入此處 -->
-                            </span>                            
-                            <span>
-                                NT$940<!-- 金額傳入此處 -->
-                            </span>
+                            <span>2022/07/30</span><!-- 日期傳入此處 -->                        
+                            <span>NT$940</span><!-- 金額傳入此處 -->
                         </div>
                     </div>
                 </div>
             </div> 
-
             <div class="product">
                 <div class="product-img">
-                    <img src="../Img/sofa.jpg">
+                    <img src="../Img/sofa-2.jpg">
                 </div>
                 <div class="product-imformation">
-                     <p>
-                        超級沙發
-                    </p>
+                     <p>超級沙發</p>
                     <div class="imformation">
                         <div class="abc1">
                             <div>
-                                <span>
-                                    商品金額：NT$
-                                </span>
-                                <span class="imformation-in">
-                                    1000<!-- 傳入這裡 -->
-                                </span>
+                                <span>商品金額：NT$</span>
+                                <span class="imformation-in">1000</span><!-- 傳入這裡 -->
                             </div>
                             <div>
-                                <span>
-                                    訂單編號：
-                                </span>
-                                <span class="imformation-in">
-                                    TY000002<!-- 傳入這裡 -->
-                                </span>
+                                <span>訂單編號：</span>
+                                <span class="imformation-in">TY000002</span><!-- 傳入這裡 -->
                             </div>
                         </div>
                         <div class="abc2">
                             <div>
-                                <span>
-                                    進帳金額：NT$
-                                </span>
-                                <span class="imformation-in">
-                                    940<!-- 傳入這裡 -->
-                                </span>
+                                <span>進帳金額：NT$</span>
+                                <span class="imformation-in">940</span><!-- 傳入這裡 -->
                             </div>
                             <div>
-                                <span>
-                                    手續費：NT$
-                                </span>
-                                <span class="imformation-in">
-                                    60<!-- 傳入這裡 -->
-                                </span>
+                                <span>手續費：NT$</span>
+                                <span class="imformation-in">60</span><!-- 傳入這裡 -->
                             </div>
                         </div>
                         <div class="abc3">
-                            <span>
-                                2022/07/30<!-- 日期傳入此處 -->
-                            </span>                            
-                            <span>
-                                NT$940<!-- 金額傳入此處 -->
-                            </span>
+                            <span>2022/07/30</span><!-- 日期傳入此處 -->                       
+                            <span>NT$940</span><!-- 金額傳入此處 -->
                         </div>
                     </div>
                 </div>
@@ -256,86 +174,46 @@
             
             <div class="product">
                 <div class="product-img">
-                    <img src="../Img/sofa.jpg">
+                    <img src="../Img/soda.jpg">
                 </div>
                 <div class="product-imformation">
-                     <p>
-                        超級沙發
-                    </p>
+                     <p>超級沙發</p>
                     <div class="imformation">
                         <div class="abc1">
                             <div>
-                                <span>
-                                    商品金額：NT$
-                                </span>
-                                <span class="imformation-in">
-                                    1000<!-- 傳入這裡 -->
-                                </span>
+                                <span>商品金額：NT$</span>
+                                <span class="imformation-in">1000</span><!-- 傳入這裡 -->
                             </div>
                             <div>
-                                <span>
-                                    訂單編號：
-                                </span>
-                                <span class="imformation-in">
-                                    TY000002<!-- 傳入這裡 -->
-                                </span>
+                                <span>訂單編號：</span>
+                                <span class="imformation-in">TY000002</span><!-- 傳入這裡 -->
                             </div>
                         </div>
                         <div class="abc2">
                             <div>
-                                <span>
-                                    進帳金額：NT$
-                                </span>
-                                <span class="imformation-in">
-                                    940<!-- 傳入這裡 -->
-                                </span>
+                                <span>進帳金額：NT$</span>
+                                <span class="imformation-in">940</span><!-- 傳入這裡 -->
                             </div>
                             <div>
-                                <span>
-                                    手續費：NT$
-                                </span>
-                                <span class="imformation-in">
-                                    60<!-- 傳入這裡 -->
-                                </span>
+                                <span>手續費：NT$</span>
+                                <span class="imformation-in">60</span><!-- 傳入這裡 -->
                             </div>
                         </div>
                         <div class="abc3">
-                            <span>
-                                2022/07/30<!-- 日期傳入此處 -->
-                            </span>                            
-                            <span>
-                                NT$940<!-- 金額傳入此處 -->
-                            </span>
+                            <span>2022/07/30</span><!-- 日期傳入此處 -->                       
+                            <span>NT$940</span><!-- 金額傳入此處 -->
                         </div>
                     </div>
                 </div>
             </div> 
-
         </div>
+        <div class="goTop">
+            <a href="#" class="goTopBtn jq-goTop">
+                <img src="../Img/top.png">
+            </a>
+        </div> 
     </div>
 
-    <footer>          
-        <div class="footer">
-            <div class="footer-img">
-                <img src="../Img/logo.ico">
-            </div>     
-            <div class="footer-link">
-                <div>
-                    <a href="##">
-                        關於我們
-                    </a>
-                    <a href="##">
-                        聯絡我們
-                    </a>
-                    <a href="##">
-                        幫助中心
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-footer">
-            @wincube
-        </div>
-    </footer>
+    
 </body>
 </html>

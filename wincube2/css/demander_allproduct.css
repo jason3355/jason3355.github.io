@@ -1,10 +1,9 @@
 body{
     margin: 0px;
-    font-family: 微軟正黑體;
+    font-family: "微軟正黑體";
 }
 .body-1{
-    margin: auto;
-    width: 1000px;
+    margin: 4rem 1rem 0 1rem;
     min-height: 100%;
 }
 .all-product{
@@ -12,35 +11,62 @@ body{
     display:flex;
     justify-content: center  
 }
+
 .all-product-1{
     width: 100%;
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
-    padding-top: 20px;
-    margin-top: 20px;
 }
-
 .allproduct-title{
     width: 100%;
     display: flex;
+    align-items:flex-end;
     margin: 10px 0 30px 0;
 }
+i{
+    width: 60%;
+}
+
+@keyframes title-span {
+    from {
+      transform: translateX(100%)
+    }
+   
+    to {
+      transform: translateX(0%)
+    }  
+} 
+ 
+.title-span{
+    animation: title-span 5s linear infinite;
+    overflow: hidden;
+}
+
+.title-span{
+    padding-left: 10px;
+    width: 350px;
+    height: 30px;
+    background-color: rgb(88, 86, 86,0.8);    
+}
+.title-span p{
+    margin: 0;
+}
+
 hr{
     width: 100%;
     margin-bottom: 30px;
 }
-.allproduct-title>h1{
+.allproduct-title>p{
     margin:0;
+    font-size: 2.3rem;
 }
-
 .allproduct-title > i{
     display: flex;
     align-items: flex-end;
     padding-left: 10px;
 }
-
-.select-1{
+.select-1{   
     width: 100%;
 }
 .select-1 > select{
@@ -51,11 +77,10 @@ hr{
     margin: 0 10px 0 10px;
     cursor: pointer;
 }
-
 .product{
-    width: 200px;
+    width: 209px;
     text-align: center;
-    padding: 25px;    
+    padding: 5px;    
 }
 .product-1{
     width: 100%;
@@ -63,13 +88,15 @@ hr{
 }
 .product-img{
     width: 100%;
+    height: 215px;
     background-color: white;
 }
 .product-img > img{
     width: 100%;
+    height: 100%;
 }
 .product-btn{
-    background-color: rgb(214, 237, 252);
+    background-color: #E0E0E0;
     padding: 6px 0px 5px 0px;
     width: 100%;
     transition: 0.5s;
@@ -81,14 +108,23 @@ hr{
 .btn:hover{
     background-color: white;
 }
-
 .product-btn:hover {
     background-color: rgb(49, 48, 48);
+}
+.form1{
+    display: flex;
+}
+.adver{
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+.adver > img{
+    width: 100%;
 }
 
 @media screen and (max-width:550px){
     .body-1{
-        margin: auto;
         width: 100%;
     }
     .product-type{
@@ -127,5 +163,17 @@ hr{
         padding: 6px 0px 5px 0px;
         width: 100%;
     }
-    
+    .select-1 > select{
+        font-size: 0.3rem;
+        width: 50px;
+        height: 30px;
+        text-align: center;
+        appearance: none;
+        margin: 0 10px 0 10px;
+        cursor: pointer;
+    }
+}
+
+.all-type{
+    border-radius: 5px;
 }

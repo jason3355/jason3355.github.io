@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新增規格</title>
-    <link rel="stylesheet" href="../css/hamburger.css">
+    <link rel="stylesheet" href="../css/hamburgers.css">
     <link rel="stylesheet" href="../css/edit-new-spe.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/background.css">
@@ -17,29 +17,27 @@
         <label for="check" class="check">
             ☰
         </label>
+        <a href="../html/SIndexs.html" class="header_logo">
+            <img src="../Img/logo.ico">
+        </a>
         <nav class="manu"> 
-            <ul>                
-                    <li>
-                        <a href="../html/SIndex.html">首頁</a>
-                    </li>
-                    <li>
-                        <a href="../html/all_product.html">商品管理</a>
-                    </li>
-                    <li>
-                        <a href="../html/order_management.html">訂單管理</a>
-                    </li>
-                    <li>
-                        <a href="##">貨運管理系統</a>
-                    </li>
-                    <li>
-                        <a href="../html/inaccount.html">進帳資料</a>
-                    </li>
-                    <li>
-                        <a href="##">績效分析</a>
-                    </li>
-                    <li>
-                        <a href="../html/Sbasic.html">修改會員資料</a>
-                    </li>                                   
+            <ul class="manu-ul">                
+                <li><a href="../html/all_product.html">商品管理</a></li>
+                <li class="order-manu">
+                    <span>訂單管理</span>
+                    <ul class="order-ul">
+                        <li><a href="../html/order_management.html">即時訂單資訊</a></li>
+                        <li><a href="../html/order_management.html">已完成訂單</a></li>
+                        <li><a href="../html/order_management.html">不成立訂單</a></li>
+                        <li><a href="../html/order_management.html">運送中訂單</a></li>
+                        <li><a href="../html/order_management.html">自取訂單</a></li>
+                        <li><a href="../html/order_management.html">cargo貨運管理</a></li>
+                    </ul>
+                </li>
+                <li><a href="##">貨運管理系統</a></li>
+                <li><a href="../html/inaccount.html">進帳資料</a></li>
+                <li><a href="##">績效分析</a></li>
+                <li><a href="../html/Sbasic.html">修改會員資料</a></li>                                   
             </ul> 
         </nav>          
             <div class="header-menu-logo">
@@ -48,17 +46,15 @@
                     <img src="../Img/wincube.png">
                 </div>
                 </a> 
-            </div>   
+            </div>  
             <div class="sign-up">
                 <form>
                     <input type="submit" name="Log out" value="登出">
                 </form>
-            </div>  
+            </div>   
             <div class="search">                
                 <input type="search" class="search-search">
-                <button class="search-btn" type="button">
-                    搜尋
-                </button>
+                <input class="button-btn" id="search-btn" type="submit" name="搜尋" value="搜尋">
             </div>   
     </header>
     <marquee direction="right" height="30" scrollamount="10" behavior="scroll">5/29伺服器測試</marquee>
@@ -113,7 +109,7 @@
                         </span>
                     </button>
                 </div>
-                <input type="button" name="type" onclick="edit()">
+                <input type="button" class="sent-out" name="type" value="送出" onclick="edit()">
             </div>
         </div>
         <div class="all-type">
@@ -127,6 +123,13 @@
                 </div>
             </div>
             <div class="type">
+                <label id="option-1">顏色</label>
+                <div>
+                    <label id="option-2">尺寸</label>
+                    <div>
+                        <input type="text" placeholder="請輸入金額">
+                    </div>
+                </div>
             </div>
         </div>
 

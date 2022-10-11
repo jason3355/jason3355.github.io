@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <link rel="stylesheet" href="../css/chart.css">
+        <link rel="stylesheet" href="../css/hamburgers.css">
+        <link rel="stylesheet" href="../css/background.css">
+    </head>
+<body>
+    <header class="header"> 
+        <input type="checkbox" id="check">           
+        <label for="check" class="check">
+            ☰
+        </label>
+        <a href="../html/SIndexs.html" class="header_logo">
+            <img src="../Img/logo.ico">
+        </a>
+        <nav class="manu"> 
+            <ul class="manu-ul">                
+                <li><a href="../html/all_product.html">商品管理</a></li>
+                <li class="order-manu">
+                    <span>訂單管理</span>
+                    <ul class="order-ul">
+                        <li><a href="../html/order_management.html">即時訂單資訊</a></li>
+                        <li><a href="../html/order_management.html">已完成訂單</a></li>
+                        <li><a href="../html/order_management.html">不成立訂單</a></li>
+                        <li><a href="../html/order_management.html">運送中訂單</a></li>
+                        <li><a href="../html/order_management.html">自取訂單</a></li>
+                        <li><a href="../html/order_management.html">cargo貨運管理</a></li>
+                    </ul>
+                </li>
+                <li><a href="##">貨運管理系統</a></li>
+                <li><a href="../html/inaccount.html">進帳資料</a></li>
+                <li><a href="##">績效分析</a></li>
+                <li><a href="../html/Sbasic.html">修改會員資料</a></li>                                   
+            </ul> 
+        </nav>          
+            <div class="header-menu-logo">
+                <a href="../html/SIndex.html" class="logo-a">
+                <div>
+                    <img src="../Img/wincube.png">
+                </div>
+                </a> 
+            </div>  
+            <div class="sign-up">
+                <form>
+                    <input type="submit" name="Log out" value="登出">
+                </form>
+            </div>   
+            <div class="search">                
+                <input type="search" class="search-search">
+                <input class="button-btn" id="search-btn" type="submit" name="搜尋" value="搜尋">
+            </div>   
+    </header>
+    <div class="body-1">
+        <p>績效分析</p>
+    </div>
+    <script>
+        var infoset = [59.5, 17.2, 9.6, 7.6, 5.5, 0.5]
+        var name_name=["無","法","底","抗","的","恩"]
+        var span = 1000, ceil = 300;
+        var rn=[];
+        for(let i=0;i<=100;i++){
+            rn[i]=i;
+        }
+        var scalespan = d3.scaleLinear()
+            .domain([0, d3.max(infoset)])
+            .range([0, 500]);
+        var screen = d3.select(".body-1").append("svg")
+            .attr("width", span)
+            .attr("height", ceil)
+            .attr("class","tbody")
+            .attr("x",120)
+            .attr("y",150)
+            .append("g").attr("transform", "translate(5,20)");
+        screen.selectAll("textt")
+            .data(name_name).enter().append("textt")
+            .attr("y", function(d, i){ return i*42; })
+            .attr("x", function(d){ return scalespan(d);})
+            .text(function(d) {return d;})
+            .attr("fill", "blue").attr("dy",".85em");
+        var rule = screen.selectAll("rect")
+            .data(infoset).enter()
+            .append("rect")
+            .attr("width", function(d){ return scalespan(d);})
+            .attr("height", 30)
+            .attr("y", function(d, i){ return i*40; })
+            .attr("fill", "#b3ccff")
+            .attr("class","rect");
+        screen.selectAll("text")
+            .data(infoset).enter().append("text")
+            .attr("y", function(d, i){ return i*42; })
+            .attr("x", function(d){ return scalespan(d);})
+            .text(function(d) {return d;})
+            .attr("fill", "blue").attr("dy",".85em");
+    </script>
+</body>
+</html>

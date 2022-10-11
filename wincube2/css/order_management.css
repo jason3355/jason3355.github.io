@@ -2,6 +2,7 @@ body{
     margin: 0;
 }
 .body-1{
+    margin-top: 4rem;
     min-height: 100%;
     width: 100%;
 }
@@ -12,6 +13,9 @@ body{
     margin: auto;
     padding-left: 30px;
     text-align: left;
+}
+footer{
+    margin-top: 150px;
 }
 
 .body-2{
@@ -68,11 +72,9 @@ table{
     border-collapse: collapse
 
 }
-
 .order-1 > tbody > tr{
     border: 1px solid black;
 }
-
 .order-1 > tbody > tr >td{
     text-align: center;
     border-right: 1px solid black;
@@ -80,11 +82,20 @@ table{
 .order{
     width: 1000px;
 }
-
 .order-title{
     background-color: bisque;
 }
-
+.order-imformation:hover{
+    background-color: rgb(165, 159, 159);
+    cursor: pointer;
+}
+.order-imformation > td > a{
+    color: black;
+    text-decoration: none;
+}
+#button-btn-1{
+    margin-left: 10px;
+}
 @media screen and (max-width:550px) {
     .body-1{
         font-size: 12px;
@@ -112,7 +123,6 @@ table{
         display: block;
         height: 30px;
     }
-
     .link{
         background-color: bisque;        
         position: absolute;
@@ -124,47 +134,39 @@ table{
         transform: translateX(-200%);
         transition:0.5s;
     }
-
     .link-hide:hover ~ .link{
         left: 0px;
         transform: translateX(0%);
-    }
-    
+    }    
     .link > a{
         cursor: pointer;    
         color: black;
         text-decoration: none;
         margin: 5px 0px 5px 0px;
         transition: 0.5s;
-    }
-    
+    }    
     .link > a:hover{
         background-color: gray;
         color: white;
-    }
-    
+    }    
     .date{
         width: 200px;
         margin-bottom:30px ;
-    }
-    
+    }    
     .date > select{
         width: 50px;
         height: 30px;
-    }
-    
+    }    
     table{
         border: 1px solid black;
         font-size: 12px;
         width: 100%;
         border-collapse: collapse
     
-    }
-    
+    }    
     .order-1 > tbody > tr{
         border: 1px solid black;
-    }
-    
+    }    
     .order-1 > tbody > tr >td{
         text-align: center;
         border-right: 1px solid black;
@@ -176,8 +178,7 @@ table{
     
     .order-title{
         background-color: bisque;
-    }
-    
+    }    
 }
 @media screen and (min-width:550px) and (max-width:1024px) {
     .body-1{
@@ -191,16 +192,13 @@ table{
         margin: auto;
         padding-left: 30px;
         text-align: left;
-    }
-    
+    }    
     .body-2{
         display: flex;
-    }
-    
+    }    
     .link-hide{
         display: none;
-    }
-    
+    }    
     .link{
         width: 130px;
         height: 250px;
@@ -208,42 +206,35 @@ table{
         display: grid;
         border-right: 1px solid black;
     }    
-    
     .link > a{
         cursor: pointer;    
         color: black;
         text-decoration: none;
         margin: 5px 0px 5px 0px;
         transition: 0.5s;
-    }
-    
+    }    
     .link > a:hover{
         background-color: gray;
         color: white;
-    }
-    
+    }    
     .date{
         width: 500px;
         margin-bottom:30px ;
-    }
-    
+    }    
     .date > select{
         width: 100px;
         height: 30px;
-    }
-    
+    }    
     table{
         border: 1px solid black;
         font-size:18px ;
         width: 100%;
         border-collapse: collapse
     
-    }
-    
+    }    
     .order-1 > tbody > tr{
         border: 1px solid black;
-    }
-    
+    }    
     .order-1 > tbody > tr >td{
         text-align: center;
         border-right: 1px solid black;
@@ -252,10 +243,8 @@ table{
         margin: auto;
         width: 500px;
         padding: 10px;
-    }
-    
+    }    
     .order-title{
         background-color: bisque;
-    }
-    
+    }    
 }

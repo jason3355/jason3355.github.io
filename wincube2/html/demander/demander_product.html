@@ -8,11 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/hamburger.css">
+    <link rel="stylesheet" href="../../css/hamburgers.css">
     <link rel="stylesheet" href="../../css/demander_product.css">
     <link rel="stylesheet" href="../../css/background.css">
-    <link rel="icon" href="../../Img/logo.ico" type="image/x-icon"/><!--分頁LOGO-->
-    
+    <link rel="icon" href="../../Img/logo.ico" type="image/x-icon"/><!--分頁LOGO-->    
 </head>
 <body>
     <header class="header"> 
@@ -20,26 +19,15 @@
         <label for="check" class="check">
             ☰
         </label>
+        <a href="../demander/DIndex.html" class="header_logo">
+            <img src="../../Img/logo.ico">
+        </a>
         <nav class="manu"> 
-            <ul>                
-                    <li>
-                        <a href="../demander/DIndex.html">首頁</a>
-                    </li>
-                    <li>
-                        <a href="../demander/demander_allproduct.html">所有商品</a>
-                    </li>
-                    <li>
-                        <a href="../demander/demander_management.html">需求管理</a>
-                    </li>
-                    <li>
-                        <a href="../demander/demander_car.html">需求車</a>
-                    </li>
-                    <li>
-                        <a href="../demander/hope_list.html">願望清單</a>
-                    </li>
-                    <li>
-                        <a href="../demander/Dbasic.html">會員資料</a>
-                    </li>                                 
+            <ul class="manu-ul">                
+                <li><a href="../demander/demander_allproduct.html">所有商品</a></li>
+                <li><a href="../demander/demander_management.html">需求管理</a></li>
+                <li><a href="../demander/demander_car.html">需求車</a></li>
+                <li><a href="../demander/Dbasic.html">會員資料</a></li>                                 
             </ul> 
         </nav>          
             <div class="header-menu-logo">
@@ -56,12 +44,9 @@
             </div>   
             <div class="search">                
                 <input type="search" class="search-search">
-                <button class="search-btn" type="button">
-                    搜尋
-                </button>
+                <input id="search-btn" class="button-btn" type="submit" name="搜尋" value="搜尋">
             </div>   
     </header>
-    <marquee direction="right" height="30" scrollamount="10" behavior="scroll">5/29伺服器測試</marquee>
     <div class="body-1">
         <div class="profile">  
             <div class="photo">
@@ -71,36 +56,29 @@
                     </div>
                 </div>
                 <div class="photo-button">
-                    <div>
-                        <img src="../../Img/logo.ico">
-                    </div>
-                    <div>
-                        <img src="../../Img/logo.ico">
-                    </div>
-                    <div>
-                        <img src="../../Img/logo.ico">
-                    </div> 
-                    <div>
-                        <img src="../../Img/logo.ico">
-                    </div>  
-                    <div>
-                        <img src="../../Img/logo.ico">
-                    </div>
-                    <div>
-                        <img src="../../Img/logo.ico">
-                    </div>
-                    <div>
-                        <img src="../../Img/logo.ico">
-                    </div>
-                    <div>
-                        <img src="../../Img/logo.ico">
-                    </div> 
-                    <div>
-                        <img src="../../Img/logo.ico">
-                    </div>  
-                    <div>
-                        <img src="../../Img/logo.ico">
-                    </div>    
+                    <ul>
+                        <li>
+                            <img src="../../Img/account.png">
+                        </li>
+                        <li>
+                            <img src="../../Img/account.png">
+                        </li>
+                        <li>
+                            <img src="../../Img/account.png">
+                        </li>
+                        <li>
+                            <img src="../../Img/account.png">
+                        </li>
+                        <li>
+                            <img src="../../Img/account.png">
+                        </li>
+                        <li>
+                            <img src="../../Img/account.png">
+                        </li>
+                        <li>
+                            <img src="../../Img/account.png">
+                        </li>
+                    </ul>  
                 </div>
             </div>
             <div class="profile-1">
@@ -112,13 +90,7 @@
                         <div class="product-type"> <!--類別-->
                                 <label>類別</label>                                
                                 <label>家具</label>                                
-                        </div>
-                        <!--單價-->
-                        <!-- <div class="product-price"> 
-                                <label>金額</label>                                 
-                                <label>899元</label>                       
-                        </div>    -->
-                        
+                        </div>                        
                         <div class="product-volume"> <!--體積-->                            
                                 <label>體積</label>                                
                                 <div>
@@ -126,8 +98,7 @@
                                     寬：50cm
                                     高：80cm
                                 </div>                                                                                   
-                        </div>
-                                              
+                        </div>                                              
                         <div class="product-spe"> <!--規格-->                            
                             <label>規格</label>  
                             <div class="spe">                                    
@@ -143,12 +114,11 @@
                                 </div>                                    
                             </div>                                                 
                         </div>
-
                         <div class="cargo"> <!--運送方式-->
                             <label>運送方式</label>                            
                             <div class="give">
                                 <input type="radio" id="home_give" name="132">
-                                <label for="home_give">宅配</label>
+                                <label class="give-1" for="home_give">宅配</label>
                             </div>  
                             <div class="give-car">
                                 <img src="../../Img/CAR.png">
@@ -161,7 +131,6 @@
                                 <img src="../../Img/packet.png">
                             </div>                    
                         </div>
-
                         <div class="amount">
                             <label>
                                 數量
@@ -186,12 +155,10 @@
                         </div>                                            
                 </div>  
                 <div class="product_btn">
-                    <button type="button">
-                        加入需求車
-                    </button>                            
-                    <button type="button">
-                        加入願望清單
-                    </button>
+                    <input type="submit" class="button-btn" name="加入需求車" value="加入需求車">
+                    <input type="submit" class="button-btn" name="加入願望清單" value="加入願望清單">
+                        
+                    
                 </div>
             </form>              
             </div>

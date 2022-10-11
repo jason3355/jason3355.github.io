@@ -9,32 +9,50 @@
 <body>
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script>
-    const width=window.innerWidth;
-    const height=window.innerHeight;
-    const range=[];
-    for(let i=0;i<=15;i++){
-            range[i]=i;
-        };
-    const svg=d3.select('body')
-      .append('svg')
-        .attr('width',width)
-        .attr('height',height);
-      let i=0;
-    setInterval(()=>{      
-      const cir=range.map((d)=>({
-      x:d*50+60,
-      y:d*20+Math.sin(d*0.5+i)*200,
-      }));       
-      const circle=svg.selectAll('circle').data(cir);
-      circle.enter().append('circle').attr('r',10);
-      circle
-        .attr('cx',(d)=>d.x)
-        .attr('cy',(d)=>d.y);
-      i+=0.1;
-      
-    },100);
+    import * as echarts from 'echarts';
+    // const width=window.innerWidth;
+    // const height=window.innerHeight;
+    // const range=[];
+    // for(let i=0;i<=15;i++){
+    //         range[i]=i;
+    //     };
+    // const svg=d3.select('body')
+    //   .append('svg')
+    //     .attr('width',width)
+    //     .attr('height',height);
+    //   let i=0;
+    // setInterval(()=>{      
+    //   const cir=range.map((d)=>({
+    //   x:d*50+60,
+    //   y:d*20+Math.sin(d*0.5+i)*200,
+    //   }));       
+    //   const circle=svg.selectAll('circle').data(cir);
+    //   circle.enter().append('circle').attr('r',10);
+    //   circle
+    //     .attr('cx',(d)=>d.x)
+    //     .attr('cy',(d)=>d.y);
+    //   i+=0.1;      
+    // },100);
     
-
+    var myChart = echarts.init(document.getElementById('main'));
+// 绘制图表
+myChart.setOption({
+  title: {
+    text: 'ECharts 入门示例'
+  },
+  tooltip: {},
+  xAxis: {
+    data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+  },
+  yAxis: {},
+  series: [
+    {
+      name: '销量',
+      type: 'bar',
+      data: [5, 20, 36, 10, 10, 20]
+    }
+  ]
+});
   </script>
 </body>
 </html>

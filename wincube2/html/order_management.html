@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../Img/logo.ico" type="image/x-icon"/><!--分頁LOGO-->
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/hamburger.css">
+    <link rel="stylesheet" href="../css/hamburgers.css">
     <link rel="stylesheet" href="../css/order_management.css">
     <link rel="stylesheet" href="../css/background.css">   
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
+    <link rel="stylesheet" href="../css/to-top.css">
+    <script src="../js/to-top.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <title>訂單管理</title>
 </head>
 <body>
@@ -19,29 +20,27 @@
         <label for="check" class="check">
             ☰
         </label>
+        <a href="../html/SIndexs.html" class="header_logo">
+            <img src="../Img/logo.ico">
+        </a>
         <nav class="manu"> 
-            <ul>                
-                    <li>
-                        <a href="../html/SIndex.html">首頁</a>
-                    </li>
-                    <li>
-                        <a href="../html/all_product.html">商品管理</a>
-                    </li>
-                    <li>
-                        <a href="../html/order_management.html">訂單管理</a>
-                    </li>
-                    <li>
-                        <a href="##">貨運管理系統</a>
-                    </li>
-                    <li>
-                        <a href="../html/inaccount.html">進帳資料</a>
-                    </li>
-                    <li>
-                        <a href="##">績效分析</a>
-                    </li>
-                    <li>
-                        <a href="../html/Sbasic.html">修改會員資料</a>
-                    </li>                                   
+            <ul class="manu-ul">                
+                <li><a href="../html/all_product.html">商品管理</a></li>
+                <li class="order-manu">
+                    <span>訂單管理</span>
+                    <ul class="order-ul">
+                        <li><a href="../html/order_management.html">即時訂單資訊</a></li>
+                        <li><a href="../html/order_management.html">已完成訂單</a></li>
+                        <li><a href="../html/order_management.html">不成立訂單</a></li>
+                        <li><a href="../html/order_management.html">運送中訂單</a></li>
+                        <li><a href="../html/order_management.html">自取訂單</a></li>
+                        <li><a href="../html/order_management.html">cargo貨運管理</a></li>
+                    </ul>
+                </li>
+                <li><a href="##">貨運管理系統</a></li>
+                <li><a href="../html/inaccount.html">進帳資料</a></li>
+                <li><a href="##">績效分析</a></li>
+                <li><a href="../html/Sbasic.html">修改會員資料</a></li>                                   
             </ul> 
         </nav>          
             <div class="header-menu-logo">
@@ -58,261 +57,117 @@
             </div>   
             <div class="search">                
                 <input type="search" class="search-search">
-                <button class="search-btn" type="button">
-                    搜尋
-                </button>
+                <input class="button-btn" id="search-btn" type="submit" name="搜尋" value="搜尋">
             </div>   
     </header>
     <div class="body-1">
-        <div class="title">
-            <span>
-                即時訂單資訊
-            </span>
-            <hr>
-        </div>
-        <div class="body-2">
-            <div class="link-hide">
-                <label class="material-symbols-outlined">
-                    chevron_right
-                </label>
+        <form action="##" id="form1">
+            <div class="title">
+                <span id="title">即時訂單資訊</span>
+                <input type="hidden" name="即時訂單資訊" value="即時訂單資訊" id="hidden">
+                <hr>
             </div>
-            <div class="link">
-                <a href="##">
-                    即時訂單資訊
-                </a>
-                <a href="##">
-                    已完成訂單
-                </a>
-                <a href="##">
-                    不成立訂單
-                </a>
-                <a href="##">
-                    運送中訂單
-                </a>
-                <a href="##">
-                    自取訂單
-                </a>
-                <a href="##">
-                    cargo貨運管理
-                </a>
-            </div>
-            <div class="order">
-                <div class="date">
-                    <select>
-                        <option value="">123</option>
-                    </select>
-                    -
-                    <select>
-                        <option value="">123</option>
-                    </select>
+            <div class="body-2">
+                <div class="link-hide">
+                    <label class="material-symbols-outlined">chevron_right</label>
                 </div>
-                <table class="order-1">
-                    <tr class="order-title">
-                        <td>
-                            商品
-                        </td> 
-                        <td>
-                            日期
-                        </td>                       
-                        <td>
-                            件數
-                        </td>                        
-                        <td>
-                            買家
-                        </td>
-                        <td>
-                            需求端
-                        </td>
-                        <td>
-                            訂單金額
-                        </td>                        
-                    </tr>
-                    <tr>
-                        <td>
-                            沙發
-                        </td> 
-                        <td>
-                            2022/07/03
-                        </td>                       
-                        <td>
-                            1
-                        </td>                        
-                        <td>
-                            彭喆珉
-                        </td>
-                        <td>
-                            木匠之家
-                        </td>
-                        <td>
-                            1000
-                        </td>       
-                    </tr>
-                    <tr>
-                        <td>
-                            沙發
-                        </td> 
-                        <td>
-                            2022/07/03
-                        </td>                       
-                        <td>
-                            1
-                        </td>                        
-                        <td>
-                            彭喆珉
-                        </td>
-                        <td>
-                            木匠之家
-                        </td>
-                        <td>
-                            1000
-                        </td>         
-                    </tr>
-                    <tr>
-                        <td>
-                            沙發
-                        </td> 
-                        <td>
-                            2022/07/03
-                        </td>                       
-                        <td>
-                            1
-                        </td>                        
-                        <td>
-                            彭喆珉
-                        </td>
-                        <td>
-                            木匠之家
-                        </td>
-                        <td>
-                            1000
-                        </td>       
-                    </tr>
-                    <tr>
-                        <td>
-                            沙發
-                        </td> 
-                        <td>
-                            2022/07/03
-                        </td>                       
-                        <td>
-                            1
-                        </td>                        
-                        <td>
-                            彭喆珉
-                        </td>
-                        <td>
-                            木匠之家
-                        </td>
-                        <td>
-                            1000
-                        </td>         
-                    </tr>
-                    <tr>
-                        <td>
-                            沙發
-                        </td> 
-                        <td>
-                            2022/07/03
-                        </td>                       
-                        <td>
-                            1
-                        </td>                        
-                        <td>
-                            彭喆珉
-                        </td>
-                        <td>
-                            木匠之家
-                        </td>
-                        <td>
-                            1000
-                        </td>       
-                    </tr>
-                    <tr>
-                        <td>
-                            沙發
-                        </td> 
-                        <td>
-                            2022/07/03
-                        </td>                       
-                        <td>
-                            1
-                        </td>                        
-                        <td>
-                            彭喆珉
-                        </td>
-                        <td>
-                            木匠之家
-                        </td>
-                        <td>
-                            1000
-                        </td>         
-                    </tr>
-                    <tr>
-                        <td>
-                            沙發
-                        </td> 
-                        <td>
-                            2022/07/03
-                        </td>                       
-                        <td>
-                            1
-                        </td>                        
-                        <td>
-                            彭喆珉
-                        </td>
-                        <td>
-                            木匠之家
-                        </td>
-                        <td>
-                            1000
-                        </td>       
-                    </tr>
-                    <tr>
-                        <td>
-                            沙發
-                        </td> 
-                        <td>
-                            2022/07/03
-                        </td>                       
-                        <td>
-                            1
-                        </td>                        
-                        <td>
-                            彭喆珉
-                        </td>
-                        <td>
-                            木匠之家
-                        </td>
-                        <td>
-                            1000
-                        </td>         
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-    <footer>          
-        <div class="footer">
-            <div class="footer-img">
-                <img src="../Img/logo.ico">
-            </div>     
-            <div class="footer-link">
-                <div>
-                    <a href="##">
-                        關於我們
-                    </a>
-                    <a href="##">
-                        聯絡我們
-                    </a>
-                    <a href="##">
-                        幫助中心
-                    </a>
+                <div class="link">
+                    <a href="##" onclick="print(1)">即時訂單資訊</a>
+                    <a href="##" onclick="print(2)">已完成訂單</a>
+                    <a href="##" onclick="print(3)">不成立訂單</a>
+                    <a href="##" onclick="print(4)">運送中訂單</a>
+                    <a href="##" onclick="print(5)">自取訂單</a>
+                    <a href="##" onclick="print(6)">cargo貨運管理</a>
+                </div>
+                <div class="order">
+                    <div class="date">
+                        <input type="date" name="" id="date_1"> to <input type="date" name="" id="date_2">
+                        <input class="button-btn" id="button-btn-1" type="submit" name="查詢" value="查詢">
+                    </div>
+                    <table class="order-1">
+                        <tr class="order-title">
+                            <td>貨運編號</td> 
+                            <td>下單時間</td>                       
+                            <td>數量</td>                        
+                            <td>訂單金額</td>
+                            <td>需求端</td>
+                            <td>商品</td>                        
+                        </tr>                        
+                        <tr class="order-imformation">                                                      
+                            <td><a href="##">C0000001</a></td>
+                            <td>2022/07/03 16-00-00</td>                       
+                            <td>1</td>                        
+                            <td>3022</td>
+                            <td>木匠之家</td>
+                            <td>沙發</td>                                                             
+                        </tr>
+                        <tr class="order-imformation">
+                            <td><a href="##">C0000001</a></td> 
+                            <td>2022/07/03 16-00-00</td>                       
+                            <td>1</td>                        
+                            <td>3022</td>
+                            <td>木匠之家</td>
+                            <td>沙發</td>         
+                        </tr>                        
+                    </table>
                 </div>
             </div>
+        </form>
+        <div class="goTop">
+            <a href="#" class="goTopBtn jq-goTop">
+                <img src="../Img/top.png">
+            </a>
         </div>
-        <div class="footer-footer">
-            @wincube
-        </div>
-    </footer>
+    </div>    
+    <script>
+        function print(a){
+            var b=document.getElementById('title');
+            var c=document.getElementById('hidden');
+            var d=document.getElementById('date_1');
+            var e=document.getElementById('date_2');
+            if(a==1){
+                b.innerHTML="即時訂單資訊";
+                c.name="即時訂單資訊";
+                c.value="即時訂單資訊";
+                d.name="即時訂單資訊";
+                e.name="即時訂單資訊";
+            }
+            if(a==2){
+                b.innerHTML="已完成訂單";
+                c.name="已完成訂單";
+                c.value="已完成訂單";
+                d.name="已完成訂單";
+                e.name="已完成訂單";
+            }
+            if(a==3){
+                b.innerHTML="不成立訂單";
+                c.name="不成立訂單";
+                c.value="不成立訂單";
+                d.name="不成立訂單";
+                e.name="不成立訂單";
+            }
+            if(a==4){
+                b.innerHTML="運送中訂單";
+                c.name="運送中訂單";
+                c.value="運送中訂單";
+                d.name="運送中訂單";
+                e.name="運送中訂單";
+            }
+            if(a==5){
+                b.innerHTML="自取訂單";
+                c.name="自取訂單";
+                c.value="自取訂單";
+                d.name="自取訂單";
+                e.name="自取訂單";
+            }
+            if(a==6){
+                b.innerHTML="cargo貨運管理";
+                c.name="cargo貨運管理";
+                c.value="cargo貨運管理";
+                d.name="cargo貨運管理";
+                e.name="cargo貨運管理";
+            }
+        }
+    </script>
 </body>
 </html>

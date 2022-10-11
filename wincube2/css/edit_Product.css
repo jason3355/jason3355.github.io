@@ -5,28 +5,23 @@ body{
 .edit-new-spe{
     width: 200px;
     background-color: burlywood;
-    margin-left: 100px;
+    margin:0;
     display: flex;
     justify-content: center;
+    box-shadow: 0px 0px 3px #D0D0D0;
 }
 .edit-new-spe > a{
     text-decoration: none;
     color: black;
 }
-
 /* 新增規格結束  */
 .body-1{
     width: 100%;
     min-height: 100%;
-    margin: auto;
+    margin-top:5rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
-.search{
-    width: 100%;
-    display: flex;
-    justify-content: right;
 }
 /* profile */
 .profile{
@@ -58,13 +53,33 @@ body{
     border: 1px dashed black;
     cursor: pointer;
 }
+/* icon */
+.material-symbols-outlined {
+    padding-top: 50px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+#icon-left{
+    width: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+#icon-right{
+    width: 10px;
+    cursor: pointer;
+}
 .photo-button{
     border: solid black 1px;
+    display: flex;
+    justify-content: center;
     width: 100%;
 }
 .photo-button > div{ 
     display: inline-flex;   
-    width: 120px;
+    width: 80px;
     padding: 5px;
     cursor: pointer;
 }
@@ -87,12 +102,9 @@ div > label{
 div > label > input{
     width: 100px; 
 }
-#product-spe{
-    display: block;
-}
 .product-spe > label{
     width: 120px;
-    padding-right: 14px;
+    padding-right: 0;
 }
 .edit-spe{
     margin: 0 0 10px 10px;
@@ -160,11 +172,18 @@ div > label > input{
     display: flex;
     justify-content:center ;
 }
-.product_btn > button{
+.product_btn > input{
     width: 50px;
     height: 40px;
     margin: 0 10px 0 10px;
 }
+
+.form div input{
+    border: 0.5px solid gray;
+    box-shadow: 0px 0px 3px #D0D0D0;
+}
+
+
 
 @media screen and (max-width:550px){
     .body-1{
@@ -555,6 +574,82 @@ div > label > input{
         height: 40px;
         margin: 0 10px 0 10px;
     }
-
-
 }
+
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+input[type=submit] {
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+select {
+
+    /* styling */
+    background-color: white;
+    border: thin solid blue;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5rem;
+    /* padding: 0.5em 3.5em 0.5em 1em; */
+    padding:0.3rem 3rem 0.1rem 0.3rem;
+  
+    /* reset */
+  
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+
+  /* arrows */
+
+select.classic {
+    background-image:
+      linear-gradient(45deg, transparent 50%, blue 50%),
+      linear-gradient(135deg, blue 50%, transparent 50%),
+      linear-gradient(to right, skyblue, skyblue);
+    background-position:
+      calc(100% - 20px) calc(1rem + 2px),
+      calc(100% - 15px) calc(1rem + 2px),
+      100% 0;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2.5rem 2.5rem;
+    background-repeat: no-repeat;
+  }
+  
+  select.classic:focus {
+    background-image:
+      linear-gradient(45deg, white 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, white 50%),
+      linear-gradient(to right, gray, gray);
+    background-position:
+      calc(100% - 15px) 1rem,
+      calc(100% - 20px) 1rem,
+      100% 0;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2.5rem 2.5rem;
+    background-repeat: no-repeat;
+    border-color: grey;
+    outline: 0;
+  }

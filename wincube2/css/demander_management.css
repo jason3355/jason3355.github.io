@@ -1,11 +1,15 @@
 body{
     margin: 0;
 }
+.body{
+    display: flex;
+    margin-top: 4rem;
+}
 .body-2{
     width: 1000px;
     margin: auto;
-    padding-top:50px ;
-    font-size: 1.4rem;
+    padding-top:35px ;
+    font-size: 1rem;
 }
 
 .title-title{
@@ -18,23 +22,83 @@ body{
 }
 
 .title-title > p{
-   font-size:2.8rem
+   font-size:2.8rem;
+   margin: 0;
+}
+
+.select-all{
+    display: flex;
+    margin-bottom: 10px;    
+}
+.select-select{
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    appearance: none;
+    cursor: pointer;
+}
+.trash-can{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
+.trash-can input{
+    width: 100px;
+    height: 30px;
+    box-shadow: 0px 3px 3px #BEBEBE;
+    transition: 0.1s;
+}
+
+.trash-can input:active{
+    transform: scale(0.8);
+}
+
+.trash-can input:hover{
+    background-color: rgb(248, 37, 37);
+}
+
+.submit{
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 }
 
 .title{
     width: 100%;
-    border-bottom: 1px solid gray ;    
+    border: 1px solid gray ;   
+    border-bottom: none; 
     display: flex;
     height: 30px;
     align-items: center;
     justify-content: center;
-    background-color: bisque;
+    background-color: rgb(248, 225, 196);
+    padding-bottom: 20px;
+    padding-top: 10px;
 }
+
+.title-1{
+    padding: 10px 0 10px 0;
+}
+
 .title > div{
     padding: 0 50px 0 50px;
 }
+
+.ALL_choice input{
+    width: 30px;
+    height: 30px;
+}
+.choice input{
+    width: 30px;
+    height: 30px;
+}
 .profile{
     width: 100%;
+    border: 1px solid gray;
+    border-top: none;
 }
 .product{
     width: 100%;
@@ -54,7 +118,8 @@ body{
     align-items:center ;
 }
 .product-img{
-    width: 90px;
+    width: 100px;
+    object-fit: fill;
 }
 .product-img > img{
     width: 100%;
@@ -77,19 +142,23 @@ td{
     width: 160px;  
     padding-right: 20px;
 }
-.product-delete > div >button{
+
+
+.advert{
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.advert > img{
     width: 100%;
-    height: 200px;
-    background-color: rgb(235, 198, 198);
-    border:none;
-    cursor: pointer;
 }
 @media screen and (max-width:550px){
     .body-2{
         font-size: 12px;
         width: 300px;
         margin: auto;
-        padding-top:50px ;
+        padding-top:35px ;
     }
     .title{
         width: 100%;
@@ -122,6 +191,14 @@ td{
         display: flex;
         align-items: center;
     }
+    .ALL_choice input{
+        width: 20px;
+        height: 20px;
+    }
+    .choice input{
+        width: 20px;
+        height: 20px;
+    }
     .product-name{
         display: flex;
         align-items:center ;
@@ -139,8 +216,7 @@ td{
     .product-amount > div{
         display: flex;
         justify-content: center;
-    }
-    
+    }    
     table{border-collapse: collapse}
     .product-1{
         border-bottom: 1px solid #D0D0D0;
@@ -157,7 +233,7 @@ td{
         font-size: 18px;
         width: 600px;
         margin: auto;
-        padding-top:50px ;
+        padding-top:35px ;
     }
     .title{
         width: 100%;
@@ -190,6 +266,14 @@ td{
         display: flex;
         align-items: center;
     }
+    .ALL_choice input{
+        width: 25px;
+        height: 25px;
+    }
+    .choice input{
+        width: 25px;
+        height: 25px;
+    }
     .product-name{
         display: flex;
         align-items:center ;
@@ -214,10 +298,98 @@ td{
     table{border-collapse: collapse}
     .product-1{
         border-bottom: 1px solid #D0D0D0;
-    }
-    
+    }    
     td{
         width: 120px;  
         padding:0;
     }
 }
+footer{
+    margin-top: 100px;
+}
+input[type="checkbox"] {
+    /* ...existing styles */
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;    
+    border: 0.15em solid currentColor;
+    transform: translateY(-0.075em);
+  }  
+  input[type="checkbox"]::before {
+    background-color: black;
+    content: "";
+    width: 1.35rem;
+    height: 1.35rem;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+  }  
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+
+
+
+  select {
+
+    /* styling */
+    background-color: white;
+    border: thin solid blue;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5rem;
+    /* padding: 0.5em 3.5em 0.5em 1em; */
+    padding:0.3rem 3rem 0.1rem 0.3rem;
+  
+    /* reset */
+  
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+
+  /* arrows */
+
+select.classic {
+    background-image:
+      linear-gradient(45deg, transparent 50%, blue 50%),
+      linear-gradient(135deg, blue 50%, transparent 50%),
+      linear-gradient(to right, skyblue, skyblue);
+    background-position:
+      calc(100% - 20px) calc(1rem + 2px),
+      calc(100% - 15px) calc(1rem + 2px),
+      100% 0;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2.5rem 2.5rem;
+    background-repeat: no-repeat;
+  }
+  
+  select.classic:focus {
+    background-image:
+      linear-gradient(45deg, white 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, white 50%),
+      linear-gradient(to right, gray, gray);
+    background-position:
+      calc(100% - 15px) 1rem,
+      calc(100% - 20px) 1rem,
+      100% 0;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2.5rem 2.5rem;
+    background-repeat: no-repeat;
+    border-color: grey;
+    outline: 0;
+  }

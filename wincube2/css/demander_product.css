@@ -1,19 +1,19 @@
 body{
     margin: 0px;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-family: 微軟正黑體;
 }
 .body-1{
     width: 100%;
     min-height: 100%;
-    margin: auto;
+    margin-top: 5rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 /* profile */
 .profile{
-    width: 100%;
+    width: 1200px;
     display: flex;
     justify-content: center;
 }
@@ -39,13 +39,14 @@ body{
     border: solid rgb(168, 164, 164) 1px;
     width: 100%;
 }
-.photo-button > div{ 
+.photo-button > ul > li{ 
+    padding: 0;
     display: inline-block;   
     width: 80px;
     margin: 5px;
     cursor: pointer;    
 }
-.photo-button > div > img{
+.photo-button > ul > li > img{
     border: solid rgb(168, 164, 164) 1px;
     width: 100%;
 }
@@ -92,14 +93,6 @@ div > label{
 
 .give-car{
     width: 50px;
-}
-
-.give>label:nth-child(2){
-    width: 130px;
-}
-
-.cargo>div:nth-child(4){
-    width: 130px;
 }
 
 .give-car > img{
@@ -152,6 +145,10 @@ div > label{
     border-left: 0px;
     border-right: 0px;
 }
+.product-intro{
+    width: 100%;
+    padding: 0;
+}
 .product-intro > label{
     min-width: 100px;
 }
@@ -162,17 +159,19 @@ div > label{
 .product_btn{
     display: flex;
     justify-content:center ;
+    margin-bottom: 30px;
 }
-.product_btn > button{
+.product_btn > input{
     width: 100px;
     height: 40px;
     margin: 0 10px 0 10px;
+    cursor: pointer;
 }
 
 @media screen and (max-width:550px){
     .body-1{
         width: 100%;
-        margin: auto;
+        margin-top: 5rem;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -234,8 +233,7 @@ div > label{
     .profile-1{
         width: 500px;    
     }
-    .profile-2{
-        border: 1px solid black;
+    .profile-2{        
         padding-left:0px;
         padding-bottom: 30px;
         margin-bottom: 30px;
@@ -319,7 +317,7 @@ div > label{
     }
     .body-1{
         width: 100%;
-        margin: auto;
+        margin-top: 5rem;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -386,7 +384,6 @@ div > label{
         width: 500px;    
     }
     .profile-2{
-        border: 1px solid black;
         padding-left:0px;
         padding-bottom: 30px;
         margin-bottom: 30px;
@@ -475,7 +472,7 @@ div > label{
 @media screen and (min-width:550px) and (max-width:1024px){
     .body-1{
         width: 100%;
-        margin: auto;
+        margin-top: 5rem;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -533,7 +530,6 @@ div > label{
         width: 100%;
     }
     .profile-2{
-        border: 1px solid black;
         padding-left: 10px;
         margin-bottom: 30px;
     }
@@ -620,4 +616,56 @@ div > label{
     }
 
 
+}
+
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #000000;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #66B3FF;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }

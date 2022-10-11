@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../Img/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../../css/footer.css">
-    <link rel="stylesheet" href="../../css/hamburger.css">
+    <link rel="stylesheet" href="../../css/hamburgers.css">
     <link rel="stylesheet" href="../../css/background.css">
     <link rel="stylesheet" href="../../css/demander_management.css">
+    <link rel="stylesheet" href="../../css/to-top.css">
+    <script src="../../js/to-top.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>    
     <title>需求管理</title>
 </head>
 <body>
@@ -17,249 +19,587 @@
         <label for="check" class="check">
             ☰
         </label>
+        <a href="../demander/DIndex.html" class="header_logo">
+            <img src="../../Img/logo.ico">
+        </a>
         <nav class="manu"> 
-            <ul>                
-                    <li>
-                        <a href="../demander/DIndex.html">首頁</a>
-                    </li>
-                    <li>
-                        <a href="../demander/demander_allproduct.html">所有商品</a>
-                    </li>
-                    <li>
-                        <a href="../demander/demander_management.html">需求管理</a>
-                    </li>
-                    <li>
-                        <a href="../demander/demander_car.html">需求車</a>
-                    </li>
-                    <li>
-                        <a href="../demander/hope_list.html">願望清單</a>
-                    </li>
-                    <li>
-                        <a href="../demander/Dbasic.html">會員資料</a>
-                    </li>                                 
+            <ul class="manu-ul">                
+                <li><a href="../demander/demander_allproduct.html">所有商品</a></li>
+                <li><a href="../demander/demander_management.html">需求管理</a></li>
+                <li><a href="../demander/demander_car.html">需求車</a></li>
+                <li><a href="../demander/Dbasic.html">會員資料</a></li>                                 
             </ul> 
         </nav>          
             <div class="header-menu-logo">
-                <a href="../demander/DIndex.html" class="logo-a">
+                <a href="../../Index/Index.html" class="logo-a">
                 <div>
                     <img src="../../Img/wincube.png">
                 </div>
                 </a> 
-            </div> 
+            </div>  
             <div class="sign-up">
                 <form>
                     <input type="submit" name="Log out" value="登出">
                 </form>
-            </div>    
+            </div>   
             <div class="search">                
                 <input type="search" class="search-search">
-                <button class="search-btn" type="button">
-                    搜尋
-                </button>
+                <input id="search-btn" class="button-btn" type="submit" name="搜尋" value="搜尋">
             </div>   
     </header>
+    <div class="body">
         <div class="body-2">
             <div class="title-title">
-                <p>
-                    需求管理
-                </p>
+                <p>需求管理</p>
             </div>
+            <div class="select-all">
+                <select class="classic">
+                    <option>由新到舊</option>
+                    <option>由舊到新</option>                
+                </select>
+                <div class="trash-can">
+                    <input type="submit" class="submit" name="delete" value="刪除">
+                </div>
+            </div>
+            
             <div class="title">
                 <table>
                     <tr class="title-1">
                         <td>
                             <div class="ALL_choice">
-                                <input type="checkbox">
+                                <input type="checkbox" name="allchecked" id="allchecked" onclick="allchecked(this)">
                             </div>
                         </td>
                         <td>
                             <div class="name">
-                                <span>
-                                    商品名稱
-                                </span>
+                                <span>商品名稱</span>
                             </div>
                         </td>
                         <td>
                             <div class="type">
-                                <span>
-                                    規格
-                                </span>
+                                <span>規格</span>
                             </div>
                         </td>
                         <td>
                             <div class="price">
-                                <span>
-                                    單價
-                                </span>
+                                <span>單價</span>
                             </div>
                         </td>
                         <td>
                             <div class="amount">
-                                <span>
-                                    數量
-                                </span>
+                                <span>數量</span>
                             </div>
                         </td>
                         <td>
                             <div class="car">
-                                <span>
-                                    運送方式
-                                </span>
+                                <span>運送方式</span>
                             </div>
-                        </td>
-                        <td>
-                            <div class="car">
-                                <span>
-                                    操作
-                                </span>
-                            </div>
-                        </td>
+                        </td>                                               
                     </tr>
                 </table>
             </div>
             <div class="profile">
-                <div class="product">
+                <div class="product">                    
                     <table>                        
                         <tr class="product-1">                            
                             <td>
                                 <div class="choice">
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="checked" id="checked" onclick="checked1()">
                                 </div>
                             </td>
                             <td>
                                 <div class="product-name">
                                     <div class="product-img">
-                                        <img src="../../Img/product.png">
+                                        <img src="../../Img/sofa-2.jpg">
                                     </div>
-                                    <span>
-                                        沙發
-                                    </span>
+                                    <span>沙發</span>
                                 </div>
                             </td>
                             <td>
                                 <div class="product-type">
-                                    <div>
-                                        藍色
-                                   </div>
-                                   <div>
-                                        綠色
-                                  </div>
+                                    <div>藍色</div>
+                                   <div>綠色</div>
                                 </div>
                             </td>
                             <td>
                                 <div class="product-price">
-                                    <div>
-                                        NT100
-                                    </div>
-                                    <div>
-                                        NT150
-                                    </div>
+                                    <div>NT100</div>
+                                    <div>NT150</div>
                                 </div>
                             </td>
                             <td>
                                 <div class="product-amount">
-                                    <div>
-                                        10
-                                    </div>
-                                    <div>
-                                        10
-                                    </div>
+                                    <div>10</div>
+                                    <div>10</div>
                                 </div>
                             </td>
                             <td>
                                 <div class="product-car">
-                                    <div>
-                                        送至府上
-                                    </div>
+                                    <div>送至府上</div>
                                 </div>
-                            </td>
-                            <td>
-                                <div class="product-delete">
-                                    <div>
-                                        <button type="button">
-                                            刪除
-                                        </button>
-                                    </div>
-                                </div>
-                            </td>
-                            
-                        </tr>
-                       
-                        <tr class="product-1">
-                            
+                            </td>                                                        
+                        </tr>                       
+                        <tr class="product-1">                            
                             <td>
                                 <div class="choice">
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="checked" id="checked" onclick="checked1()">
                                 </div>
                             </td>
                             <td>
                                 <div class="product-name">
                                     <div class="product-img">
-                                        <img src="../../Img/product.png">
+                                        <img src="../../Img/sofa-2.jpg">
                                     </div>
-                                    <span>
-                                        沙發
-                                    </span>
+                                    <span>沙發</span>
                                 </div>
                             </td>
                             <td>
                                 <div class="product-type">
-                                    <div>
-                                        藍色
-                                   </div>
-                                   <div>
-                                        綠色
-                                  </div>
+                                    <div>藍色</div>
+                                   <div>綠色</div>
                                 </div>
                             </td>
                             <td>
                                 <div class="product-price">
-                                    <div>
-                                        NT100
-                                    </div>
-                                    <div>
-                                        NT150
-                                    </div>
+                                    <div>NT100</div>
+                                    <div>NT150</div>
                                 </div>
                             </td>
                             <td>
                                 <div class="product-amount">
-                                    <div>
-                                        10
-                                    </div>
-                                    <div>
-                                        10
-                                    </div>
+                                    <div>10</div>
+                                    <div>10</div>
                                 </div>
                             </td>
                             <td>
                                 <div class="product-car">
-                                    <div>
-                                        送至府上
-                                    </div>
+                                    <div>送至府上</div>
+                                </div>
+                            </td>                            
+                        </tr>
+                        <tr class="product-1">                            
+                            <td>
+                                <div class="choice">
+                                    <input type="checkbox" name="checked" id="checked" onclick="checked1()">
                                 </div>
                             </td>
                             <td>
-                                <div class="product-delete">
-                                    <div>
-                                        <button type="button">
-                                            刪除
-                                        </button>
+                                <div class="product-name">
+                                    <div class="product-img">
+                                        <img src="../../Img/sofa-2.jpg">
                                     </div>
+                                    <span>沙發</span>
                                 </div>
                             </td>
+                            <td>
+                                <div class="product-type">
+                                    <div>藍色</div>
+                                   <div>綠色</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-price">
+                                    <div>NT100</div>
+                                    <div>NT150</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-amount">
+                                    <div>10</div>
+                                    <div>10</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-car">
+                                    <div>送至府上</div>
+                                </div>
+                            </td>                            
+                        </tr>
+                        <tr class="product-1">                            
+                            <td>
+                                <div class="choice">
+                                    <input type="checkbox" name="checked" id="checked" onclick="checked1()">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-name">
+                                    <div class="product-img">
+                                        <img src="../../Img/sofa-2.jpg">
+                                    </div>
+                                    <span>沙發</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-type">
+                                    <div>藍色</div>
+                                   <div>綠色</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-price">
+                                    <div>NT100</div>
+                                    <div>NT150</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-amount">
+                                    <div>10</div>
+                                    <div>10</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-car">
+                                    <div>送至府上</div>
+                                </div>
+                            </td>                            
+                        </tr>
+                        <tr class="product-1">                            
+                            <td>
+                                <div class="choice">
+                                    <input type="checkbox" name="checked" id="checked" onclick="checked1()">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-name">
+                                    <div class="product-img">
+                                        <img src="../../Img/sofa-2.jpg">
+                                    </div>
+                                    <span>沙發</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-type">
+                                    <div>藍色</div>
+                                   <div>綠色</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-price">
+                                    <div>NT100</div>
+                                    <div>NT150</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-amount">
+                                    <div>10</div>
+                                    <div>10</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-car">
+                                    <div>送至府上</div>
+                                </div>
+                            </td>                            
+                        </tr>
+                        <tr class="product-1">                            
+                            <td>
+                                <div class="choice">
+                                    <input type="checkbox" name="checked" id="checked" onclick="checked1()">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-name">
+                                    <div class="product-img">
+                                        <img src="../../Img/sofa-2.jpg">
+                                    </div>
+                                    <span>沙發</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-type">
+                                    <div>藍色</div>
+                                   <div>綠色</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-price">
+                                    <div>NT100</div>
+                                    <div>NT150</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-amount">
+                                    <div>10</div>
+                                    <div>10</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-car">
+                                    <div>送至府上</div>
+                                </div>
+                            </td>                            
+                        </tr>
+                        <tr class="product-1">                            
+                            <td>
+                                <div class="choice">
+                                    <input type="checkbox" name="checked" id="checked" onclick="checked1()">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-name">
+                                    <div class="product-img">
+                                        <img src="../../Img/sofa-2.jpg">
+                                    </div>
+                                    <span>沙發</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-type">
+                                    <div>藍色</div>
+                                   <div>綠色</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-price">
+                                    <div>NT100</div>
+                                    <div>NT150</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-amount">
+                                    <div>10</div>
+                                    <div>10</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-car">
+                                    <div>送至府上</div>
+                                </div>
+                            </td>                            
+                        </tr>
+                        <tr class="product-1">                            
+                            <td>
+                                <div class="choice">
+                                    <input type="checkbox" name="checked" id="checked" onclick="checked1()">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-name">
+                                    <div class="product-img">
+                                        <img src="../../Img/sofa-2.jpg">
+                                    </div>
+                                    <span>沙發</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-type">
+                                    <div>藍色</div>
+                                   <div>綠色</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-price">
+                                    <div>NT100</div>
+                                    <div>NT150</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-amount">
+                                    <div>10</div>
+                                    <div>10</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-car">
+                                    <div>送至府上</div>
+                                </div>
+                            </td>                            
+                        </tr>
+
+                        <tr class="product-1">                            
+                            <td>
+                                <div class="choice">
+                                    <input type="checkbox" name="checked" id="checked" onclick="checked1()">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-name">
+                                    <div class="product-img">
+                                        <img src="../../Img/sofa-2.jpg">
+                                    </div>
+                                    <span>沙發</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-type">
+                                    <div>藍色</div>
+                                   <div>綠色</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-price">
+                                    <div>NT100</div>
+                                    <div>NT150</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-amount">
+                                    <div>10</div>
+                                    <div>10</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-car">
+                                    <div>送至府上</div>
+                                </div>
+                            </td>                            
+                        </tr>
+                        <tr class="product-1">                            
+                            <td>
+                                <div class="choice">
+                                    <input type="checkbox" name="checked" id="checked" onclick="checked1()">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-name">
+                                    <div class="product-img">
+                                        <img src="../../Img/sofa-2.jpg">
+                                    </div>
+                                    <span>沙發</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-type">
+                                    <div>藍色</div>
+                                   <div>綠色</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-price">
+                                    <div>NT100</div>
+                                    <div>NT150</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-amount">
+                                    <div>10</div>
+                                    <div>10</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-car">
+                                    <div>送至府上</div>
+                                </div>
+                            </td>                            
+                        </tr>
+                        <tr class="product-1">                            
+                            <td>
+                                <div class="choice">
+                                    <input type="checkbox" name="checked" id="checked" onclick="checked1()">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-name">
+                                    <div class="product-img">
+                                        <img src="../../Img/sofa-2.jpg">
+                                    </div>
+                                    <span>沙發</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-type">
+                                    <div>藍色</div>
+                                   <div>綠色</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-price">
+                                    <div>NT100</div>
+                                    <div>NT150</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-amount">
+                                    <div>10</div>
+                                    <div>10</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-car">
+                                    <div>送至府上</div>
+                                </div>
+                            </td>                            
+                        </tr>
+                        <tr class="product-1">                            
+                            <td>
+                                <div class="choice">
+                                    <input type="checkbox" name="checked" id="checked" onclick="checked1()">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-name">
+                                    <div class="product-img">
+                                        <img src="../../Img/sofa-2.jpg">
+                                    </div>
+                                    <span>沙發</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-type">
+                                    <div>藍色</div>
+                                   <div>綠色</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-price">
+                                    <div>NT100</div>
+                                    <div>NT150</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-amount">
+                                    <div>10</div>
+                                    <div>10</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="product-car">
+                                    <div>送至府上</div>
+                                </div>
+                            </td>                            
                         </tr>
                     </table>
-                    
-                    
-                    
-                    
-                    
-                    
                 </div>
-            </div>
-        </div>
-
+            </div>            
+        </div>            
+        <div class="goTop">
+            <a href="#" class="goTopBtn jq-goTop">
+                <img src="../../Img/top.png">
+            </a>
+        </div>      
     </div>
+    
+    <script>
+        function allchecked(obj){
+            var check_1=document.getElementsByName("checked");
+            var num=0;
+            if(obj.checked==1){
+                for(i=0;i<check_1.length;i++){
+                    check_1[i].checked=true;
+                }
+            }
+            else{
+                for(i=0;i<=check_1.length;i++){
+                    check_1[i].checked=false;
+                }
+            }                     
+        }
+        function checked1(){
+            var check_1=document.getElementsByName("checked");
+            var check_2=document.getElementsByName("allchecked");
+            var num=0;
+            for(i=0;i<check_1.length;i++){
+                if(check_1[i].checked==1){
+                    num+=1;
+                }
+                if(num==check_1.length){
+                    check_2[0].checked=true;
+                }
+                else{
+                    check_2[0].checked=false;
+                }
+            }
+        }
+    </script>
 </body>
 </html>

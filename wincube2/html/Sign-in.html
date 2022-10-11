@@ -10,114 +10,26 @@
 </head>
 <body>   
     <div class="body">
-        <div class="body-1">
-            <div class="title">
-                <img src="../Img/wincube.png">
-            </div>
-            <div class="all-submit">
-                <div class="select">
-                    <div id="supp">
-                        供給端
-                    </div>
-                    <div id="deman">
-                        需求端
-                    </div>
-                </div>
-                <div class="supplier" id="supplier">                    
-                    <div class="password">
-                        <form action="##">
-                            <input type="hidden" name="Sort" value="S">
-                            <div class="account">
-                                <span>電子信箱：</span>
-                                <input type="text" name="Account">
-                            </div>                
-                            <div class="password">
-                                <span>密碼：</span>
-                                <input type="password" name="Password">                                
-                            </div>  
-                            <div class="submit">
-                                <input type="submit">
-                            </div>                          
-                        </form> 
-                    </div>
-                    <div class="button">
-                        <div class="forget">
-                            <div>
-                                <a href="##">
-                                    忘記密碼
-                                </a>
-                            </div>
-                        </div>                        
-                    </div>
-                </div>
-
-                <div class="demander" id="demander">                    
-                    <div class="password">
-                        <form action="##">
-                            <input type="hidden" name="Sort" value="D">
-                            <div class="account">
-                                <spqn>電子信箱：</spqn>
-                                <input type="text" name="Account">
-                            </div>                
-                            <div class="password">
-                                <span>密碼：</span>
-                                <input type="password" name="Password">
-                            </div>  
-                            <div class="submit">
-                                <input type="submit">
-                            </div>                           
-                        </form> 
-                    </div>
-                    <div class="button">
-                        <div class="forget">
-                            <div>
-                                <a href="##">
-                                    忘記密碼
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="supplier">
+            <p>供給端</p>
+            <input type="text" name="供給端帳號" placeholder="帳號">
+            <input type="text" name="供給端密碼" placeholder="密碼">
+            <div class="supplier-1">
+                <input type="submit" name="登入" value="登入">
+                <a href="../html/forget.html">忘記密碼</a>
+            </div>            
         </div>
-    </div> 
-    
-    
-    
-    
+        <div class="demander">
+            <p>需求端</p>
+            <input type="text" name="需求端帳號" placeholder="帳號">
+            <input type="text" name="需求端密碼" placeholder="密碼">
+            <div class="demander-1">
+                <input type="submit" name="登入" value="登入">
+                <a href="../html/forget.html">忘記密碼</a>
+            </div>  
+        </div>
+    </div>
     <script>
-        var sup =document.getElementById("supp");
-        var deman =document.getElementById("deman");
-        var i;
-        var j;
-        sup.onclick = function(){
-            i =document.getElementById("demander");
-            j =document.getElementById("supplier");
-            i.style.display="none";
-            j.style.display="block";
-            sup.setAttribute("style",
-                "background-color:#EBD3E8;box-shadow:#272727 1px 1px 1px;opacity:1;"
-            );
-            deman.setAttribute("style",
-                "background-color:#F0F0F0;box-shadow:none;opacity: 0.5;"
-            );
-        }
-        deman.onclick=function(){
-            i =document.getElementById("demander");
-            j =document.getElementById("supplier");
-            i.style.display="block";
-            j.style.display="none";
-            sup.setAttribute("style",
-                "background-color:#F0F0F0;box-shadow:none;opacity: 0.5;"
-            );
-            deman.setAttribute("style",
-                "background-color:#EBD3E8;box-shadow:#272727 1px 1px 1px;opacity:1;"
-            );
-        }
-
-
     </script>
-    
 </body>
 </html>

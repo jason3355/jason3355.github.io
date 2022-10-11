@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>編輯商品</title>
-    <link rel="stylesheet" href="../css/hamburger.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/hamburgers.css">
     <link rel="stylesheet" href="../css/edit_Product.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/background.css">
+    <link rel="stylesheet" href="../css/background.css">    
     <link rel="icon" href="../Img/logo.ico" type="image/x-icon"/><!--分頁LOGO-->
 </head>
 <body>
@@ -17,29 +18,27 @@
         <label for="check" class="check">
             ☰
         </label>
+        <a href="../html/SIndexs.html" class="header_logo">
+            <img src="../Img/logo.ico">
+        </a>
         <nav class="manu"> 
-            <ul>                
-                    <li>
-                        <a href="../html/SIndex.html">首頁</a>
-                    </li>
-                    <li>
-                        <a href="../html/all_product.html">商品管理</a>
-                    </li>
-                    <li>
-                        <a href="../html/order_management.html">訂單管理</a>
-                    </li>
-                    <li>
-                        <a href="##">貨運管理系統</a>
-                    </li>
-                    <li>
-                        <a href="../html/inaccount.html">進帳資料</a>
-                    </li>
-                    <li>
-                        <a href="##">績效分析</a>
-                    </li>
-                    <li>
-                        <a href="../html/Sbasic.html">修改會員資料</a>
-                    </li>                                   
+            <ul class="manu-ul">                
+                <li><a href="../html/all_product.html">商品管理</a></li>
+                <li class="order-manu">
+                    <span>訂單管理</span>
+                    <ul class="order-ul">
+                        <li><a href="../html/order_management.html">即時訂單資訊</a></li>
+                        <li><a href="../html/order_management.html">已完成訂單</a></li>
+                        <li><a href="../html/order_management.html">不成立訂單</a></li>
+                        <li><a href="../html/order_management.html">運送中訂單</a></li>
+                        <li><a href="../html/order_management.html">自取訂單</a></li>
+                        <li><a href="../html/order_management.html">cargo貨運管理</a></li>
+                    </ul>
+                </li>
+                <li><a href="##">貨運管理系統</a></li>
+                <li><a href="../html/inaccount.html">進帳資料</a></li>
+                <li><a href="##">績效分析</a></li>
+                <li><a href="../html/Sbasic.html">修改會員資料</a></li>                                   
             </ul> 
         </nav>          
             <div class="header-menu-logo">
@@ -56,12 +55,9 @@
             </div>   
             <div class="search">                
                 <input type="search" class="search-search">
-                <button class="search-btn" type="button">
-                    搜尋
-                </button>
+                <input class="button-btn" id="search-btn" type="submit" name="搜尋" value="搜尋">
             </div>   
     </header>
-    <marquee direction="right" height="30" scrollamount="10" behavior="scroll">5/29伺服器測試</marquee>
     <div class="body-1">
         <div class="profile">
             <form action="">
@@ -73,18 +69,24 @@
                         </div>
                     </div>
                     <div class="photo-button">
-                            <div onclick="dd()">
-                                <img src="../Img/logo.ico">
-                                <input id="img" type="file" name="file" multiple="multiple" accept="image/*" aspect="1" value="請放入照片">
-                            </div>
-                            <div onclick="dd()">
-                                <img src="../Img/logo.ico">
-                                <input id="img" type="file" name="file" multiple="multiple" accept="image/*" aspect="1" value="請放入照片">
-                            </div>
-                            <div onclick="dd()">
-                                <img src="../Img/logo.ico">
-                                <input id="img" type="file" name="file" multiple="multiple" accept="image/*" aspect="1" value="請放入照片">
-                            </div>                    
+                        <span class="material-symbols-outlined" id="icon-left" onclick="preview(-1)">chevron_left</span>
+                        <div onclick="dd()" class="preview">
+                            <img src="../Img/logo.ico">
+                            <input id="img" type="file" name="file" multiple="multiple" accept="image/*" aspect="1" value="請放入照片">
+                        </div>
+                        <div onclick="dd()" class="preview">
+                            <img src="../Img/logo.ico">
+                            <input id="img" type="file" name="file" multiple="multiple" accept="image/*" aspect="1" value="請放入照片">
+                        </div>  
+                        <div onclick="dd()" class="preview">
+                            <img src="../Img/logo.ico">
+                            <input id="img" type="file" name="file" multiple="multiple" accept="image/*" aspect="1" value="請放入照片">
+                        </div>
+                        <div onclick="dd()" class="preview">
+                            <img src="../Img/logo.ico">
+                            <input id="img" type="file" name="file" multiple="multiple" accept="image/*" aspect="1" value="請放入照片">
+                        </div>
+                        <span class="material-symbols-outlined" id="icon-right" onclick="preview(1)">chevron_right</span>                  
                     </div>
                 </div>
             </form>
@@ -116,57 +118,7 @@
                                 <label>商品規格</label> 
                                 <div class="edit-new-spe">
                                     <a href="##">新增規格</a>
-                                </div>
-                                <!-- <div class="edit-spe">
-                                    <div class="edit-spe-name">
-                                        <span>
-                                            商品規格名稱
-                                        </span>
-                                        <input type="text" placeholder="請輸入規格名稱，EX:顏色">
-                                    </div>
-                                    <div class="edit-spe-pro" id="edit-pro">
-                                        <span>
-                                            選項
-                                        </span>
-                                        <div class="edit-pro">
-                                            <div class="div_space">
-                                            </div>
-                                            <input type="text" placeholder="請輸入規格選項，EX:藍色">
-                                        </div>                                        
-                                    </div>
-                                    <div class="edit-pro-btn">
-                                        <button type="button" class="edit-btn" onclick="add()">
-                                            <span>
-                                                增加選項
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div>   
-                                <div class="edit-spe">
-                                    <div class="edit-spe-name">
-                                        <span>
-                                            商品規格名稱
-                                        </span>
-                                        <input type="text" placeholder="請輸入規格名稱，EX:顏色">
-                                    </div>
-                                    <div class="edit-spe-pro" id="edit-pro2">
-                                        <span>
-                                            選項
-                                        </span>
-                                        <div class="edit-pro">
-                                            <div class="div_space">
-                                            </div>
-                                            <input type="text" placeholder="請輸入規格選項，EX:藍色">
-                                        </div>                                        
-                                    </div>
-                                    <div class="edit-pro-btn">
-                                        <button type="button" class="edit-btn" onclick="add2()">
-                                            <span>
-                                                增加選項
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div>  -->                                               
+                                </div>                                
                         </div>
                         <div class="product-volume"> <!--體積-->                            
                                 <label>*體積</label>
@@ -187,44 +139,16 @@
                             <textarea></textarea>
                         </div>
                         <div class="product_btn">
-                            <button type="button">
-                                取消
-                            </button>
-                            <button type="button">
-                                儲存
-                            </button>
-                            <button type="button">
-                                上架
-                            </button>
+                            <input type="submit" name="取消" value="取消">
+                            <input type="submit" name="儲存" value="儲存">
+                            <input type="submit" name="上架" value="上架">
                         </div>
                     </form>
                 </div>                
             </div>
         </div>
     </div>
-    <footer>          
-        <div class="footer">
-            <div class="footer-img">
-                <img src="../Img/logo.ico">
-            </div>     
-            <div class="footer-link">
-                <div>
-                    <a href="##">
-                        關於我們
-                    </a>
-                    <a href="##">
-                        聯絡我們
-                    </a>
-                    <a href="##">
-                        幫助中心
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-footer">
-            @wincube
-        </div>
-    </footer>
+    
     <script>        
         function dd(){
             var d =document.getElementById("img");
@@ -255,6 +179,17 @@
         input.setAttribute("type","text");
         input.setAttribute("placeholder","請輸入規格選項，EX:藍色");
         div2.appendChild(input);
+        }
+        function preview(n){
+            preview_2(n+1);
+        }
+        function preview_2(n){
+            var i;
+            var tt=document.getElementsByClassName('preview');
+            for(i=0;i<tt.length;i++){
+                tt[i].style.display='inline-flex';
+            }
+            tt[n].style.display='none';
         }
     </script>
 </body>

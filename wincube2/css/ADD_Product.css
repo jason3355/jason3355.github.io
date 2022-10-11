@@ -8,17 +8,13 @@ body{
     width: 150px;
 }
 .body-1{
+    margin-top: 5rem;
     min-height: 100%;
     width: 100%;
-    margin: auto;
+    /* margin: auto; */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
-.search{
-    width: 100%;
-    display: flex;
-    justify-content: right;
 }
 /* profile */
 .profile{
@@ -72,6 +68,7 @@ body{
 }
 .form > div {
     display: flex;
+    flex-wrap: wrap;
     margin: 10px 0px 10px 0px;
     font-size: 20px;
 }
@@ -82,9 +79,9 @@ div > label{
 div > label > input{
     width: 100px; 
 }
-#product-spe{
+/* #product-spe{
     display: block;
-}
+} */
 .product-spe > label{
     width: 120px;
     padding-right: 14px;
@@ -92,13 +89,13 @@ div > label > input{
 .add-spe{
     margin: 0 0 10px 10px;
     width: 500px;
-    background-color: blanchedalmond;
+    background-color: rgb(207, 245, 227,0.5);
     padding: 16px;
 }
 .add-spe2{
     margin-left: 10px;
     width: 500px;
-    background-color: blanchedalmond;
+    background-color: rgb(207, 245, 227,0.5);
     padding: 16px;
 }
 .add-spe-name{
@@ -161,36 +158,19 @@ div > label > input{
     display: flex;
     justify-content:center ;
 }
-.product_btn > button{
+.product_btn > input{
     width: 50px;
     height: 40px;
     margin: 0 10px 0 10px;
+    box-shadow: 1px 1px 3px #F0F0F0;
 }
 
 @media screen and (max-width:550px){
     .body-1{
         width: 100%;
-        margin: auto;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-    }
-    .search{
-        width: 100%;
-        display: flex;
-        justify-content: right;
-    }
-    .search > div{
-        padding-top: 10px;
-        width: 30px;
-    }
-    .search > div > img{
-        width: 100%;
-    }
-    .search-search{
-        margin:12px 10px 0px 0px;
-        width: 110px;
-        height: 30px;
     }
     /* profile */
     .profile{
@@ -244,9 +224,9 @@ div > label > input{
     }
     .profile-1{
         width: 100%;
-        margin: 0px;
+        /* margin: 0px; */
         display: flex;
-        justify-content: center;
+        padding: 0 10px 0 10px;
     }    
     .form > div {
         display: flex;        
@@ -265,7 +245,10 @@ div > label > input{
     } 
     .product-spe{
         display: block;
-    }   
+    }  
+    .product-spe > label{
+        display: none;
+    }  
     .product-spe > label{
         text-align: center;
         width: auto;
@@ -274,6 +257,10 @@ div > label > input{
     .add-spe{
         width: 250px;
         background-color: blanchedalmond;
+        padding: 8px;
+    }
+    .add-spe2{
+        width: 250px;
         padding: 8px;
     }
     .add-spe-name{
@@ -375,27 +362,9 @@ div > label > input{
 @media screen and (min-width:550px) and (max-width:1024px){
     .body-1{
         width: 100%;
-        margin: auto;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-    }
-    .search{
-        width: 100%;
-        display: flex;
-        justify-content: right;
-    }
-    .search > div{
-        padding-top: 10px;
-        width: 30px;
-    }
-    .search > div > img{
-        width: 100%;
-    }
-    .search-search{
-        margin:12px 10px 0px 0px;
-        width: 110px;
-        height: 30px;
     }
     /* profile */
     .profile{
@@ -452,6 +421,7 @@ div > label > input{
     }    
     .form > div {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         margin: 10px 0px 10px 0px;
         font-size: 15px;
@@ -467,16 +437,19 @@ div > label > input{
         width: 270px;
     }
     .product-spe > label{
+        display: none;
         text-align: center;
         width: auto;
         padding-right:0px;
     }
     .add-spe{
+        width: 250px;
         margin-left: 8px;
-        width: 260px;
         background-color: blanchedalmond;
         padding: 8px;
-        
+    }
+    .add-spe2{
+        width: 250px;
     }
     .add-spe-name{
         display: flex;
@@ -551,3 +524,81 @@ div > label > input{
 
 
 }
+
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+input[type=submit] {
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+select {
+
+    /* styling */
+    background-color: white;
+    border: thin solid blue;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5rem;
+    /* padding: 0.5em 3.5em 0.5em 1em; */
+    padding:0.3rem 3rem 0.1rem 0.3rem;
+  
+    /* reset */
+  
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+
+  /* arrows */
+
+select.classic {
+    background-image:
+      linear-gradient(45deg, transparent 50%, blue 50%),
+      linear-gradient(135deg, blue 50%, transparent 50%),
+      linear-gradient(to right, skyblue, skyblue);
+    background-position:
+      calc(100% - 20px) calc(1rem + 2px),
+      calc(100% - 15px) calc(1rem + 2px),
+      100% 0;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2.5rem 2.5rem;
+    background-repeat: no-repeat;
+  }
+  
+  select.classic:focus {
+    background-image:
+      linear-gradient(45deg, white 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, white 50%),
+      linear-gradient(to right, gray, gray);
+    background-position:
+      calc(100% - 15px) 1rem,
+      calc(100% - 20px) 1rem,
+      100% 0;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2.5rem 2.5rem;
+    background-repeat: no-repeat;
+    border-color: grey;
+    outline: 0;
+  }

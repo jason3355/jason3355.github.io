@@ -1,11 +1,33 @@
 body{
     margin: 0%;
-    font-size: 1.4rem;
+    font-size: 1rem;
 }
 .body-1{
     width: 100%;
-    margin: auto;
+    margin-top: 5rem;
     min-height: 100%;
+}
+.title-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+.title-title > p{
+    margin:10px 0 0 0;
+}
+.trash-can{
+    display: flex;
+    justify-content: right;
+}
+.trash-can input{
+    cursor: pointer;
+    border:0.5px solid rgb(185, 180, 180);
+    width: 50px;
+    height: 30px;
+}
+.trash-can input:hover{
+    background-color:red;
 }
 .profile{
     width: 1000px;
@@ -16,11 +38,9 @@ body{
     margin: auto;
     width: 100%;
 }
-
 td{
     padding: 10px 20px 10px 20px;
 }
-
 .title{
     background-color: rgb(235, 229, 229);
     display: flex;
@@ -33,21 +53,33 @@ td{
     width: 150px;
     padding-right: 30px;
 }
+.product-type{
+    /* width: 150px; */
+}
+.product-price{
+    margin-right: 30px;
+}
 .product-amount{
-    margin-left: 100px;
-    width: 200px;
+    /* margin-left: 100px; */
+    width: 100px;
 }
 .product-give{
     width: 100px;
     padding-left: 30px;
+    margin-right: 30px;
 }
 .all_choose{
     padding-left: 10px;
+}
+.all_choose > input{
+    width: 30px;
+    height: 30px;
 }
 .demander{
     margin: auto;
     display: flex;
     border: 1px solid rgb(214, 207, 207);
+    background-color: white;
 }
 .demander > div{
     padding: 10px;
@@ -56,8 +88,13 @@ td{
     display: flex;
     align-items: center;
 }
+.choose > input{
+    width: 30px;
+    height: 30px;
+}
 .img{
-    width:100px
+    width:50px;
+    height: 50px;
 }
 .img > img{
     width: 100%;
@@ -65,6 +102,18 @@ td{
 .name{
     display: flex;
     align-items: center;
+    margin-right: 10px;
+}
+.type{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+.price{
+    width: 70px;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
 }
 .amount{
     width: 100px;
@@ -78,40 +127,74 @@ td{
 .amount1{
     width: 50px;
 }
-.trash{    
-    width: 38px;
-    display: flex;
-    align-items:flex-end;
-    margin-left: 10px;
-}
-.trash > button > img{
-    width: 100%;
-}
 .option{
     display: flex;
     align-items: flex-end;
 }
-
 .no{
     color: red;
 }
-
 .send-out{
     margin-top:30px;
     height: 30px;
     display:flex;
     justify-content: center;
 }
+.sent-out-out{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    box-shadow: 5px 3px 3px gray;
+    bottom: 0%;
+    margin-top: 70px;
+    display: flex;
+    /* justify-content: right; */
+    align-items: center;
+}
+.sent-out-out span{
+    font-size: 1.4rem;
+    margin-left: 30px;
+    width: 100%;
+}
+.sent-out-out input{
+    margin-right: 50px;
+    width: 100px;
+    height: 50px;
+}
+.sent-out-out input:hover{
+    background-color: rgb(235, 229, 229);
+}
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+.submit{
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
 
 @media screen and (min-width:550px) and (max-width:1024px) {
     .body-1{
         width: 100%;
-        margin: auto;
-        font-size: 1.4rem;
+        margin-top: 5rem;
+        font-size: 1rem;
+    }
+    td{
+        padding: 5px 10px 5px 10px;
     }
     .profile{
         width: 90%;
-        margin-top: 30px;
     }
     .title{
         display: flex;
@@ -120,16 +203,27 @@ td{
     .title > div{
         text-align: center;    
     }
+
     .product-name{
-        width: 50px;
-        padding-right: 30px;
+        width: 90px;
+        padding-right: 0;
+        /* margin-right: 100px; */
+    }
+    .product-type{
+        width: 90px;
+    }
+    .product-price{
+        width: 90px;
+        margin-right: 10px;
     }
     .product-amount{
-        width: 150px;
+        /* margin-left: 100px; */
+        width: 90px;
     }
     .product-give{
-        width: 100px;
+        width: 90px;
         padding-left: 30px;
+        margin-right: 10px;
     }
     .all_choose{
         padding-left: 0px;
@@ -144,7 +238,8 @@ td{
         padding: 10px 0 5px 0; 
     }
     .img{
-        width:100px;
+        width:50px;
+        height: 50px;
     }
     .img > img{
         width: 100%;
@@ -154,7 +249,7 @@ td{
         align-items: center;
     }
     .amount{
-        width: 50px;
+        width: 90px;
         margin-left: 10px;
         display: flex;
         align-items:flex-end;
@@ -166,17 +261,9 @@ td{
     .amount1{
         width: 50px;
     }
-    .trash{    
-        width: 60px;
-        display: flex;
-        align-items:flex-end;
-        margin-left: 60px;
-    }
-    .trash > button > img{
-        width: 100%;
-    }
+
     .option{
-        font-size: 1.2rem;
+        font-size: 1rem;
         display: flex;
         align-items: flex-end;
     }
@@ -191,7 +278,7 @@ td{
 @media screen and (min-width:280px) and (max-width:550px) {
     .body-1{
         width: 100%;
-        margin: auto;
+        margin-top: 5rem;
         font-size: 1.2rem;
     }
     td{
@@ -199,7 +286,6 @@ td{
     }
     .profile{
         width: 100%;
-        margin-top: 30px;
     }
     .profile > table{
         width: 90%;
@@ -267,15 +353,7 @@ td{
     .amount1{
         width: 30px;
     }
-    .trash{    
-        width: 40px; 
-        display: flex;
-        justify-content: right;
-        align-items: flex-start;
-    }
-    .trash > button > img{
-        width: 100%;
-    }
+    
     .option{
         display: flex;
         align-items: flex-end;
@@ -291,7 +369,7 @@ td{
 @media screen and (max-width:280px){
     .body-1{
         width: 100%;
-        margin: auto;
+        margin-top: 5rem;
         font-size: 1.2rem;
     }
     td{
@@ -299,7 +377,6 @@ td{
     }
     .profile{
         width: 100%;
-        margin-top: 30px;
     }
     .profile > table{
         width: 90%;
@@ -364,15 +441,7 @@ td{
     .amount1{
         width: 30px;
     }
-    .trash{    
-        width: 40px; 
-        display: flex;
-        justify-content: right;
-        align-items: flex-start;
-    }
-    .trash > button > img{
-        width: 100%;
-    }
+
     .option{
         display: flex;
         align-items: flex-end;
@@ -385,3 +454,28 @@ td{
     }
 
 }
+input[type="checkbox"] {
+    /* ...existing styles */
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;    
+    border: 0.15em solid currentColor;
+    transform: translateY(-0.075em);
+  }  
+  input[type="checkbox"]::before {
+    background-color: black;
+    content: "";
+    width: 1.35rem;
+    height: 1.35rem;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+  }  
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
