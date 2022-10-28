@@ -54,8 +54,11 @@ body{
 .all-type{
     margin: 0 0 10px 10px;
     width: 500px;
-    background-color: blanchedalmond;
     padding: 16px;
+}
+
+.type label{
+    padding-right: 10px;
 }
 
 input[type=button] {
@@ -72,9 +75,34 @@ input[type=button] {
     margin-top: 10px;
     box-shadow: 1px 1px 3px #8b8787;
 }
-
+.optype{
+    display: flex;
+}
+.type{
+    padding: 10px;
+    background-color: blanchedalmond;
+    margin-bottom: 20px;
+}
+#option-1{
+    padding: 10px 0 10px 0;
+}
+.type_1{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0 10px 0;
+}  
+.type_1 hr{
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+} 
+.type_1 input{
+    margin: 0 10px 0 10px;
+}
 .sent-out:active{
     box-shadow:none;
+}
+.option-2{
+    width: 75px;
 }
 
 @media screen and (min-width:550px) and (max-width:1024px) {

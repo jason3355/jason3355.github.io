@@ -5,54 +5,79 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script> 
 </head>
 <body>
-  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <div class="chart char_1" id="char_1">
+    <canvas id="myChart_1"></canvas>
+</div>
   <script>
-    import * as echarts from 'echarts';
-    // const width=window.innerWidth;
-    // const height=window.innerHeight;
-    // const range=[];
-    // for(let i=0;i<=15;i++){
-    //         range[i]=i;
-    //     };
-    // const svg=d3.select('body')
-    //   .append('svg')
-    //     .attr('width',width)
-    //     .attr('height',height);
-    //   let i=0;
-    // setInterval(()=>{      
-    //   const cir=range.map((d)=>({
-    //   x:d*50+60,
-    //   y:d*20+Math.sin(d*0.5+i)*200,
-    //   }));       
-    //   const circle=svg.selectAll('circle').data(cir);
-    //   circle.enter().append('circle').attr('r',10);
-    //   circle
-    //     .attr('cx',(d)=>d.x)
-    //     .attr('cy',(d)=>d.y);
-    //   i+=0.1;      
-    // },100);
-    
-    var myChart = echarts.init(document.getElementById('main'));
-// 绘制图表
-myChart.setOption({
-  title: {
-    text: 'ECharts 入门示例'
-  },
-  tooltip: {},
-  xAxis: {
-    data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
-  },
-  yAxis: {},
-  series: [
-    {
-      name: '销量',
-      type: 'bar',
-      data: [5, 20, 36, 10, 10, 20]
-    }
-  ]
-});
+    // var ctx = document.getElementById('myChart_1').getContext('2d');
+    // var myChart_1 = new Chart(ctx, {
+    //         type: 'line',
+    //         data: {
+    //           labels: ["沙發", "民生用品", "水壺", "椅子", "桌子", "機器人", "公仔","寶寶"],
+    //           datasets: [{ 
+    //               data: [100,114,106,106,107,111,150,10],
+    //               label: "Total",
+    //               borderColor: "rgb(62,149,205)",
+    //               backgroundColor: "rgb(62,149,205,0.1)",
+    //               borderWidth:2
+    //             }, { 
+    //               type:'line',
+    //               data: [70,90,44,60,83,90,100,10],
+    //               label: "Accepted",
+    //               borderColor: "rgb(60,186,159)",
+    //               backgroundColor: "rgb(60,186,159,0.1)",
+    //               borderWidth:2,
+                  
+
+    //             },
+
+    //           ]
+    //         },
+            
+            
+    //       });
+
+    var ctx = document.getElementById('myChart_1').getContext('2d');
+        var myChart_1 = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ["沙發", "民生用品", "水壺", "椅子", "桌子", "機器人", "公仔","寶寶"],
+              datasets: [
+                { 
+                  data: [100,114,106,106,107,111,150,10],
+                  label: "Total",
+                  borderColor: "rgb(62,149,205)",
+                  backgroundColor: "rgb(62,149,205,0.1)",
+                  borderWidth:2
+                }, { 
+                  type:'line',
+                  data: [70,90,44,60,83,90,100,10],
+                  label: "Accepted",
+                  borderColor: "rgb(60,186,159)",
+                  backgroundColor: "rgb(60,186,159,0.1)",
+                  borderWidth:2
+                }, 
+              ]
+            },
+          });
+        var ctx = document.getElementById('myChart_1').getContext('2d');
+        var myChart_2 = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ["沙發", "民生用品", "水壺", "椅子", "桌子", "機器人", "公仔","寶寶"],
+              datasets: [{ 
+                  data: [100,114,106,106,107,111,150,10],
+                  label: "Total",
+                  borderColor: "rgb(62,149,205)",
+                  backgroundColor: "rgb(62,149,205,0.1)",
+                  borderWidth:2
+                }, 
+              ]
+            },
+          });
   </script>
 </body>
 </html>

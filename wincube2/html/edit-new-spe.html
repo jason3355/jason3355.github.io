@@ -7,7 +7,6 @@
     <title>新增規格</title>
     <link rel="stylesheet" href="../css/hamburgers.css">
     <link rel="stylesheet" href="../css/edit-new-spe.css">
-    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/background.css">
     <link rel="icon" href="../Img/logo.ico" type="image/x-icon"/><!--分頁LOGO-->
 </head>
@@ -36,7 +35,7 @@
                 </li>
                 <li><a href="##">貨運管理系統</a></li>
                 <li><a href="../html/inaccount.html">進帳資料</a></li>
-                <li><a href="##">績效分析</a></li>
+                <li><a href="../html/chart.html">績效分析</a></li>
                 <li><a href="../html/Sbasic.html">修改會員資料</a></li>                                   
             </ul> 
         </nav>          
@@ -90,7 +89,7 @@
                     <span>
                         商品規格名稱
                     </span>
-                    <input name="option-2" type="text" placeholder="請輸入規格名稱，EX:顏色">
+                    <input name="option-2" type="text" placeholder="請輸入規格名稱，EX:尺寸">
                 </div>
                 <div class="edit-spe-pro" id="edit-pro2">
                     <span>
@@ -99,7 +98,7 @@
                     <div class="edit-pro">
                         <div class="div_space">
                         </div>
-                        <input name="option2" type="text" placeholder="請輸入規格選項，EX:藍色">
+                        <input name="option2" type="text" placeholder="請輸入規格選項，EX:XL">
                     </div>                                        
                 </div>
                 <div class="edit-pro-btn">
@@ -110,32 +109,41 @@
                     </button>
                 </div>
                 <input type="button" class="sent-out" name="type" value="送出" onclick="edit()">
+                <input type="button" class="sent-out" name="type" value="清除">
             </div>
         </div>
-        <div class="all-type">
+        <div class="all-type" id="all-type">
             <div class="type">
                 <label id="option-1">顏色</label>
-                <div>
+                <button type="button" onclick="del(0)">刪除</button>
+                <hr>
+                <div class="type_1">
                     <label id="option-2">尺寸</label>
-                    <div>
-                        <input type="text" placeholder="請輸入金額">
-                    </div>
+                    <input type="text" placeholder="請輸入金額">
+                    <input type="text" placeholder="請輸入金額">
                 </div>
-            </div>
+            </div>  
             <div class="type">
                 <label id="option-1">顏色</label>
-                <div>
+                <button type="button" onclick="del(0)">刪除</button>
+                <hr>
+                <div class="type_1">
                     <label id="option-2">尺寸</label>
-                    <div>
-                        <input type="text" placeholder="請輸入金額">
-                    </div>
+                    <input type="text" placeholder="請輸入金額">
+                    <input type="text" placeholder="請輸入金額">
                 </div>
-            </div>
+                <hr>
+                <div class="type_1">
+                    <label id="option-2">尺寸</label>
+                    <input type="text" placeholder="請輸入金額">
+                    <input type="text" placeholder="請輸入金額">
+                </div>
+                <hr>
+            </div>            
         </div>
 
     </form>   
     <script>   
-        var n=0;
         var m=0; 
         window.onload = function(){
             n=0;
@@ -172,29 +180,70 @@
             m+=1;
         }
         function edit(){
+            var n=0;
             var option1=document.getElementsByName('option1');
-            // var option1_1=option1[0].value;
             var option2=document.getElementsByName('option2');
-            // var option2_1=option2[0].value;          
-            var tt=[];
-            var rr=[];
-            var count1=0;
-            var count2=0;
-            for(let i=0;i<=n;i++){
-                tt[i]=option1[i].value;
-                count1+=1;
-                if(count1==n){
-                    n=0;
-                }
+            var alldiv=document.getElementById('all-type'); 
+            var optype;
+            var label_1;
+            var type_1;
+            var label_2;
+            var text_money; 
+            var text_amount;
+            var hr_1=[];
+            var hr_2=[];
+            var del_btn;
+            if(option1.value==""){
+                alert("error");
             }
-            for(let j=0;j<=m;j++){
-                rr[j]=option2[0].value;
-                count2+=1;
-                if(count2==m){
-                    m=0;
+            else{
+                if(n==20){
+                
                 }
-            }
-            
+                else{
+                    for(let i=0;i<option1.length;i++){
+                        var x=option1[i].value;
+                        optype=document.createElement('div');
+                        optype.setAttribute('class','type');
+                        alldiv.appendChild(optype);
+                        label_1=document.createElement('label');
+                        label_1.setAttribute('class','option-1');
+                        label_1.innerHTML=x;
+                        optype.appendChild(label_1);
+                        del_btn=document.createElement('button')
+                        del_btn.setAttribute('type','button');
+                        del_btn.setAttribute('onclick','del(i)');
+                        hr_1[i]=document.createElement('hr');
+                        optype.appendChild(del_btn);
+                        optype.appendChild(hr_1[i]);                                                                     
+                        for(let j=0;j<option2.length;j++){
+                            type_1=document.createElement('div');
+                            type_1.setAttribute('class','type_1');
+                            optype.appendChild(type_1);
+                            var y=option2[j].value;
+                            label_2=document.createElement('label');
+                            label_2.setAttribute('class','option-2');
+                            label_2.innerHTML=y;
+                            text_money=document.createElement('input');
+                            text_money.setAttribute('type','text');
+                            text_money.setAttribute("placeholder","請輸入金額");
+                            text_amount=document.createElement('input');
+                            text_amount.setAttribute('type','text');
+                            text_amount.setAttribute("placeholder","請輸入數量");
+                            hr_2[j]=document.createElement('hr');
+                            type_1.appendChild(label_2);
+                            type_1.appendChild(text_money);
+                            type_1.appendChild(text_amount);
+                            type_1.appendChild(hr_2[j]);
+                        }
+                    }
+                }
+            }             
+        }
+        function del(n){
+            var x=document.getElementsByClassName('type');
+            var parentObj = x[n].parentNode;
+            parentObj.removeChild(x[n]);          
         }
     </script>
 </body>

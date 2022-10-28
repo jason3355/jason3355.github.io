@@ -1,29 +1,83 @@
 body{
     margin: 0%;
 }
-#chart{
-    width: 500px;
-    height: 600px;
-}
-.tbody{
-    border: 1px solid black;
-}
+
 .body-1{
-    margin: 4rem auto 0 auto;
+    margin: 4.5rem auto 0 auto;
     display: flex;
     flex-wrap:wrap;
-    width: 1000px;
+    justify-content: center;
+    width: 100%;
     height: 500px;
 }
+.back_1{
+    display: flex;
+    justify-content: center;
+    width: 130px;
+    cursor: pointer;
+    padding: 20px 10px 20px 10px;
+    border: 1px solid #E0E0E0;
+    margin: 0 20px 0 20px;
+}
+.back{
+    background-color: #fff;
+    padding: 20px 10px 20px 10px;
+    box-shadow: 1px 1px 1px #E0E0E0;
+}
+.back_1:nth-child(1){
+    border-top: blue 3px solid;
+}
+hr{
+    width: 80%;
+    height: 0px;
+}
+h2{
+    width: 80%;
+}
+.datee{
+    width: 80%;
+    margin-bottom: 10px;    
+}
+.chart{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: none;
+}
+#char_1{
+    display: block;
+}
+.chart >p{
+    font-size: 18px;
+}
+#myChart_1{
+    max-width: 1000px;
+    max-height: 500px;
+}
+#myChart_2{
+    max-width: 1000px;
+    max-height: 500px;
+}
+#myChart_3{
+    max-width: 1000px;
+    max-height: 500px;
+}
+#myChart_4{
+    max-width: 1000px;
+    max-height: 500px;
+}
+.backk{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
 p{
     font-size: 2.3rem;
+    width: 100%;
+    justify-content: center;
     margin: 0;
     display: flex;
     align-items: center;
-}
-.rect{
-    transition: 0.5s;
-}
-.rect:hover{
-    fill: red;
 }

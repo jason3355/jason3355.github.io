@@ -94,11 +94,11 @@
                         </td>
                         <td class="amount">
                             <div>
-                                <button type="button" class="add" onclick="add()">
+                                <button type="button" class="add" onclick="add(0)">
                                     +
                                 </button>
-                                <input type="text" value="1" class="amount1" id="amount">
-                                <button type="button" class="less" onclick="less()">
+                                <input type="text" value="1" class="amount1" id="amount" name="amount">
+                                <button type="button" class="less" onclick="less(0)">
                                     -
                                 </button>
                             </div>
@@ -128,11 +128,11 @@
                         </td>
                         <td class="amount">
                             <div>
-                                <button type="button" class="add" onclick="add()">
+                                <button type="button" class="add" onclick="add(1)">
                                     +
                                 </button>
-                                <input type="text" value="1" class="amount1" id="amount">
-                                <button type="button" class="less" onclick="less()">
+                                <input type="text" value="1" class="amount1" id="amount" name="amount">
+                                <button type="button" class="less" onclick="less(1)">
                                     -
                                 </button>
                             </div>
@@ -144,7 +144,40 @@
                             <label class="no">否,自行前往領取</label>
                         </td>
                     </tr>    
-                                  
+                    <tr class="demander">
+                        <td class="choose">
+                            <input type="checkbox" name="tt" onclick="c2()">
+                        </td>
+                        <td class="img">
+                            <img src="../../Img/sofa-3.jpg">
+                        </td>
+                        <td class="name">
+                            <span>條紋沙發</span>
+                        </td>
+                        <td class="type">
+                            <span>家具</span>
+                        </td>
+                        <td class="price">
+                            <span>NT598</span>
+                        </td>
+                        <td class="amount">
+                            <div>
+                                <button type="button" class="add" onclick="add(2)">
+                                    +
+                                </button>
+                                <input type="text" value="1" class="amount1" id="amount" name="amount">
+                                <button type="button" class="less" onclick="less(2)">
+                                    -
+                                </button>
+                            </div>
+                        </td>
+                        <td class="option">
+                            <input type="radio" value="是,需要配送" name="yn-1">
+                            <label class="yes">是,需要配送</label>
+                            <input type="radio" value="否,自行前往領取" name="yn-1">
+                            <label class="no">否,自行前往領取</label>
+                        </td>
+                    </tr>              
                 </table>
                 <!-- <div class="send-out">
                     <input type="submit" value="送出">
@@ -159,16 +192,18 @@
     </div>
 </body>
 <script>
-    function add(){
-        let x = document.getElementById("amount").value;   
-        document.getElementById("amount").value=Number(x)+1;
+    function add(n){
+        var x = document.getElementsByName("amount");
+        let z=x[n].value;
+        x[n].value=Number(z)+1;
     }
-    function less(){
-        let x = document.getElementById("amount").value; 
-        if(Number(x)==1){        
+    function less(n){
+        var x = document.getElementsByName("amount"); 
+        let z=x[n].value; 
+        if(Number(z)==1){        
         } 
         else{
-            document.getElementById("amount").value=Number(x)-1;
+            x[n].value=Number(z)-1;
         }
     }
     function c(obj){

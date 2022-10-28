@@ -1,9 +1,11 @@
 <html>
     <head>
-        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
         <link rel="stylesheet" href="../css/chart.css">
         <link rel="stylesheet" href="../css/hamburgers.css">
         <link rel="stylesheet" href="../css/background.css">
+        <link rel="icon" href="../Img/logo.ico" type="image/x-icon"/><!--分頁LOGO-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     </head>
 <body>
     <header class="header"> 
@@ -30,7 +32,7 @@
                 </li>
                 <li><a href="##">貨運管理系統</a></li>
                 <li><a href="../html/inaccount.html">進帳資料</a></li>
-                <li><a href="##">績效分析</a></li>
+                <li><a href="../html/chart.html">績效分析</a></li>
                 <li><a href="../html/Sbasic.html">修改會員資料</a></li>                                   
             </ul> 
         </nav>          
@@ -53,45 +55,233 @@
     </header>
     <div class="body-1">
         <p>績效分析</p>
+        <hr>
+        <div class="back datee">
+            <span>資料期間</span>
+            <input type="date"> - 
+            <input type="date"> 
+        </div>
+        <div class="back">
+          <div class="backk">
+            <div class="back_1" onclick="show(1)">
+              <span>銷售額</span>
+            </div>
+            <div class="back_1" onclick="show(2)">
+              <span>訂單數</span>
+            </div>
+            <div class="back_1" onclick="show(3)">
+              <span>平均訂單金額</span>
+            </div>
+            <div class="back_1" onclick="show(4)">
+              <span>頁面瀏覽數</span>
+            </div>
+          </div>
+          <div class="chart char_1" id="char_1">
+              <canvas id="myChart_1"></canvas>
+          </div>
+          <div class="chart chart_2" id="char_2">
+              <canvas id="myChart_2"></canvas>
+          </div>
+          <div class="chart chart_3" id="char_3">
+              <canvas id="myChart_3"></canvas>
+          </div>
+          <div class="chart chart_4" id="char_4">
+              <canvas id="myChart_4"></canvas>
+          </div>
+        </div>
     </div>
     <script>
-        var infoset = [59.5, 17.2, 9.6, 7.6, 5.5, 0.5]
-        var name_name=["無","法","底","抗","的","恩"]
-        var span = 1000, ceil = 300;
-        var rn=[];
-        for(let i=0;i<=100;i++){
-            rn[i]=i;
+        function show(n){
+          var chart_1=document.getElementById('char_1');
+          var chart_2=document.getElementById('char_2');
+          var chart_3=document.getElementById('char_3');
+          var chart_4=document.getElementById('char_4');
+          var back_1=document.getElementsByClassName('back_1')
+          if(n==1){
+            chart_1.style.display='block';
+            back_1[0].style.borderTop='blue 3px solid';
+            chart_2.style.display='none';
+            back_1[1].style.borderTop='1px solid #E0E0E0';
+            chart_3.style.display='none';
+            back_1[2].style.borderTop='1px solid #E0E0E0';
+            chart_4.style.display='none';
+            back_1[3].style.borderTop='1px solid #E0E0E0';
+          }
+          if(n==2){
+            chart_1.style.display='none';
+            back_1[0].style.borderTop='1px solid #E0E0E0';
+            chart_2.style.display='block';
+            back_1[1].style.borderTop='red 3px solid';
+            chart_3.style.display='none';
+            back_1[2].style.borderTop='1px solid #E0E0E0';
+            chart_4.style.display='none';
+            back_1[3].style.borderTop='1px solid #E0E0E0';
+          }
+          if(n==3){
+            chart_1.style.display='none';
+            back_1[0].style.borderTop='1px solid #E0E0E0';
+            chart_2.style.display='none';
+            back_1[1].style.borderTop='1px solid #E0E0E0';
+            chart_3.style.display='block';
+            back_1[2].style.borderTop='green 3px solid';
+            chart_4.style.display='none';
+            back_1[3].style.borderTop='1px solid #E0E0E0';
+          }
+          if(n==4){
+            chart_1.style.display='none';
+            back_1[0].style.borderTop='1px solid #E0E0E0';
+            chart_2.style.display='none';
+            back_1[1].style.borderTop='1px solid #E0E0E0';
+            chart_3.style.display='none';
+            back_1[2].style.borderTop='1px solid #E0E0E0';
+            chart_4.style.display='block';
+            back_1[3].style.borderTop='yellow 3px solid';
+          }
         }
-        var scalespan = d3.scaleLinear()
-            .domain([0, d3.max(infoset)])
-            .range([0, 500]);
-        var screen = d3.select(".body-1").append("svg")
-            .attr("width", span)
-            .attr("height", ceil)
-            .attr("class","tbody")
-            .attr("x",120)
-            .attr("y",150)
-            .append("g").attr("transform", "translate(5,20)");
-        screen.selectAll("textt")
-            .data(name_name).enter().append("textt")
-            .attr("y", function(d, i){ return i*42; })
-            .attr("x", function(d){ return scalespan(d);})
-            .text(function(d) {return d;})
-            .attr("fill", "blue").attr("dy",".85em");
-        var rule = screen.selectAll("rect")
-            .data(infoset).enter()
-            .append("rect")
-            .attr("width", function(d){ return scalespan(d);})
-            .attr("height", 30)
-            .attr("y", function(d, i){ return i*40; })
-            .attr("fill", "#b3ccff")
-            .attr("class","rect");
-        screen.selectAll("text")
-            .data(infoset).enter().append("text")
-            .attr("y", function(d, i){ return i*42; })
-            .attr("x", function(d){ return scalespan(d);})
-            .text(function(d) {return d;})
-            .attr("fill", "blue").attr("dy",".85em");
+        var ctx = document.getElementById('myChart_1').getContext('2d');
+        var myChart_1 = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ["沙發", "民生用品", "水壺", "椅子", "桌子", "機器人", "公仔","寶寶"],
+              datasets: [{ 
+                  data: [100,114,106,106,107,111,150,10],
+                  label: "Total",
+                  borderColor: "rgb(62,149,205)",
+                  backgroundColor: "rgb(62,149,205,0.1)",
+                  borderWidth:2
+                }, { 
+                  data: [70,90,44,60,83,90,100,10],
+                  label: "Accepted",
+                  borderColor: "rgb(60,186,159)",
+                  backgroundColor: "rgb(60,186,159,0.1)",
+                  borderWidth:2
+                }, { 
+                  data: [10,21,60,44,17,21,17,10],
+                  label: "Pending",
+                  borderColor: "rgb(255,165,0)",
+                  backgroundColor:"rgb(255,165,0,0.1)",
+                  borderWidth:2
+                }, { 
+                  data: [6,3,2,2,7,0,16,10],
+                  label: "Rejected",
+                  borderColor: "rgb(196,88,80)",
+                  backgroundColor:"rgb(196,88,80,0.1)",
+                  borderWidth:2
+                }
+                , { 
+                  data: [10,10,10,10,10,10,10,10],
+                  label: "哈哈阿",
+                  borderColor: "rgb(100,88,80)",
+                  backgroundColor:"rgb(166,88,80,0.1)",
+                  borderWidth:2
+                }
+              ]
+            },
+          });
+        var ctx = document.getElementById('myChart_2').getContext('2d');
+        var myChart_2 = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ["沙發", "民生用品", "水壺", "椅子", "桌子", "機器人", "公仔","寶寶"],
+              datasets: [{ 
+                  data: [100,114,106,106,107,111,150,10],
+                  label: "Total",
+                  borderColor: "rgb(62,149,205)",
+                  backgroundColor: "rgb(62,149,205,0.1)",
+                  borderWidth:2
+                }, { 
+                  data: [70,90,44,60,83,90,100,10],
+                  label: "Accepted",
+                  borderColor: "rgb(60,186,159)",
+                  backgroundColor: "rgb(60,186,159,0.1)",
+                  borderWidth:2
+                }, { 
+                  data: [10,21,60,44,17,21,17,10],
+                  label: "Pending",
+                  borderColor: "rgb(255,165,0)",
+                  backgroundColor:"rgb(255,165,0,0.1)",
+                  borderWidth:2
+                }, { 
+                  data: [6,3,2,2,7,0,16,10],
+                  label: "Rejected",
+                  borderColor: "rgb(196,88,80)",
+                  backgroundColor:"rgb(196,88,80,0.1)",
+                  borderWidth:2
+                }
+                , { 
+                  data: [10,10,10,10,10,10,10,10],
+                  label: "哈",
+                  borderColor: "rgb(100,88,80)",
+                  backgroundColor:"rgb(166,88,80,0.1)",
+                  borderWidth:2
+                }
+              ]
+            },
+          });
+        var ctx = document.getElementById('myChart_3').getContext('2d');
+        var myChart_2 = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ["沙發", "民生用品", "水壺", "椅子", "桌子", "機器人", "公仔","寶寶"],
+              datasets: [{ 
+                    data: [100,114,106,106,107,111,150,10],
+                    label: "Total",
+                    borderColor: "rgb(62,149,205)",
+                    backgroundColor: [
+                        "rgb(52,149,125,0.1)",                  
+                        "rgb(62,89,35,0.1)",
+                        "rgb(100,56,128,0.1)",
+                        "rgb(200,13,56,0.1)",
+                        "rgb(233,36,96,0.1)",
+                        "rgb(123,86,20,0.1)",
+                        "rgb(29,99,15,0.1)",
+                        "rgb(78,123,48,0.1)",
+                    ],
+                    borderWidth:2
+                }
+              ]
+            },
+          });
+        var ctx = document.getElementById('myChart_4').getContext('2d');
+        var myChart_2 = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+              labels: ["沙發", "民生用品", "水壺", "椅子", "桌子", "機器人", "公仔","寶寶"],
+              datasets: [{ 
+                data: [100,114,106,106,107,111,150,10],
+                  label: "Total",
+                  borderColor: "rgb(62,149,205)",
+                  backgroundColor: "rgb(62,149,205,0.1)",
+                  borderWidth:2
+                }, { 
+                  data: [70,90,44,60,83,90,100,10],
+                  label: "Accepted",
+                  borderColor: "rgb(60,186,159)",
+                  backgroundColor: "rgb(60,186,159,0.1)",
+                  borderWidth:2
+                }, { 
+                  data: [10,21,60,44,17,21,17,10],
+                  label: "Pending",
+                  borderColor: "rgb(255,165,0)",
+                  backgroundColor:"rgb(255,165,0,0.1)",
+                  borderWidth:2
+                }, { 
+                  data: [6,3,2,2,7,0,16,10],
+                  label: "Rejected",
+                  borderColor: "rgb(196,88,80)",
+                  backgroundColor:"rgb(196,88,80,0.1)",
+                  borderWidth:2
+                }
+                , { 
+                  data: [10,10,10,10,10,10,10,10],
+                  label: "哈",
+                  borderColor: "rgb(100,88,80)",
+                  backgroundColor:"rgb(166,88,80,0.1)",
+                  borderWidth:2
+                }
+              ]
+            },
+          });
     </script>
 </body>
 </html>

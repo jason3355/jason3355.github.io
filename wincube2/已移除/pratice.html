@@ -1,268 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- <link href="../已移除/pratice.js"> -->
-    <title>練習</title>
-    <style>
-        body{
-            margin: 0;
-        }
-        /* .cir{
-            fill: url("../Img/hope.png");
-        } */
-    </style>
-</head>
-<body>    
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script> 
-        const n=100;
-        const width=window.innerWidth;
-        const height=window.innerHeight; 
-        const range=[];
-        for(let i=0;i<=n;i++){
-            range[i]=i;
-        };
-        const svg=d3.select('body')
-            .append('svg')
-            .attr('width',width)
-            .attr('height',height)  
-            .style('background-color','white');
-        svg
-            .append('g')
-            .selectAll('rect')
-            .data(range)
-            .join(
-                enter => enter.append('rect')
-                .attr('y',(d)=>d*20)
-                .attr('width',width)
-                .attr('height',10)
-                .style('background-color','black')
-                .attr('mask','url(#circle-mask)')                
-            );
-        svg
-            .append('g')
-            .selectAll('rect')
-            .data(range)
-            .join(
-                enter => enter.append('rect')
-                .attr('x',(d)=>d*20)
-                .attr('width',10)
-                .attr('height',height)
-                .style('background-color','black')
-                .attr('mask','url(#circle-mask2)')                
-            );               
-        
-        const mask=svg.append('mask').attr('id','circle-mask');
-        mask
-            .append('rect')
-            .attr('width',width)
-            .attr('height',height)
-            .style('background-color','black');
+    <title>Chart.js Bar Chart</title>
+    <link rel="stylesheet" href="cchart.css">
+    <!--Chart.js JS CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script> 
+  </head>
+  <body>
 
-        mask
-            .append('circle')
-            .attr('cx',width/2)
-            .attr('cy',height/2)
-            .attr('r',200)
-            .style('background-color','white');
-        
-        const mask2=svg.append('mask').attr('id','circle-mask2');
-        mask2
-            .append('rect')
-            .attr('width',width)
-            .attr('height',height)
-            .style('background-color','white');
+    <div class="body">
+	    <canvas id="myChart_1"></canvas>
+    </div>
 
-        mask2
-            .append('circle')
-            .attr('cx',width/2)
-            .attr('cy',width/2)
-            .attr('r',200)
-            .style('background-color','black');
-
-        
-        // const width=window.innerWidth;
-        // const height=window.innerHeight;
-
-        // const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
-        // svg.setAttribute('width',width);
-        // svg.setAttribute('height',height);
-        // svg.setAttribute('fill','white');
-        // document.body.appendChild(svg);
-        // //裡面
-        // const mask=document.createElementNS('http://www.w3.org/2000/svg','mask');
-        // mask.setAttribute('width',width);
-        // mask.setAttribute('height',height);
-        // mask.setAttribute('id','rect-mask');
-        // svg.appendChild(mask);
-
-        // const maskRect=document.createElementNS('http://www.w3.org/2000/svg','rect');
-        // maskRect.setAttribute('width',width);
-        // maskRect.setAttribute('height',height);
-        // maskRect.setAttribute('fill','black');
-        // mask.appendChild(maskRect);
-
-        // const rect=document.createElementNS('http://www.w3.org/2000/svg','rect');
-        // rect.setAttribute('width',200);
-        // rect.setAttribute('height',200);
-        // rect.setAttribute('x',600);
-        // rect.setAttribute('y',250);
-        // rect.setAttribute('fill','white');
-        // mask.appendChild(rect);
-
-        // let n=100;
-        // for(let i=0;i<n;i++){
-        //     const rect=document.createElementNS('http://www.w3.org/2000/svg','rect');
-        //     rect.setAttribute('y',i*20);
-        //     rect.setAttribute('width',width);
-        //     rect.setAttribute('height',10);            
-        //     rect.setAttribute('fill','black');
-        //     rect.setAttribute('mask','url(#rect-mask)');
-        //     svg.appendChild(rect);
-        // }
+    <script>
+      var ctx = document.getElementById('myChart_1').getContext('2d');
+        var myChart_1 = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ["00", "04", "08", "12", "16", "20", "24"],
+              datasets: [{ 
+                  data: [100,114,106,106,107,111,150],
+                  label: "Total",
+                  borderColor: "rgb(62,149,205)",
+                  backgroundColor: "rgb(62,149,205,0.1)",
+                  borderWidth:2
+                }, {  
+                  data: [10,10,10,10,10,10,10],
+                  label: "哈哈阿",
+                  borderColor: "rgb(100,88,80)",
+                  backgroundColor:"rgb(166,88,80,0.1)",
+                  borderWidth:2
+                }
+              ]
+            },
+            options: {
+              scales: {  // 縮放屬性
+                yAxes: [{  // 設定垂直軸 [使用陣列方式]
+                  ticks: {  // 設定間隔數值
+                    // 固定數值
+                    min: 0,  // 最小是 0
+                    max: 2000,                    
+                    // 建議數值
+                    suggestedMin: 0,
+                    suggestedMax: 2000,
+                    
+                    // 值間隔
+                    stepSize: 400,
+                    
+                    // 增加數值文字
+                    callback: function (value, index, values) {
+                      // return value + '萬顆';
+                    }
+                  }
+                }]
+              }
+            }
 
 
-        // //外面
-        // const mask2=document.createElementNS('http://www.w3.org/2000/svg','mask');
-        // mask2.setAttribute('width',width);
-        // mask2.setAttribute('height',height);
-        // mask2.setAttribute('id','rect-mask-2');
-        // svg.appendChild(mask2);
-
-        // const maskRect2=document.createElementNS('http://www.w3.org/2000/svg','rect');
-        // maskRect2.setAttribute('width',width);
-        // maskRect2.setAttribute('height',height);
-        // maskRect2.setAttribute('fill','white');
-        // mask2.appendChild(maskRect2);
-
-        // const rect2=document.createElementNS('http://www.w3.org/2000/svg','rect');
-        // rect2.setAttribute('width',200);
-        // rect2.setAttribute('height',200);
-        // rect2.setAttribute('x',600);
-        // rect2.setAttribute('y',250);
-        // rect2.setAttribute('fill','black');
-        // mask2.appendChild(rect2);
 
 
-        // for(let i=0;i<n;i++){
-        //     const rect=document.createElementNS('http://www.w3.org/2000/svg','rect');
-        //     rect.setAttribute('x',i*20);
-        //     rect.setAttribute('width',10);
-        //     rect.setAttribute('height',height);            
-        //     rect.setAttribute('fill','black');
-        //     rect.setAttribute('mask','url(#rect-mask-2)');
-        //     svg.appendChild(rect);
-        // }
-
-    //     const width = window.innerWidth;
-    //   const height = window.innerHeight;
-
-    //   const svg = document.createElementNS(
-    //     'http://www.w3.org/2000/svg',
-    //     'svg'
-    //   );
-    //   svg.setAttribute('width', width);
-    //   svg.setAttribute('height', height);
-    //   document.body.appendChild(svg);
-
-    //   const mask = document.createElementNS(
-    //     'http://www.w3.org/2000/svg',
-    //     'mask'
-    //   );
-    //   mask.setAttribute('id', 'circle-mask');
-    //   svg.appendChild(mask);
-
-    //   const maskRect = document.createElementNS(
-    //     'http://www.w3.org/2000/svg',
-    //     'rect'
-    //   );
-    //   maskRect.setAttribute('width', width);
-    //   maskRect.setAttribute('height', height);
-    //   maskRect.setAttribute('fill', 'black');
-    //   mask.appendChild(maskRect);
-
-    //   const circle = document.createElementNS(
-    //     'http://www.w3.org/2000/svg',
-    //     'circle'
-    //   );
-    //   circle.setAttribute('cx', width / 2);
-    //   circle.setAttribute('cy', height / 2);
-    //   circle.setAttribute('r', 200);
-    //   circle.setAttribute('fill', 'white');
-    //   mask.appendChild(circle);
-
-    //   const mask2 = document.createElementNS(
-    //     'http://www.w3.org/2000/svg',
-    //     'mask'
-    //   );
-    //   mask2.setAttribute('id', 'circle-mask-2');
-    //   svg.appendChild(mask2);
-
-    //   const maskRect2 = document.createElementNS(
-    //     'http://www.w3.org/2000/svg',
-    //     'rect'
-    //   );
-    //   maskRect2.setAttribute('width', width);
-    //   maskRect2.setAttribute('height', height);
-    //   maskRect2.setAttribute('fill', 'white');
-    //   mask2.appendChild(maskRect2);
-
-    //   const circle2 = document.createElementNS(
-    //     'http://www.w3.org/2000/svg',
-    //     'circle'
-    //   );
-    //   circle2.setAttribute('cx', width / 2);
-    //   circle2.setAttribute('cy', height / 2);
-    //   circle2.setAttribute('r', 200);
-    //   circle2.setAttribute('fill', 'black');
-    //   mask2.appendChild(circle2);
-
-    //   const n = 100;
-    //   for (let i = 0; i < n; i++) {
-    //     const rect = document.createElementNS(
-    //       'http://www.w3.org/2000/svg',
-    //       'rect'
-    //     );
-    //     rect.setAttribute('y', i * 20);
-    //     rect.setAttribute('width', width);
-    //     rect.setAttribute('height', 10);
-    //     rect.setAttribute('mask', 'url(#circle-mask)');
-    //     svg.appendChild(rect);
-    //   }
-
-    //   for (let i = 0; i < n; i++) {
-    //     const rect = document.createElementNS(
-    //       'http://www.w3.org/2000/svg',
-    //       'rect'
-    //     );
-    //     rect.setAttribute('x', i * 20);
-    //     rect.setAttribute('width', 10);
-    //     rect.setAttribute('height', height);
-    //     rect.setAttribute('mask', 'url(#circle-mask-2)');
-    //     svg.appendChild(rect);
-    //   }
-
+          });
     </script>
-    <!-- <form action="pratice.php" method="post"> 
-        <div>
-            <input type="hidden" name="test" value="0">
-            <input type="hidden" name="test2" value="1">
-            <input type="test" name="testt" id="john">
-        </div>
-        <div>
-            <input type="hidden" name="test" value="0">
-            <input type="hidden" name="test2" value="1">
-            <input type="test" name="testt" id="john">
-            <input type="submit">
-        </div>
-    </form>
-    <form>
-        <label id="jason">
-        </label>
-    </form> -->
-</body>
+
+  </body>
 </html>
