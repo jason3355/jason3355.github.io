@@ -34,15 +34,14 @@
                 </div>
                 </a> 
             </div>  
+            <div class="search">                
+                <span>您好!阿吉</span>
+            </div>  
             <div class="sign-up">
                 <form>
                     <input type="submit" name="Log out" value="登出">
                 </form>
-            </div>   
-            <div class="search">                
-                <input type="search" class="search-search">
-                <input id="search-btn" class="button-btn" type="submit" name="搜尋" value="搜尋">
-            </div>   
+            </div>             
     </header>
     <div class="body-1">
         <form method='post'>
@@ -67,6 +66,9 @@
                         <td class="product-amount">
                             <span>商品數量</span>
                         </td>
+                        <td class="product-inven">
+                            <span>庫存量</span>
+                        </td>
                         <td class="product-give">
                             <span>配送方式</span>
                         </td>
@@ -81,7 +83,7 @@
                             <input type="checkbox" name="tt" onclick="c2()">
                         </td>
                         <td class="img">
-                            <img src="../../Img/sofa-2.jpg">
+                            <img src="../../Img/sofa.jpg">
                         </td>
                         <td class="name">
                             <span>條紋沙發</span>
@@ -103,6 +105,9 @@
                                 </button>
                             </div>
                         </td>
+                        <td class="invent">
+                            <span>13</span>
+                        </td>
                         <td class="option">
                             <input type="radio" value="是,需要配送" name="yn">
                             <label class="yes">是,需要配送</label>
@@ -110,74 +115,7 @@
                             <label class="no">否,自行前往領取</label>
                         </td>
                     </tr>
-                    <tr class="demander">
-                        <td class="choose">
-                            <input type="checkbox" name="tt" onclick="c2()">
-                        </td>
-                        <td class="img">
-                            <img src="../../Img/sofa-3.jpg">
-                        </td>
-                        <td class="name">
-                            <span>條紋沙發</span>
-                        </td>
-                        <td class="type">
-                            <span>家具</span>
-                        </td>
-                        <td class="price">
-                            <span>NT598</span>
-                        </td>
-                        <td class="amount">
-                            <div>
-                                <button type="button" class="add" onclick="add(1)">
-                                    +
-                                </button>
-                                <input type="text" value="1" class="amount1" id="amount" name="amount">
-                                <button type="button" class="less" onclick="less(1)">
-                                    -
-                                </button>
-                            </div>
-                        </td>
-                        <td class="option">
-                            <input type="radio" value="是,需要配送" name="yn-1">
-                            <label class="yes">是,需要配送</label>
-                            <input type="radio" value="否,自行前往領取" name="yn-1">
-                            <label class="no">否,自行前往領取</label>
-                        </td>
-                    </tr>    
-                    <tr class="demander">
-                        <td class="choose">
-                            <input type="checkbox" name="tt" onclick="c2()">
-                        </td>
-                        <td class="img">
-                            <img src="../../Img/sofa-3.jpg">
-                        </td>
-                        <td class="name">
-                            <span>條紋沙發</span>
-                        </td>
-                        <td class="type">
-                            <span>家具</span>
-                        </td>
-                        <td class="price">
-                            <span>NT598</span>
-                        </td>
-                        <td class="amount">
-                            <div>
-                                <button type="button" class="add" onclick="add(2)">
-                                    +
-                                </button>
-                                <input type="text" value="1" class="amount1" id="amount" name="amount">
-                                <button type="button" class="less" onclick="less(2)">
-                                    -
-                                </button>
-                            </div>
-                        </td>
-                        <td class="option">
-                            <input type="radio" value="是,需要配送" name="yn-1">
-                            <label class="yes">是,需要配送</label>
-                            <input type="radio" value="否,自行前往領取" name="yn-1">
-                            <label class="no">否,自行前往領取</label>
-                        </td>
-                    </tr>              
+                                  
                 </table>
                 <!-- <div class="send-out">
                     <input type="submit" value="送出">

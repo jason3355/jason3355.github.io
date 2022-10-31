@@ -119,10 +119,12 @@ body{
 }
 .product-img{
     width: 100px;
+    height: 100px;
     object-fit: fill;
 }
 .product-img > img{
     width: 100%;
+    height: 100%;
 }
 .product-name > span{
     width: 70px;

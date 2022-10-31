@@ -10,26 +10,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script> 
   </head>
   <body>
-
+    <button onclick="hh()">123</button>
     <div class="body">
 	    <canvas id="myChart_1"></canvas>
     </div>
 
     <script>
+      var kk=[0,(114/100),(106/100),(106/100),(107/100),(111/100),(150/100)
+      ,(111/100),(69/100),(150/100),(136/100),(55/100),(112/100)];
+      var cc=[0,74,86,36,157,131,140,118,99,87,137,66,90];
+      function hh(){
+        kk=[];
+      }
+
       var ctx = document.getElementById('myChart_1').getContext('2d');
         var myChart_1 = new Chart(ctx, {
             type: 'line',
             data: {
-              labels: ["00", "04", "08", "12", "16", "20", "24"],
+              labels: ["00","","02","","04","" ,"6","","8","","10","","12"],
               datasets: [{ 
-                  data: [100,114,106,106,107,111,150],
-                  label: "Total",
+                  data: kk,
+                  // data: [0,114,106,106,107,111,150,111,69,150,136,55,112],
+                  label: "銷售額",
                   borderColor: "rgb(62,149,205)",
                   backgroundColor: "rgb(62,149,205,0.1)",
                   borderWidth:2
                 }, {  
-                  data: [10,10,10,10,10,10,10],
-                  label: "哈哈阿",
+                  data: cc,
+                  label: "訂單數",
                   borderColor: "rgb(100,88,80)",
                   backgroundColor:"rgb(166,88,80,0.1)",
                   borderWidth:2
@@ -42,7 +50,7 @@
                   ticks: {  // 設定間隔數值
                     // 固定數值
                     min: 0,  // 最小是 0
-                    max: 2000,                    
+                    max: 1,                    
                     // 建議數值
                     suggestedMin: 0,
                     suggestedMax: 2000,

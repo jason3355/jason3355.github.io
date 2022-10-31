@@ -21,6 +21,7 @@ body{
 .allproduct-title{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items:flex-end;
     margin: 10px 0 30px 0;
 }
@@ -28,41 +29,19 @@ i{
     width: 60%;
 }
 
-@keyframes title-span {
-    from {
-      transform: translateX(100%)
-    }
-   
-    to {
-      transform: translateX(0%)
-    }  
-} 
- 
-.title-span{
-    animation: title-span 5s linear infinite;
-    overflow: hidden;
-}
-
-.title-span{
-    padding-left: 10px;
-    width: 350px;
-    height: 30px;
-    background-color: rgb(88, 86, 86,0.8);    
-}
-.title-span p{
-    margin: 0;
-}
-
 hr{
     width: 100%;
     margin-bottom: 30px;
 }
 .allproduct-title>p{
+    width: 100%;
     margin:0;
     font-size: 2.3rem;
 }
-.allproduct-title > i{
+.allproduct-title > span{
+    width: 200px;
     display: flex;
+    justify-content: end;
     align-items: flex-end;
     padding-left: 10px;
 }

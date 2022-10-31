@@ -35,11 +35,11 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     background-color:#ece4e5;
 }
 .top:hover{
-    transform:scale(1.1);   
+    transform:scale(1.03);   
     background-color:rgb(250, 211, 211); 
 }
 .top-img{
@@ -110,10 +110,10 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #ece4e5;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 .tbody-right:hover{
-    transform: scale(1.1);
+    transform: scale(1.03);
     background-color:rgb(250, 211, 211);
 }
 .right{

@@ -45,7 +45,7 @@
 }
 .manu-ul{ 
     width: 100%;   
-    margin-top: 15px;   
+    margin-top: 20px;   
     list-style: none; 
     padding: 0;
     display: flex;
@@ -75,34 +75,18 @@
 }
 
 .search{
+    width: 100px;
     display: flex;
     justify-content: right;
-    margin-right: 30px;
+    align-items: center;
+    margin-right: 10px;
 }
-.search > div > img{
-    width: 100%;
-}
-.search-search{
-    margin:10px 10px 10px 0px;
-    width: 150px;
-    height: 30px;
-}
-
-#search-btn{
-    margin-top: 10px;
-    width: 50px;
-    height: 30px;
-}
-
 .sign-up{
     width: 50px;
-    padding-top: 13px;
-}
-
-.sign-up > a{
-    color: black;
-    text-decoration: none;
-
+    /* padding-top: 13px; */
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
 }
 
 .sign-up > form >input{
@@ -110,6 +94,7 @@
     cursor: pointer;
     border: none;
     background-color: #ece4e5;
+    padding:5px 8px 5px 8px;
 }
 
 .sign-up > form >input:hover{
