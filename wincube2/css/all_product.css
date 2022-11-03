@@ -168,7 +168,7 @@ select.classic {
 }
 
 .add-product:hover{
-    width: 60px;
+    transform:scale(1.04);
 }
 
 @media screen and (max-width:550px){

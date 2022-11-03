@@ -43,15 +43,14 @@
                 </div>
                 </a> 
             </div>  
-            <div class="sign-up">
-                <form>
-                    <input type="submit" name="Log out" value="登出">
-                </form>
-            </div>   
             <div class="search">                
-                <input type="search" class="search-search">
-                <input class="button-btn" id="search-btn" type="submit" name="搜尋" value="搜尋">
-            </div>   
+              <span>您好!阿吉</span>
+          </div>  
+          <div class="sign-up">
+              <form>
+                  <input type="submit" name="Log out" value="登出">
+              </form>
+          </div>     
     </header>
     <div class="body-1">
         <p>績效分析</p>
@@ -63,20 +62,23 @@
         </div>
         <div class="back">
           <div class="backk">
-            <div class="back_1" onclick="show(1)">
+            <div class="back_1" onclick="aa(1)">
               <span>銷售額</span>
             </div>
-            <div class="back_1" onclick="show(2)">
+            <div class="back_1" onclick="aa(2)">
               <span>訂單數</span>
             </div>
-            <div class="back_1" onclick="show(3)">
+            <div class="back_1" onclick="aa(3)">
               <span>平均訂單金額</span>
             </div>
-            <div class="back_1" onclick="show(4)">
+            <div class="back_1" onclick="aa(4)">
               <span>頁面瀏覽數</span>
             </div>
           </div>
           <div class="chart char_1" id="char_1">
+            <canvas id="myChart_1"></canvas>
+          </div>
+          <!-- <div class="chart char_1" id="char_1">
               <canvas id="myChart_1"></canvas>
           </div>
           <div class="chart chart_2" id="char_2">
@@ -87,201 +89,151 @@
           </div>
           <div class="chart chart_4" id="char_4">
               <canvas id="myChart_4"></canvas>
-          </div>
+          </div> -->
         </div>
     </div>
     <script>
-        function show(n){
-          var chart_1=document.getElementById('char_1');
-          var chart_2=document.getElementById('char_2');
-          var chart_3=document.getElementById('char_3');
-          var chart_4=document.getElementById('char_4');
-          var back_1=document.getElementsByClassName('back_1')
-          if(n==1){
-            chart_1.style.display='block';
-            back_1[0].style.borderTop='blue 3px solid';
-            chart_2.style.display='none';
-            back_1[1].style.borderTop='1px solid #E0E0E0';
-            chart_3.style.display='none';
-            back_1[2].style.borderTop='1px solid #E0E0E0';
-            chart_4.style.display='none';
-            back_1[3].style.borderTop='1px solid #E0E0E0';
+        var back_1=document.getElementsByClassName('back_1');
+        var chart_chart_1=[0,0.5,0.78,0.36,0.66,0.58,0.49,0.33,0.25,0.13,0.26,0.76,0.53];
+        let chart_1n=0;
+        var chart_chart_2=[];
+        let chart_2n=1;
+        var chart_chart_3=[];
+        let chart_3n=1;
+        var chart_chart_4=[];
+        let chart_4n=1;
+        creative();
+          function aa(chartn){
+            if(chartn==1){
+              chart_1n+=1;
+              if(chart_1n%2!=0){
+                back_1[0].style.borderTop='1px solid #E0E0E0';
+                chart_chart_1=[];
+                creative();
+                if(chart_chart_1==true&&chart_chart_2==true&&chart_chart_3==true&&chart_chart_4==true){
+                  back_1[0].style.borderTop='blue 3px solid';
+                  chart_chart_1=[0,0.5,0.78,0.36,0.66,0.58,0.49,0.33,0.25,0.13,0.26,0.76,0.53];
+                  creative();
+                }
+              }
+              else{
+                back_1[0].style.borderTop='blue 3px solid';
+                chart_chart_1=[0,0.5,0.78,0.36,0.66,0.58,0.49,0.33,0.25,0.13,0.26,0.76,0.53];
+                creative();
+              }
+            }
+            if(chartn==2){
+              chart_2n+=1;
+              if(chart_2n%2!=0){
+                back_1[1].style.borderTop='1px solid #E0E0E0';
+                chart_chart_2=[];
+                creative();
+                if(chart_chart_1==true&&chart_chart_2==true&&chart_chart_3==true&&chart_chart_4==true){
+                  back_1[1].style.borderTop='red 3px solid';
+                  chart_chart_2=[0,0.5,0.78,0.36,0.66,0.58,0.49,0.33,0.25,0.13,0.26,0.76,0.53];
+                  creative();
+                }
+              }
+              else{
+                back_1[1].style.borderTop='red 3px solid';
+                chart_chart_2=[0,0.9,0.75,0.46,0.36,0.68,0.79,0.93,0.15,0.33,0.46,0.86,0.03];
+                creative();
+              }
+            }
+            if(chartn==3){
+              chart_3n+=1;
+              if(chart_3n%2!=0){
+                back_1[2].style.borderTop='1px solid #E0E0E0';
+                chart_chart_3=[];
+                creative();
+                if(chart_chart_1==true&&chart_chart_2==true&&chart_chart_3==true&&chart_chart_4==true){
+                  back_1[2].style.borderTop='green 3px solid';
+                  chart_chart_3=[0,0.5,0.78,0.36,0.66,0.58,0.49,0.33,0.25,0.13,0.26,0.76,0.53];
+                  creative();
+                }
+              }
+              else{
+                back_1[2].style.borderTop='green 3px solid';
+                chart_chart_3=[0,0.3,0.28,0.56,0.96,0.233,0.755,0.199,0.45,0.83,0.66,0.56,0.23];
+                creative();
+              }
+            }
+            if(chartn==4){
+              chart_4n+=1;
+              if(chart_4n%2!=0){
+                back_1[3].style.borderTop='1px solid #E0E0E0';
+                chart_chart_4=[];
+                creative();
+                if(chart_chart_1==true&&chart_chart_2==true&&chart_chart_3==true&&chart_chart_4==true){
+                  back_1[3].style.borderTop='yellow 3px solid';
+                  chart_chart_4=[0,0.5,0.78,0.36,0.66,0.58,0.49,0.33,0.25,0.13,0.26,0.76,0.53];
+                  creative();
+                }
+              }
+              else{
+                back_1[3].style.borderTop='yellow 3px solid';
+                chart_chart_4=[0,0.42,0.69,0.24,0.83,0.17,0.44,0.73,0.49,0.44,0.58,0.97,0.227];
+                creative();
+              }
+            }                       
           }
-          if(n==2){
-            chart_1.style.display='none';
-            back_1[0].style.borderTop='1px solid #E0E0E0';
-            chart_2.style.display='block';
-            back_1[1].style.borderTop='red 3px solid';
-            chart_3.style.display='none';
-            back_1[2].style.borderTop='1px solid #E0E0E0';
-            chart_4.style.display='none';
-            back_1[3].style.borderTop='1px solid #E0E0E0';
+          function creative(){
+            var ctx = document.getElementById('myChart_1').getContext('2d');
+            var myChart_1 = new Chart(ctx, {
+                type: 'line',
+                data: {
+                  labels: ["00","","02","","04","" ,"6","","8","","10","","12"],
+                  datasets: [{ 
+                      data: chart_chart_1,
+                      label: "銷售額",
+                      borderColor: "rgb(62,149,205)",
+                      backgroundColor: "rgb(62,149,205,0.1)",
+                      borderWidth:2
+                    }, { 
+                      data: chart_chart_2,
+                      label: "訂單數",
+                      borderColor: "rgb(60,186,159)",
+                      backgroundColor: "rgb(60,186,159,0.1)",
+                      borderWidth:2
+                    }, { 
+                      data: chart_chart_3,
+                      label: "平均訂單金額",
+                      borderColor: "rgb(255,165,0)",
+                      backgroundColor:"rgb(255,165,0,0.1)",
+                      borderWidth:2
+                    }, { 
+                      data: chart_chart_4,
+                      label: "頁面瀏覽數",
+                      borderColor: "rgb(196,88,80)",
+                      backgroundColor:"rgb(196,88,80,0.1)",
+                      borderWidth:2
+                    }
+                  ]
+                },
+                  options: {
+                    scales: {  // 縮放屬性
+                      yAxes: [{  // 設定垂直軸 [使用陣列方式]
+                        ticks: {  // 設定間隔數值
+                          // 固定數值
+                          min: 0,  // 最小是 0
+                          max: 1,                    
+                          // 建議數值
+                          suggestedMin: 0,
+                          suggestedMax: 2000,
+                          
+                          // 值間隔
+                          stepSize: 400,
+                          
+                          // 增加數值文字
+                          callback: function (value, index, values) {
+                            // return value + '萬顆';
+                          }
+                        }
+                      }]
+                    }
+                  }
+              });
           }
-          if(n==3){
-            chart_1.style.display='none';
-            back_1[0].style.borderTop='1px solid #E0E0E0';
-            chart_2.style.display='none';
-            back_1[1].style.borderTop='1px solid #E0E0E0';
-            chart_3.style.display='block';
-            back_1[2].style.borderTop='green 3px solid';
-            chart_4.style.display='none';
-            back_1[3].style.borderTop='1px solid #E0E0E0';
-          }
-          if(n==4){
-            chart_1.style.display='none';
-            back_1[0].style.borderTop='1px solid #E0E0E0';
-            chart_2.style.display='none';
-            back_1[1].style.borderTop='1px solid #E0E0E0';
-            chart_3.style.display='none';
-            back_1[2].style.borderTop='1px solid #E0E0E0';
-            chart_4.style.display='block';
-            back_1[3].style.borderTop='yellow 3px solid';
-          }
-        }
-        var ctx = document.getElementById('myChart_1').getContext('2d');
-        var myChart_1 = new Chart(ctx, {
-            type: 'bar',
-            data: {
-              labels: ["沙發", "民生用品", "水壺", "椅子", "桌子", "機器人", "公仔","寶寶"],
-              datasets: [{ 
-                  data: [100,114,106,106,107,111,150,10],
-                  label: "Total",
-                  borderColor: "rgb(62,149,205)",
-                  backgroundColor: "rgb(62,149,205,0.1)",
-                  borderWidth:2
-                }, { 
-                  data: [70,90,44,60,83,90,100,10],
-                  label: "Accepted",
-                  borderColor: "rgb(60,186,159)",
-                  backgroundColor: "rgb(60,186,159,0.1)",
-                  borderWidth:2
-                }, { 
-                  data: [10,21,60,44,17,21,17,10],
-                  label: "Pending",
-                  borderColor: "rgb(255,165,0)",
-                  backgroundColor:"rgb(255,165,0,0.1)",
-                  borderWidth:2
-                }, { 
-                  data: [6,3,2,2,7,0,16,10],
-                  label: "Rejected",
-                  borderColor: "rgb(196,88,80)",
-                  backgroundColor:"rgb(196,88,80,0.1)",
-                  borderWidth:2
-                }
-                , { 
-                  data: [10,10,10,10,10,10,10,10],
-                  label: "哈哈阿",
-                  borderColor: "rgb(100,88,80)",
-                  backgroundColor:"rgb(166,88,80,0.1)",
-                  borderWidth:2
-                }
-              ]
-            },
-          });
-        var ctx = document.getElementById('myChart_2').getContext('2d');
-        var myChart_2 = new Chart(ctx, {
-            type: 'line',
-            data: {
-              labels: ["沙發", "民生用品", "水壺", "椅子", "桌子", "機器人", "公仔","寶寶"],
-              datasets: [{ 
-                  data: [100,114,106,106,107,111,150,10],
-                  label: "Total",
-                  borderColor: "rgb(62,149,205)",
-                  backgroundColor: "rgb(62,149,205,0.1)",
-                  borderWidth:2
-                }, { 
-                  data: [70,90,44,60,83,90,100,10],
-                  label: "Accepted",
-                  borderColor: "rgb(60,186,159)",
-                  backgroundColor: "rgb(60,186,159,0.1)",
-                  borderWidth:2
-                }, { 
-                  data: [10,21,60,44,17,21,17,10],
-                  label: "Pending",
-                  borderColor: "rgb(255,165,0)",
-                  backgroundColor:"rgb(255,165,0,0.1)",
-                  borderWidth:2
-                }, { 
-                  data: [6,3,2,2,7,0,16,10],
-                  label: "Rejected",
-                  borderColor: "rgb(196,88,80)",
-                  backgroundColor:"rgb(196,88,80,0.1)",
-                  borderWidth:2
-                }
-                , { 
-                  data: [10,10,10,10,10,10,10,10],
-                  label: "哈",
-                  borderColor: "rgb(100,88,80)",
-                  backgroundColor:"rgb(166,88,80,0.1)",
-                  borderWidth:2
-                }
-              ]
-            },
-          });
-        var ctx = document.getElementById('myChart_3').getContext('2d');
-        var myChart_2 = new Chart(ctx, {
-            type: 'bar',
-            data: {
-              labels: ["沙發", "民生用品", "水壺", "椅子", "桌子", "機器人", "公仔","寶寶"],
-              datasets: [{ 
-                    data: [100,114,106,106,107,111,150,10],
-                    label: "Total",
-                    borderColor: "rgb(62,149,205)",
-                    backgroundColor: [
-                        "rgb(52,149,125,0.1)",                  
-                        "rgb(62,89,35,0.1)",
-                        "rgb(100,56,128,0.1)",
-                        "rgb(200,13,56,0.1)",
-                        "rgb(233,36,96,0.1)",
-                        "rgb(123,86,20,0.1)",
-                        "rgb(29,99,15,0.1)",
-                        "rgb(78,123,48,0.1)",
-                    ],
-                    borderWidth:2
-                }
-              ]
-            },
-          });
-        var ctx = document.getElementById('myChart_4').getContext('2d');
-        var myChart_2 = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-              labels: ["沙發", "民生用品", "水壺", "椅子", "桌子", "機器人", "公仔","寶寶"],
-              datasets: [{ 
-                data: [100,114,106,106,107,111,150,10],
-                  label: "Total",
-                  borderColor: "rgb(62,149,205)",
-                  backgroundColor: "rgb(62,149,205,0.1)",
-                  borderWidth:2
-                }, { 
-                  data: [70,90,44,60,83,90,100,10],
-                  label: "Accepted",
-                  borderColor: "rgb(60,186,159)",
-                  backgroundColor: "rgb(60,186,159,0.1)",
-                  borderWidth:2
-                }, { 
-                  data: [10,21,60,44,17,21,17,10],
-                  label: "Pending",
-                  borderColor: "rgb(255,165,0)",
-                  backgroundColor:"rgb(255,165,0,0.1)",
-                  borderWidth:2
-                }, { 
-                  data: [6,3,2,2,7,0,16,10],
-                  label: "Rejected",
-                  borderColor: "rgb(196,88,80)",
-                  backgroundColor:"rgb(196,88,80,0.1)",
-                  borderWidth:2
-                }
-                , { 
-                  data: [10,10,10,10,10,10,10,10],
-                  label: "哈",
-                  borderColor: "rgb(100,88,80)",
-                  backgroundColor:"rgb(166,88,80,0.1)",
-                  borderWidth:2
-                }
-              ]
-            },
-          });
     </script>
 </body>
 </html>

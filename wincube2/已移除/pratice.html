@@ -16,13 +16,10 @@
     </div>
 
     <script>
-      var kk=[0,(114/100),(106/100),(106/100),(107/100),(111/100),(150/100)
-      ,(111/100),(69/100),(150/100),(136/100),(55/100),(112/100)];
-      var cc=[0,74,86,36,157,131,140,118,99,87,137,66,90];
-      function hh(){
-        kk=[];
-      }
-
+      var n=0;
+      var kk=[0,(14/100),(16/100),(16/100),(17/100),(11/100),(15/100)
+      ,(11/100),(69/100),(50/100),(36/100),(55/100),(42/100)];
+      var cc=[0,0.5,0.78,0.36,0.66,0.58,0.49,0.33,0.25,0.13,0.26,0.76,0.53];
       var ctx = document.getElementById('myChart_1').getContext('2d');
         var myChart_1 = new Chart(ctx, {
             type: 'line',
@@ -66,11 +63,106 @@
                 }]
               }
             }
-
-
-
-
           });
+      function hh(){
+        n+=1;
+        if(n%2!=0){
+          kk=[];
+          var ctx = document.getElementById('myChart_1').getContext('2d');
+          var myChart_1 = new Chart(ctx,{
+              type: 'line',
+              data: {
+                labels: ["00","","02","","04","" ,"6","","8","","10","","12"],
+                datasets: [{ 
+                    data: kk,
+                    // data: [0,114,106,106,107,111,150,111,69,150,136,55,112],
+                    label: "銷售額",
+                    borderColor: "rgb(62,149,205)",
+                    backgroundColor: "rgb(62,149,205,0.1)",
+                    borderWidth:2
+                  }, {  
+                    data: cc,
+                    label: "訂單數",
+                    borderColor: "rgb(100,88,80)",
+                    backgroundColor:"rgb(166,88,80,0.1)",
+                    borderWidth:2
+                  }
+                ]
+              },
+              options: {
+                scales: {  // 縮放屬性
+                  yAxes: [{  // 設定垂直軸 [使用陣列方式]
+                    ticks: {  // 設定間隔數值
+                      // 固定數值
+                      min: 0,  // 最小是 0
+                      max: 1,                    
+                      // 建議數值
+                      suggestedMin: 0,
+                      suggestedMax: 2000,
+                      
+                      // 值間隔
+                      stepSize: 400,
+                      
+                      // 增加數值文字
+                      callback: function (value, index, values) {
+                        // return value + '萬顆';
+                      }
+                    }
+                  }]
+                }
+              }
+            });
+          }
+          else{
+            kk=[0,(14/100),(16/100),(16/100),(17/100),(11/100),(15/100)
+            ,(11/100),(69/100),(50/100),(36/100),(55/100),(42/100)];
+            var ctx = document.getElementById('myChart_1').getContext('2d');
+            var myChart_1 = new Chart(ctx, {
+                type: 'line',
+                data: {
+                  labels: ["00","","02","","04","" ,"6","","8","","10","","12"],
+                  datasets: [{ 
+                      data: kk,
+                      // data: [0,114,106,106,107,111,150,111,69,150,136,55,112],
+                      label: "銷售額",
+                      borderColor: "rgb(62,149,205)",
+                      backgroundColor: "rgb(62,149,205,0.1)",
+                      borderWidth:2
+                    }, {  
+                      data: cc,
+                      label: "訂單數",
+                      borderColor: "rgb(100,88,80)",
+                      backgroundColor:"rgb(166,88,80,0.1)",
+                      borderWidth:2
+                    }
+                  ]
+                },
+                options: {
+                  scales: {  // 縮放屬性
+                    yAxes: [{  // 設定垂直軸 [使用陣列方式]
+                      ticks: {  // 設定間隔數值
+                        // 固定數值
+                        min: 0,  // 最小是 0
+                        max: 1,                    
+                        // 建議數值
+                        suggestedMin: 0,
+                        suggestedMax: 2000,
+                        
+                        // 值間隔
+                        stepSize: 400,
+                        
+                        // 增加數值文字
+                        callback: function (value, index, values) {
+                          // return value + '萬顆';
+                        }
+                      }
+                    }]
+                  }
+                }
+              });
+          }
+      }
+      
     </script>
 
   </body>
