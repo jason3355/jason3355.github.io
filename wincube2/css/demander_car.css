@@ -47,7 +47,7 @@ td{
     padding: 10px 20px 10px 20px;
 }
 .title{
-    background-color: rgb(235, 229, 229);
+    background-color: rgb(227, 227, 227);
     display: flex;
     width: 100%;
 }
@@ -83,7 +83,7 @@ td{
 .demander{
     margin: auto;
     display: flex;
-    border: 1px solid rgb(214, 207, 207);
+    border: 1px solid rgb(227, 227, 227);
     background-color: white;
 }
 .demander > div{
