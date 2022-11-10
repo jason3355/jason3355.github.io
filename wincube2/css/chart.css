@@ -1,6 +1,54 @@
 body{
     margin: 0%;
 }
+.material-symbols-outlined {
+    z-index: 10002;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+#tip_1:hover ~.tips_1{
+    display: block;
+}
+#tip_2:hover ~.tips_2{
+    display: block;
+}
+#tip_3:hover ~.tips_3{
+    display: block;
+}
+#tip_4:hover ~.tips_4{
+    display: block;
+}
+.Tips{
+    display: flex;
+    justify-content: space-between;
+}
+.tip{
+    display: none;
+    background-color: #fff;
+    padding: 5px 10px 5px 10px;
+    font-size: 12px;
+    position: absolute;
+    box-shadow: 0px 0px 2px #e0e0e0;
+}
+.tips_1{    
+    top: 125px;
+    left: 250px;
+}
+.tips_2{    
+    top: 125px;
+    left: 553px;
+}
+.tips_3{    
+    top: 125px;
+    left: 858px;
+}
+.tips_4{    
+    top: 125px;
+    left: 1156px;
+}
 .charthtml{
     font-weight: bold;
     border-radius: 3px;
