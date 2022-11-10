@@ -1,7 +1,11 @@
 body{
     margin: 0px;
 }
-
+.all_product{
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: #e0e0e0;
+}
 .body-1{
     margin: 4rem 2rem 0.5rem 2rem;
     min-height: 100%;

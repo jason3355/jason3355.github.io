@@ -1,7 +1,11 @@
 body{
     margin: 0%;
 }
-
+.charthtml{
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: #e0e0e0;
+}
 .body-1{
     margin: 4.5rem auto 0 auto;
     display: flex;
@@ -10,33 +14,69 @@ body{
     width: 100%;
     height: 500px;
 }
-.back_1{
-    display: flex;
-    justify-content: center;
-    width: 130px;
-    cursor: pointer;
-    padding: 20px 10px 20px 10px;
-    border: 1px solid #E0E0E0;
-    margin: 0 20px 0 20px;
+hr{
+    width: 90%;
+    height: 0px;
+}
+.datee{
+    width: 90%;
+    margin-bottom: 10px;    
 }
 .back{
+    width: 90%;
     background-color: #fff;
     padding: 20px 10px 20px 10px;
     box-shadow: 1px 1px 1px #E0E0E0;
 }
+.back_1{
+    /* display: grid;
+    justify-content: center; */
+    width: 242px;
+    cursor: pointer;
+    padding: 15px 10px 10px 10px;
+    border: 1px solid #E0E0E0;
+    margin: 0 20px 0 20px;
+    box-shadow: 0 0 1px gray;
+}
 .back_1:nth-child(1){
     border-top: blue 3px solid;
 }
-hr{
-    width: 80%;
-    height: 0px;
+.back_1 span:nth-child(1){
+    font-size: 0.9rem;
+    padding-bottom: 7px;
 }
-h2{
-    width: 80%;
+.back_2{
+    display: flex;
 }
-.datee{
-    width: 80%;
-    margin-bottom: 10px;    
+.back_2 span:nth-child(1){
+    width: 85px;
+    font-size: 1.1rem;
+    padding-bottom:0;
+    padding-right: 10px;
+}
+.mouth{
+    width: 50px;
+    padding: 8px 2px 0 5px;
+    font-size: 12px;
+}
+.back_2_1{
+    padding-left: 20px;
+    display: flex;
+    justify-content: right;
+}
+.ammount{
+    display: inline-block;
+    align-self: center;
+    font-size: 14px;
+    padding: 0px 0 0 0;
+}
+.range{
+    display: flex;
+    align-items: center;
+    width: 15px;
+}
+.range img{
+    width: 100%;
 }
 .chart{
     display: flex;
@@ -45,34 +85,17 @@ h2{
     display: none;
 }
 #char_1{
-    display: block;
+    display: flex;
+    justify-content: center;
 }
 .chart >p{
     font-size: 18px;
-}
-#myChart_1{
-    max-width: 1000px;
-    max-height: 500px;
-}
-#myChart_2{
-    max-width: 1000px;
-    max-height: 500px;
-}
-#myChart_3{
-    max-width: 1000px;
-    max-height: 500px;
-}
-#myChart_4{
-    max-width: 1000px;
-    max-height: 500px;
 }
 .backk{
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
-
-
 p{
     font-size: 2.3rem;
     width: 100%;
@@ -80,4 +103,221 @@ p{
     margin: 0;
     display: flex;
     align-items: center;
+}
+.sign-up{
+    padding-top: 13px;
+}
+#myChart_1{
+    width: 2000px;
+    max-width: 1024px;
+}
+@media screen and (min-width:550px) and (max-width:1024px) {
+    .body-1{
+        margin: 4.5rem auto 0 auto;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        width: 100%;
+        height: 500px;
+    }
+    hr{
+        width: 90%;
+        height: 0px;
+    }
+    .datee{
+        width: 90%;
+        margin-bottom: 10px;    
+    }
+    .back{
+        background-color: #fff;
+        padding: 20px 10px 20px 10px;
+        box-shadow: 1px 1px 1px #E0E0E0;
+    }
+    .back_1{
+        /* display: grid;
+        justify-content: center; */
+        width: 160px;
+        cursor: pointer;
+        padding: 15px 10px 15px 10px;
+        border: 1px solid #E0E0E0;
+        margin: 0 20px 0 20px;
+        box-shadow: 0 0 1px gray;
+    }
+    .back_1:nth-child(1){
+        border-top: blue 3px solid;
+    }
+    .back_1 span:nth-child(1){
+        font-size: 0.9rem;
+        padding-bottom: 7px;
+    }
+    .back_2{
+        display: -webkit-inline-box;
+    }
+    .back_2 span:nth-child(1){
+        width: 85px;
+        font-size: 0.6rem;
+        padding-bottom:0;
+        padding-right: 10px;
+    }
+    .mouth{
+        width: 50px;
+        padding: 4px 2px 0 5px;
+        font-size: 12px;
+    }
+    .back_2_1{
+        padding-left: 20px;
+        display: flex;
+    }
+    .ammount{
+        display: inline-block;
+        align-self: center;
+        font-size: 14px;
+        padding: 0px 0 0 0;
+    }
+    .range{
+        display: flex;
+        align-items: center;
+        width: 15px;
+    }
+    .range img{
+        width: 100%;
+    }
+    .chart{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        display: none;
+    }
+    #char_1{
+        display: flex;
+        justify-content: center;
+    }
+    .chart >p{
+        font-size: 18px;
+    }
+    .backk{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 2.3rem;
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    .sign-up{
+        padding-top: 13px;
+    }
+    #myChart_1{
+        width: 2000px;
+        max-width: 1024px;
+    }   
+}
+@media screen and (max-width:550px){
+    .body-1{
+        margin: 4.5rem auto 0 auto;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        width: 100%;
+        height: 500px;
+    }
+    hr{
+        width: 90%;
+        height: 0px;
+    }
+    .datee{
+        width: 90%;
+        margin-bottom: 10px;    
+    }
+    .back{
+        background-color: #fff;
+        padding: 20px 10px 20px 10px;
+        box-shadow: 1px 1px 1px #E0E0E0;
+    }
+    .back_1{
+        /* display: grid;
+        justify-content: center; */
+        width: 242px;
+        cursor: pointer;
+        padding: 15px 10px 15px 10px;
+        border: 1px solid #E0E0E0;
+        margin: 0 20px 0 20px;
+        box-shadow: 0 0 1px gray;
+    }
+    .back_1:nth-child(1){
+        border-top: blue 3px solid;
+    }
+    .back_1 span:nth-child(1){
+        font-size: 0.9rem;
+        padding-bottom: 7px;
+    }
+    .back_2{
+        display: flex;
+    }
+    .back_2 span:nth-child(1){
+        width: 85px;
+        font-size: 1.1rem;
+        padding-bottom:0;
+        padding-right: 10px;
+    }
+    .mouth{
+        width: 50px;
+        padding: 4px 2px 0 5px;
+        font-size: 12px;
+    }
+    .back_2_1{
+        padding-left: 20px;
+        display: flex;
+    }
+    .ammount{
+        display: inline-block;
+        align-self: center;
+        font-size: 14px;
+        padding: 0px 0 0 0;
+    }
+    .range{
+        display: flex;
+        align-items: center;
+        width: 15px;
+    }
+    .range img{
+        width: 100%;
+    }
+    .chart{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        display: none;
+    }
+    #char_1{
+        display: flex;
+        justify-content: center;
+    }
+    .chart >p{
+        font-size: 18px;
+    }
+    .backk{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 2.3rem;
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    .sign-up{
+        padding-top: 13px;
+    }
+    #myChart_1{
+        width: 2000px;
+        max-width: 1024px;
+    } 
 }

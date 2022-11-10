@@ -8,53 +8,53 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     </head>
 <body>
-    <header class="header"> 
-        <input type="checkbox" id="check">           
-        <label for="check" class="check">
-            ☰
-        </label>
-        <a href="../html/SIndexs.html" class="header_logo">
-            <img src="../Img/logo.ico">
-        </a>
-        <nav class="manu"> 
-            <ul class="manu-ul">                
-                <li><a href="../html/all_product.html">商品管理</a></li>
-                <li class="order-manu">
-                    <span>訂單管理</span>
-                    <ul class="order-ul">
-                        <li><a href="../html/order_management.html">即時訂單資訊</a></li>
-                        <li><a href="../html/order_management.html">已完成訂單</a></li>
-                        <li><a href="../html/order_management.html">不成立訂單</a></li>
-                        <li><a href="../html/order_management.html">運送中訂單</a></li>
-                        <li><a href="../html/order_management.html">自取訂單</a></li>
-                        <li><a href="../html/order_management.html">cargo貨運管理</a></li>
-                    </ul>
-                </li>
-                <li><a href="##">貨運管理系統</a></li>
-                <li><a href="../html/inaccount.html">進帳資料</a></li>
-                <li><a href="../html/chart.html">績效分析</a></li>
-                <li><a href="../html/Sbasic.html">修改會員資料</a></li>                                   
-            </ul> 
-        </nav>          
-            <div class="header-menu-logo">
-                <a href="../html/SIndex.html" class="logo-a">
-                <div>
-                    <img src="../Img/wincube.png">
-                </div>
-                </a> 
-            </div>  
-            <div class="search">                
-              <span>您好!阿吉</span>
-          </div>  
-          <div class="sign-up">
-              <form>
-                  <input type="submit" name="Log out" value="登出">
-              </form>
-          </div>     
-    </header>
+  <header class="header"> 
+    <input type="checkbox" id="check">           
+    <label for="check" class="check">
+        ☰
+    </label>
+    <a href="../html/SIndexs.html" class="header_logo">
+        <img src="../Img/logo.ico">
+    </a>
+    <nav class="manu"> 
+        <ul class="manu-ul">                
+            <li class="all_product"><a href="../html/all_product.html">商品管理</a></li>
+            <li class="order-manu">
+                <span>訂單管理</span>
+                <ul class="order-ul">
+                    <li><a href="../html/order_management.html">即時訂單資訊</a></li>
+                    <li><a href="../html/order_management.html">已完成訂單</a></li>
+                    <li><a href="../html/order_management.html">不成立訂單</a></li>
+                    <li><a href="../html/order_management.html">運送中訂單</a></li>
+                    <li><a href="../html/order_management.html">自取訂單</a></li>
+                    <li><a href="../html/order_management.html">cargo貨運管理</a></li>
+                </ul>
+            </li>
+            <li class="cargo"><a href="##">貨運管理系統</a></li>
+            <li class="inaccount"><a href="../html/inaccount.html">進帳資料</a></li>
+            <li class="charthtml"><a href="../html/chart.html">績效分析</a></li>
+            <li class="Sbasic"><a href="../html/Sbasic.html">修改會員資料</a></li>                                   
+        </ul> 
+    </nav>          
+        <div class="header-menu-logo">
+            <a href="../html/SIndex.html" class="logo-a">
+            <div>
+                <img src="../Img/wincube.png">
+            </div>
+            </a> 
+        </div>  
+        <div class="search">                
+            <span>您好!阿吉</span>
+        </div>  
+        <div class="sign-up">
+            <form>
+                <input type="submit" name="Log out" value="登出">
+            </form>
+        </div>     
+</header>
     <div class="body-1">
-        <p>績效分析</p>
-        <hr>
+        <!-- <p>績效分析</p>
+        <hr> -->
         <div class="back datee">
             <span>資料期間</span>
             <input type="date"> - 
@@ -62,17 +62,57 @@
         </div>
         <div class="back">
           <div class="backk">
-            <div class="back_1" onclick="aa(1)">
+            <div class="back_1" onclick="change(1)">
               <span>銷售額</span>
+              <div class="back_2">
+                <span>NT$1000</span>
+                <span class="mouth">vs前12月</span>                
+              </div>
+              <div class="back_2_1">
+                <div class="range">
+                  <img src="../Img/reddown_1.png">
+                </div>
+                <span class="ammount">12%</span>
+              </div>
             </div>
-            <div class="back_1" onclick="aa(2)">
+            <div class="back_1" onclick="change(2)">
               <span>訂單數</span>
+              <div class="back_2">
+                <span>1</span>
+                <span class="mouth">vs前12月</span>
+              </div>
+              <div class="back_2_1">
+                <div class="range">
+                  <img src="../Img/greenup_1.png">
+                </div>
+                <span class="ammount">12%</span>
+              </div>
             </div>
-            <div class="back_1" onclick="aa(3)">
+            <div class="back_1" onclick="change(3)">
               <span>平均訂單金額</span>
+              <div class="back_2">
+                <span>NT$320</span>
+                <span class="mouth">vs前12月</span>
+              </div>
+              <div class="back_2_1">
+                <div class="range">
+                  <img src="../Img/reddown_1.png">
+                </div>
+                <span class="ammount">12%</span>
+              </div>
             </div>
-            <div class="back_1" onclick="aa(4)">
+            <div class="back_1" onclick="change(4)">
               <span>頁面瀏覽數</span>
+              <div class="back_2">
+                <span>726</span>
+                <span class="mouth">vs前12月</span>                            
+              </div>
+              <div class="back_2_1">
+                <div class="range">
+                  <img src="../Img/greenup_1.png">
+                </div>
+                <span class="ammount">12%</span>
+              </div>
             </div>
           </div>
           <div class="chart char_1" id="char_1">
@@ -93,8 +133,12 @@
         </div>
     </div>
     <script>
+        var chart_1=[0,0.5,0.78,0.36,0.66,0.58,0.49,0.33,0.25,0.13,0.26,0.76,0.53];
+        var chart_2=[0,0.9,0.75,0.46,0.36,0.68,0.79,0.93,0.15,0.33,0.46,0.86,0.03];
+        var chart_3=[0,0.3,0.28,0.56,0.96,0.233,0.755,0.199,0.45,0.83,0.66,0.56,0.23];
+        var chart_4=[0,0.42,0.69,0.24,0.83,0.17,0.44,0.73,0.49,0.44,0.58,0.97,0.227];
         var back_1=document.getElementsByClassName('back_1');
-        var chart_chart_1=[0,0.5,0.78,0.36,0.66,0.58,0.49,0.33,0.25,0.13,0.26,0.76,0.53];
+        var chart_chart_1=chart_1;
         let chart_1n=0;
         var chart_chart_2=[];
         let chart_2n=1;
@@ -103,22 +147,24 @@
         var chart_chart_4=[];
         let chart_4n=1;
         creative();
-          function aa(chartn){
+          function change(chartn){
             if(chartn==1){
               chart_1n+=1;
               if(chart_1n%2!=0){
                 back_1[0].style.borderTop='1px solid #E0E0E0';
                 chart_chart_1=[];
-                creative();
-                if(chart_chart_1==true&&chart_chart_2==true&&chart_chart_3==true&&chart_chart_4==true){
+                if(chart_chart_1.length==0&&chart_chart_2.length==0&&chart_chart_3.length==0&&chart_chart_4.length==0){
                   back_1[0].style.borderTop='blue 3px solid';
-                  chart_chart_1=[0,0.5,0.78,0.36,0.66,0.58,0.49,0.33,0.25,0.13,0.26,0.76,0.53];
+                  chart_chart_1=chart_1;
                   creative();
                 }
+                else{
+                  creative();
+                }                                
               }
               else{
                 back_1[0].style.borderTop='blue 3px solid';
-                chart_chart_1=[0,0.5,0.78,0.36,0.66,0.58,0.49,0.33,0.25,0.13,0.26,0.76,0.53];
+                chart_chart_1=chart_1;
                 creative();
               }
             }
@@ -127,16 +173,18 @@
               if(chart_2n%2!=0){
                 back_1[1].style.borderTop='1px solid #E0E0E0';
                 chart_chart_2=[];
-                creative();
-                if(chart_chart_1==true&&chart_chart_2==true&&chart_chart_3==true&&chart_chart_4==true){
+                if(chart_chart_1.length==0&&chart_chart_2.length==0&&chart_chart_3.length==0&&chart_chart_4.length==0){
                   back_1[1].style.borderTop='red 3px solid';
-                  chart_chart_2=[0,0.5,0.78,0.36,0.66,0.58,0.49,0.33,0.25,0.13,0.26,0.76,0.53];
+                  chart_chart_2=chart_2;
+                  creative();
+                }
+                else{
                   creative();
                 }
               }
               else{
                 back_1[1].style.borderTop='red 3px solid';
-                chart_chart_2=[0,0.9,0.75,0.46,0.36,0.68,0.79,0.93,0.15,0.33,0.46,0.86,0.03];
+                chart_chart_2=chart_2;
                 creative();
               }
             }
@@ -145,16 +193,18 @@
               if(chart_3n%2!=0){
                 back_1[2].style.borderTop='1px solid #E0E0E0';
                 chart_chart_3=[];
-                creative();
-                if(chart_chart_1==true&&chart_chart_2==true&&chart_chart_3==true&&chart_chart_4==true){
+                if(chart_chart_1.length==0&&chart_chart_2.length==0&&chart_chart_3.length==0&&chart_chart_4.length==0){
                   back_1[2].style.borderTop='green 3px solid';
-                  chart_chart_3=[0,0.5,0.78,0.36,0.66,0.58,0.49,0.33,0.25,0.13,0.26,0.76,0.53];
+                  chart_chart_3=chart_3;
+                  creative();
+                }
+                else{
                   creative();
                 }
               }
               else{
                 back_1[2].style.borderTop='green 3px solid';
-                chart_chart_3=[0,0.3,0.28,0.56,0.96,0.233,0.755,0.199,0.45,0.83,0.66,0.56,0.23];
+                chart_chart_3=chart_3;
                 creative();
               }
             }
@@ -163,23 +213,25 @@
               if(chart_4n%2!=0){
                 back_1[3].style.borderTop='1px solid #E0E0E0';
                 chart_chart_4=[];
-                creative();
-                if(chart_chart_1==true&&chart_chart_2==true&&chart_chart_3==true&&chart_chart_4==true){
+                if(chart_chart_1.length==0&&chart_chart_2.length==0&&chart_chart_3.length==0&&chart_chart_4.length==0){
                   back_1[3].style.borderTop='yellow 3px solid';
-                  chart_chart_4=[0,0.5,0.78,0.36,0.66,0.58,0.49,0.33,0.25,0.13,0.26,0.76,0.53];
+                  chart_chart_4=chart_4;
+                  creative();
+                }
+                else{
                   creative();
                 }
               }
               else{
                 back_1[3].style.borderTop='yellow 3px solid';
-                chart_chart_4=[0,0.42,0.69,0.24,0.83,0.17,0.44,0.73,0.49,0.44,0.58,0.97,0.227];
+                chart_chart_4=chart_4;
                 creative();
               }
-            }                       
+            }                      
           }
           function creative(){
             var ctx = document.getElementById('myChart_1').getContext('2d');
-            var myChart_1 = new Chart(ctx, {
+            this.myChart_1 = new Chart(ctx, {
                 type: 'line',
                 data: {
                   labels: ["00","","02","","04","" ,"6","","8","","10","","12"],
@@ -192,20 +244,20 @@
                     }, { 
                       data: chart_chart_2,
                       label: "訂單數",
-                      borderColor: "rgb(60,186,159)",
-                      backgroundColor: "rgb(60,186,159,0.1)",
+                      borderColor: "rgb(196,88,80)",
+                      backgroundColor: "rgb(196,88,80,0.1)",
                       borderWidth:2
                     }, { 
                       data: chart_chart_3,
                       label: "平均訂單金額",
-                      borderColor: "rgb(255,165,0)",
-                      backgroundColor:"rgb(255,165,0,0.1)",
+                      borderColor: "rgb(57,245,72)",
+                      backgroundColor:"rgb(57,245,72,0.1)",
                       borderWidth:2
                     }, { 
                       data: chart_chart_4,
                       label: "頁面瀏覽數",
-                      borderColor: "rgb(196,88,80)",
-                      backgroundColor:"rgb(196,88,80,0.1)",
+                      borderColor: "rgb(242,245,57)",
+                      backgroundColor:"rgb(242,245,57,0.1)",
                       borderWidth:2
                     }
                   ]
@@ -219,11 +271,9 @@
                           max: 1,                    
                           // 建議數值
                           suggestedMin: 0,
-                          suggestedMax: 2000,
-                          
+                          suggestedMax: 2000,                          
                           // 值間隔
-                          stepSize: 400,
-                          
+                          stepSize: 400,                          
                           // 增加數值文字
                           callback: function (value, index, values) {
                             // return value + '萬顆';
@@ -231,9 +281,10 @@
                         }
                       }]
                     }
-                  }
-              });
-          }
+                  }                  
+              }); 
+              myChart_1.update();                         
+          }            
     </script>
 </body>
 </html>

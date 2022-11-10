@@ -2,6 +2,11 @@ body{
     margin: 0px;
     font-family: "微軟正黑體";
 }
+.demander_allproduct{
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: #e0e0e0;
+}
 .body-1{
     margin: 4rem 1rem 0 1rem;
     min-height: 100%;
@@ -11,7 +16,6 @@ body{
     display:flex;
     justify-content: center  
 }
-
 .all-product-1{
     width: 100%;
     display: flex;
@@ -23,30 +27,27 @@ body{
     display: flex;
     flex-wrap: wrap;
     align-items:flex-end;
-    margin: 10px 0 30px 0;
+    margin: 10px 0 15px 0;
 }
-i{
-    width: 60%;
-}
-
 hr{
     width: 100%;
     margin-bottom: 30px;
 }
 .allproduct-title>p{
-    width: 100%;
     margin:0;
     font-size: 2.3rem;
 }
 .allproduct-title > span{
-    width: 200px;
+    width: 290px;
     display: flex;
     justify-content: end;
     align-items: flex-end;
-    padding-left: 10px;
 }
 .select-1{   
     width: 100%;
+    background: rgba(0, 0, 0, 0.03);
+    margin: 0 0 1rem 0;
+    padding: 20px 0 20px 0;
 }
 .select-1 > select{
     width: 100px;
@@ -76,19 +77,25 @@ hr{
 }
 .product-btn{
     background-color: #E0E0E0;
+    border: none;
+    cursor: pointer;
     padding: 6px 0px 5px 0px;
     width: 100%;
     transition: 0.5s;
+    color: black;
+    box-shadow: 1px 1px 1px black;
 }
 .btn{
-    border: 0.5px solid white ;
+    width: 200px;
+    /* border: 0.5px solid white ; */
+    box-shadow: 0px 0px 1px gray;
     cursor: pointer;
 }
-.btn:hover{
+/* .btn:hover{
     background-color: white;
-}
+} */
 .product-btn:hover {
-    background-color: rgb(49, 48, 48);
+    background-color: rgb(160, 160, 160,0.5);
 }
 .form1{
     display: flex;
@@ -103,12 +110,14 @@ hr{
 }
 
 @media screen and (max-width:550px){
-    .body-1{
-        width: 100%;
+    .demander_allproduct{
+        font-weight: bold;
+        border-radius: 3px;
+        background-color: #e0e0e0;
     }
-    .product-type{
-        margin-left: 30px;
-        width: 50px;
+    .body-1{
+        margin: 4rem 1rem 0 1rem;
+        min-height: 100%;
     }
     .all-product{
         width: 100%;  
@@ -121,10 +130,45 @@ hr{
         justify-content: center;
         flex-wrap: wrap;
     }
-    .product{
-        width: 200px;
+    .allproduct-title{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items:flex-end;
+        margin: 10px 0 15px 0;
+    }
+    hr{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .allproduct-title>p{
+        margin:0;
+        font-size: 2.3rem;
+    }
+    .allproduct-title > span{
+        width: 290px;
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+    }
+    .select-1{   
+        width: 100%;
+        background: rgba(0, 0, 0, 0.03);
+        margin: 0 0 1rem 0;
+        padding: 20px 0 20px 0;
+    }
+    .select-1 > select{
+        width: 100px;
+        height: 30px;
         text-align: center;
-        padding: 10px;    
+        appearance: none;
+        margin: 0 10px 0 10px;
+        cursor: pointer;
+    }
+    .product{
+        width: 209px;
+        text-align: center;
+        padding: 5px;    
     }
     .product-1{
         width: 100%;
@@ -132,25 +176,47 @@ hr{
     }
     .product-img{
         width: 100%;
+        height: 215px;
         background-color: white;
     }
     .product-img > img{
         width: 100%;
+        height: 100%;
     }
     .product-btn{
-        background-color: black;
+        background-color: #E0E0E0;
+        border: none;
+        cursor: pointer;
         padding: 6px 0px 5px 0px;
         width: 100%;
+        transition: 0.5s;
+        color: black;
+        box-shadow: 1px 1px 1px black;
     }
-    .select-1 > select{
-        font-size: 0.3rem;
-        width: 50px;
-        height: 30px;
-        text-align: center;
-        appearance: none;
-        margin: 0 10px 0 10px;
+    .btn{
+        width: 200px;
+        /* border: 0.5px solid white ; */
+        box-shadow: 0px 0px 1px gray;
         cursor: pointer;
     }
+    /* .btn:hover{
+        background-color: white;
+    } */
+    .product-btn:hover {
+        background-color: rgb(160, 160, 160,0.5);
+    }
+    .form1{
+        display: flex;
+    }
+    .adver{
+        width: 100px;
+        display: flex;
+        align-items: center;
+    }
+    .adver > img{
+        width: 100%;
+    }
+    
 }
 
 .all-type{
