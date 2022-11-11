@@ -158,18 +158,6 @@
           <div class="chart char_1" id="char_1">
             <canvas id="myChart_1"></canvas>
           </div>
-          <!-- <div class="chart char_1" id="char_1">
-              <canvas id="myChart_1"></canvas>
-          </div>
-          <div class="chart chart_2" id="char_2">
-              <canvas id="myChart_2"></canvas>
-          </div>
-          <div class="chart chart_3" id="char_3">
-              <canvas id="myChart_3"></canvas>
-          </div>
-          <div class="chart chart_4" id="char_4">
-              <canvas id="myChart_4"></canvas>
-          </div> -->
         </div>
     </div>
     <script>
@@ -279,25 +267,25 @@
                       data: chart_chart_1,
                       label: "銷售額",
                       borderColor: "rgb(62,149,205)",
-                      backgroundColor: "rgb(62,149,205,0.1)",
+                      backgroundColor: "rgb(62,149,205,0.01)",
                       borderWidth:2
                     }, { 
                       data: chart_chart_2,
                       label: "訂單數",
                       borderColor: "rgb(196,88,80)",
-                      backgroundColor: "rgb(196,88,80,0.1)",
+                      backgroundColor: "rgb(196,88,80,0.01)",
                       borderWidth:2
                     }, { 
                       data: chart_chart_3,
                       label: "平均訂單金額",
                       borderColor: "rgb(57,245,72)",
-                      backgroundColor:"rgb(57,245,72,0.1)",
+                      backgroundColor:"rgb(57,245,72,0.01)",
                       borderWidth:2
                     }, { 
                       data: chart_chart_4,
                       label: "頁面瀏覽數",
                       borderColor: "rgb(242,245,57)",
-                      backgroundColor:"rgb(242,245,57,0.1)",
+                      backgroundColor:"rgb(242,245,57,0.01)",
                       borderWidth:2
                     }
                   ]
@@ -316,7 +304,6 @@
                           stepSize: 400,                          
                           // 增加數值文字
                           callback: function (value, index, values) {
-                            // return value + '萬顆';
                           }
                         }
                       }]

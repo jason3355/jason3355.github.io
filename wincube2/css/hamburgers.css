@@ -5,7 +5,7 @@
     display: flex;
     background-color: white;
     box-shadow: 0px 0px 5px #E0E0E0;
-    z-index: 9999;
+    z-index: 100000;
 }
 .header_logo{
     padding-left:10px ;
@@ -234,8 +234,16 @@
     .sign-up > form >input:hover{
         color: white;
     }
+    .order-ul{
+        top: 50%;
+        position: absolute;
+        list-style: none;
+        background-color: white;
+        display: none;
+        padding: 0;
+        padding: 0 20px 20px 20px;
+    }
 }
-
 @media screen and (max-width:550px){
     .search{
         width: 100%;
