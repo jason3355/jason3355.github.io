@@ -217,6 +217,22 @@ p{
         padding-left: 20px;
         display: flex;
     }
+    .tips_1{    
+        top: 125px;
+        left: 145px;
+    }
+    .tips_2{    
+        top: 125px;
+        left: 356px;
+    }
+    .tips_3{    
+        top: 125px;
+        left: 600px;
+    }
+    .tips_4{    
+        top: 125px;
+        left: 768px;
+    }
     .ammount{
         display: inline-block;
         align-self: center;
@@ -303,6 +319,22 @@ p{
     .back_1 span:nth-child(1){
         font-size: 0.9rem;
         padding-bottom: 7px;
+    }
+    .tips_1{    
+        top: 125px;
+        left: 145px;
+    }
+    .tips_2{    
+        top: 125px;
+        left: 356px;
+    }
+    .tips_3{    
+        top: 125px;
+        left: 600px;
+    }
+    .tips_4{    
+        top: 125px;
+        left: 768px;
     }
     .back_2{
         display: flex;

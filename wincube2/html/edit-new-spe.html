@@ -55,7 +55,6 @@
                 </form>
             </div>     
     </header>
-    <marquee direction="right" height="30" scrollamount="10" behavior="scroll">5/29伺服器測試</marquee>
     <form class="body-1">
         <div>
             <div class="edit-spe">
@@ -114,7 +113,8 @@
         <div class="all-type" id="all-type">
             <div class="type">
                 <label id="option-1">顏色</label>
-                <button type="button" onclick="del(0)">刪除</button>
+                <input type="button" onclick="del(0)" value="刪除">
+                <!-- <button type="button" onclick="del(0)">刪除</button> -->
                 <hr>
                 <div class="type_1">
                     <label id="option-2">尺寸</label>
@@ -124,7 +124,8 @@
             </div>  
             <div class="type">
                 <label id="option-1">顏色</label>
-                <button type="button" onclick="del(0)">刪除</button>
+                <input type="button" onclick="del(0)" value="刪除">
+                <!-- <button type="button" onclick="del(0)">刪除</button> -->
                 <hr>
                 <div class="type_1">
                     <label id="option-2">尺寸</label>
@@ -140,7 +141,6 @@
                 <hr>
             </div>            
         </div>
-
     </form>   
     <script>   
         var m=0; 
@@ -209,9 +209,10 @@
                         label_1.setAttribute('class','option-1');
                         label_1.innerHTML=x;
                         optype.appendChild(label_1);
-                        del_btn=document.createElement('button')
+                        del_btn=document.createElement('input');
                         del_btn.setAttribute('type','button');
                         del_btn.setAttribute('onclick','del(i)');
+                        del_btn.setAttribute('value','刪除');
                         hr_1[i]=document.createElement('hr');
                         optype.appendChild(del_btn);
                         optype.appendChild(hr_1[i]);                                                                     

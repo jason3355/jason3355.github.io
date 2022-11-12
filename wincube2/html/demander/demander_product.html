@@ -104,8 +104,8 @@
                         </div>                                              
                         <div class="product-spe"> <!--規格-->                            
                             <label>規格</label>  
-                            <div class="spe">                                    
-                                <div class="spe-pro" id="pro"><!--規格屬性-->                                         
+                            <!--  <div class="spe">                                    
+                               <div class="spe-pro" id="pro">                                        
                                      <div class="pro">
                                         <input type="radio" name="color" id="color1">  
                                         <label for="color1">藍色</label>          
@@ -114,8 +114,38 @@
                                         <input type="radio" name="color" id="color2">  
                                         <label for="color2">紅色</label>          
                                     </div>                                       
-                                </div>                                    
-                            </div>                                                 
+                                </div>                              
+                            </div>   -->  
+                            <form>
+                                <div class="spe-2">
+                                    <div class="spe_1">
+                                        <span>顏色</span>
+                                        <div class="spe_1_choice">
+                                            <button class="spe_1_choice_button" name="choice_button" onclick="choice(0)">1231</button>
+                                            <button class="spe_1_choice_button" name="choice_button" onclick="choice(1)">1231</button>
+                                            <button class="spe_1_choice_button" name="choice_button" onclick="choice(2)">1231</button>
+                                            <button class="spe_1_choice_button" name="choice_button" onclick="choice(3)">1231</button>
+                                            <button class="spe_1_choice_button" name="choice_button" onclick="choice(4)">1231</button>
+                                        </div>
+                                        <input type="hidden">
+                                    </div>
+                                    <div class="spe_1">
+                                        <span>尺寸</span>
+                                        <div class="spe_1_choice">
+                                            <button class="spe_1_choice_button" name="choice_button" onclick="choice(5)">1231</button>
+                                            <button class="spe_1_choice_button" name="choice_button" onclick="choice(6)">123152225252525</button>
+                                            <button class="spe_1_choice_button" name="choice_button" onclick="choice(7)">1231</button>
+                                            <button class="spe_1_choice_button" name="choice_button" onclick="choice(8)">1231</button>
+                                            <button class="spe_1_choice_button" name="choice_button" onclick="choice(9)">1231</button>
+                                            <button class="spe_1_choice_button" name="choice_button" onclick="choice(10)">123125252525252</button>
+                                            <button class="spe_1_choice_button" name="choice_button" onclick="choice(11)">1231</button>
+                                            <button class="spe_1_choice_button" name="choice_button" onclick="choice(12)">1231</button>
+                                        </div>
+                                        <input type="hidden">
+                                    </div>
+                                    <span class="invant">庫存123</span>
+                                </div>                                
+                            </form>                                              
                         </div>
                         <div class="cargo"> <!--運送方式-->
                             <label>運送方式</label>                            
@@ -217,6 +247,16 @@
         if(num==4){
             pho.style.marginLeft="-200px";
         }
+    }
+    function choice(n){
+        var chi=document.getElementsByName("choice_button");
+        var chiocee=chi[n].getAttribute('class');
+        if(chiocee=="spe_1_choice_button_button"){
+            chi[n].setAttribute('class','spe_1_choice_button');
+        }else{
+            chi[n].setAttribute('class','spe_1_choice_button_button');
+        }
+        
     }
 </script>
 </html>
