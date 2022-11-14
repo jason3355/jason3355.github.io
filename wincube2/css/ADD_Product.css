@@ -18,6 +18,8 @@ body{
 }
 /* profile */
 .profile{
+    background-color: #fff;
+    padding: 10px 0 10px 0;
     width: 100%;
     display: flex;
     justify-content: center;

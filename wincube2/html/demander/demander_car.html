@@ -45,9 +45,6 @@
     </header>
     <div class="body-1">
         <form method='post'>
-            <!-- <div class="title-title">
-                <p>需求車</p>
-            </div>             -->
             <div class="profile">                
                 <table>
                     <tr class="title">
@@ -410,7 +407,44 @@
                             <input type="radio" value="否,自行前往領取" name="yn">
                             <label class="no">否,自行前往領取</label>
                         </td>
-                    </tr>                                
+                    </tr>
+                    <tr class="demander">
+                        <td class="choose">
+                            <input type="checkbox" name="tt" onclick="c2()">
+                        </td>
+                        <td class="img">
+                            <img src="../../Img/sofa.jpg">
+                        </td>
+                        <td class="name">
+                            <span>條紋沙發</span>
+                        </td>
+                        <td class="type">
+                            <span>家具</span>
+                        </td>
+                        <td class="price">
+                            <span>NT12000</span>
+                        </td>
+                        <td class="amount">
+                            <div>
+                                <button type="button" class="add" onclick="add(9)">
+                                    +
+                                </button>
+                                <input type="text" value="1" class="amount1" id="amount" name="amount">
+                                <button type="button" class="less" onclick="less(9)">
+                                    -
+                                </button>
+                            </div>
+                        </td>
+                        <td class="invent">
+                            <span>13</span>
+                        </td>
+                        <td class="option">
+                            <input type="radio" value="是,需要配送" name="yn">
+                            <label class="yes">是,需要配送</label>
+                            <input type="radio" value="否,自行前往領取" name="yn">
+                            <label class="no">否,自行前往領取</label>
+                        </td>
+                    </tr>
                 </table>              
             </div>
             <div class="sent-out-out">

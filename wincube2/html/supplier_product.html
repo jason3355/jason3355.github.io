@@ -9,10 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/hamburgers.css">
-    <link rel="stylesheet" href="../../css/demander_product.css">
-    <link rel="stylesheet" href="../../css/background.css">
-    <link rel="icon" href="../../Img/logo.ico" type="image/x-icon"/><!--分頁LOGO-->    
+    <link rel="stylesheet" href="../css/hamburgers.css">
+    <link rel="stylesheet" href="../css/demander_product.css">
+    <link rel="stylesheet" href="../css/background.css">
+    <link rel="icon" href="../Img/logo.ico" type="image/x-icon"/><!--分頁LOGO-->    
 </head>
 <body>
     <header class="header"> 
@@ -20,21 +20,33 @@
         <label for="check" class="check">
             ☰
         </label>
-        <a href="../demander/ddindex.html" class="header_logo">
-            <img src="../../Img/logo.ico">
+        <a href="../html/SIndexs.html" class="header_logo">
+            <img src="../Img/logo.ico">
         </a>
         <nav class="manu"> 
             <ul class="manu-ul">                
-                <li class="demander_allproduct"><a href="../demander/demander_allproduct.html">所有商品</a></li>
-                <li class="demander_management"><a href="../demander/demander_management.html">需求管理</a></li>
-                <li class="demander_car"><a href="../demander/demander_car.html">需求車</a></li>
-                <li class="Dbasic"><a href="../demander/Dbasic.html">會員資料</a></li>                                 
+                <li class="product_management"><a href="../html/product_management.html">商品管理</a></li>
+                <li class="order-manu">
+                    <span>訂單管理</span>
+                    <ul class="order-ul">
+                        <li><a href="../html/order_management.html">即時訂單資訊</a></li>
+                        <li><a href="../html/order_management.html">已完成訂單</a></li>
+                        <li><a href="../html/order_management.html">不成立訂單</a></li>
+                        <li><a href="../html/order_management.html">運送中訂單</a></li>
+                        <li><a href="../html/order_management.html">自取訂單</a></li>
+                        <li><a href="../html/order_management.html">cargo貨運管理</a></li>
+                    </ul>
+                </li>
+                <li class="cargo"><a href="##">貨運管理系統</a></li>
+                <li class="inaccount"><a href="../html/inaccount.html">進帳資料</a></li>
+                <li class="charthtml"><a href="../html/chart.html">績效分析</a></li>
+                <li class="Sbasic"><a href="../html/Sbasic.html">修改會員資料</a></li>                                   
             </ul> 
         </nav>          
             <div class="header-menu-logo">
-                <a href="../../Index/Index.html" class="logo-a">
+                <a href="../html/SIndex.html" class="logo-a">
                 <div>
-                    <img src="../../Img/wincube.png">
+                    <img src="../Img/wincube.png">
                 </div>
                 </a> 
             </div>  
@@ -45,39 +57,39 @@
                 <form>
                     <input type="submit" name="Log out" value="登出">
                 </form>
-            </div>             
+            </div>     
     </header>
     <div class="body-1">
         <div class="profile">  
             <div class="photo">
                 <div class="photo-top">
                     <div>
-                        <img src="../../Img/logo.ico">                            
+                        <img src="../Img/logo.ico">                            
                     </div>
                 </div>
                 <div class="photo-button">
                     <span class="material-symbols-outlined" id="icon-left" onclick="left()">chevron_left</span>
                     <ul id="pho">
                         <li>
-                            <img src="../../Img/account.png">
+                            <img src="../Img/account.png">
                         </li>
                         <li>
-                            <img src="../../Img/CAR.png">
+                            <img src="../Img/CAR.png">
                         </li>
                         <li>
-                            <img src="../../Img/account.png">
+                            <img src="../Img/account.png">
                         </li>
                         <li>
-                            <img src="../../Img/account.png">
+                            <img src="../Img/account.png">
                         </li>
                         <li>
-                            <img src="../../Img/account.png">
+                            <img src="../Img/account.png">
                         </li>
                         <li>
-                            <img src="../../Img/account.png">
+                            <img src="../Img/account.png">
                         </li>
                         <li>
-                            <img src="../../Img/account.png">
+                            <img src="../Img/account.png">
                         </li>
                     </ul>
                     <span class="material-symbols-outlined" id="icon-right" onclick="right()">chevron_right</span>
@@ -158,14 +170,14 @@
                                 <label class="give-1" for="home_give">宅配</label>
                             </div>  
                             <div class="give-car">
-                                <img src="../../Img/CAR.png">
+                                <img src="../Img/CAR.png">
                             </div>                          
                             <div class="give">
                                 <input type="radio" id="shop_give" name="132">
                                 <label for="shop_give">到店自取</label>
                             </div>   
                             <div class="give-car">
-                                <img src="../../Img/packet.png">
+                                <img src="../Img/packet.png">
                             </div>                    
                         </div>
                         <div class="amount">
@@ -191,9 +203,6 @@
                             </p>
                         </div>                                            
                 </div>  
-                <div class="product_btn">
-                    <input type="submit" class="button-btn" name="加入需求車" value="加入需求車">
-                </div>
             </form>              
             </div>
         </div>

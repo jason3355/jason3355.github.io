@@ -25,11 +25,13 @@ body{
 .trash-can input:hover{
     background-color:red;
 }
+/*  */
 .profile{
     width: 1000px;
     padding-top: 30px;
     margin: auto;
 }
+/*  */
 .profile > table{
     margin: auto;
     width: 100%;
@@ -43,22 +45,19 @@ td{
     width: 100%;
 }
 .title > div{
-    text-align: center;    
+    text-align: center;
 }
 .product-name{
     width: 150px;
-    padding-right: 30px;
+    /* padding-right: 30px; */
 }
-.product-type{
-    /* width: 150px; */
-}
-.product-price{
-    margin-right: 30px;
-}
-.product-amount{
-    /* margin-left: 100px; */
+.product-type , .product-price,.product-amount,.product-inven,.product-give{
     width: 100px;
 }
+/* .product-price{
+    margin-right: 30px;
+} */
+
 .product-give{
     width: 100px;
     padding-left: 30px;
@@ -100,7 +99,7 @@ td{
 .name{
     display: flex;
     align-items: center;
-    /* margin-right: 10px; */
+    margin-right: 10px;
 }
 .type{
     display: flex;
@@ -111,7 +110,7 @@ td{
     width: 70px;
     display: flex;
     align-items: center;
-    /* margin-right: 15px; */
+    margin-right: 15px;
 }
 .amount{
     width: 100px;
@@ -150,7 +149,7 @@ td{
     background-color: white;
     box-shadow: 5px 3px 3px gray;
     bottom: 0%;
-    margin-top: 70px;
+    margin-top: 200px;
     display: flex;
     /* justify-content: right; */
     align-items: center;
@@ -214,7 +213,6 @@ button[class="less"]{
     .title > div{
         text-align: center;    
     }
-
     .product-name{
         width: 90px;
         padding-right: 0;
@@ -258,12 +256,14 @@ button[class="less"]{
     .name{
         display: flex;
         align-items: center;
+        margin: 0;
     }
     .amount{
         width: 90px;
         margin-left: 10px;
         display: flex;
         align-items:flex-end;
+        margin: 0;
     }
     .amount > div{        
         height: 30px;
@@ -272,13 +272,12 @@ button[class="less"]{
     .amount1{
         width: 50px;
     }
-
     .option{
         font-size: 1rem;
         display: flex;
         align-items: flex-end;
+        margin: 0;
     }
-
     .send-out{
         margin-top:30px;
         display:flex;

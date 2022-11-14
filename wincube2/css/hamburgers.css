@@ -98,6 +98,7 @@
     display: none;
     padding: 0;
     padding: 0 20px 20px 20px;
+    box-shadow: 1px 1px 1px #c7c4c4;
 }
 .order-manu span{
     cursor: pointer;
@@ -235,7 +236,7 @@
         color: white;
     }
     .order-ul{
-        top: 50%;
+        top: 33%;
         position: absolute;
         list-style: none;
         background-color: white;
@@ -357,5 +358,14 @@
     }    
     .sign-up > form >input:hover{
         color: white;
+    }
+    .order-ul{
+        top: 33%;
+        position: absolute;
+        list-style: none;
+        background-color: white;
+        display: none;
+        padding: 0;
+        padding: 0 20px 20px 20px;
     }
 }

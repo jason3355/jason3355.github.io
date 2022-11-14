@@ -1,4 +1,4 @@
-$(function () {
+(function () {
 	// close效果
 	$(".jq-adClose").click(function (event) {
 		/* Act on the event */

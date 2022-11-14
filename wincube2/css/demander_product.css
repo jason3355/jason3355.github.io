@@ -13,20 +13,24 @@ body{
 }
 /* profile */
 .profile{
+    background-color: #fff;
     width: 1200px;
     display: flex;
+    padding: 10px;
     justify-content: center;
 }
-.profile > div {
-    /* width: 500px; */
+/* .profile > div {
     padding: 0px 50px 0px 50px;
-}
+} */
 .photo{
     width: 400px;
+    padding: 15px;
+
 }
 .photo-top{    
-    border: solid rgb(168, 164, 164) 1px;   
+    border: solid rgb(168, 164, 164) 1px;  
     width: 100%;
+    background-color: #fafafa;
 }
 .photo-top > div{
     width: 100%;
@@ -36,6 +40,7 @@ body{
     flex-wrap: wrap;
 }
 .photo-button{
+    background-color: #fafafa;
     display: flex;
     border: solid rgb(168, 164, 164) 1px;
     width: 100%;
@@ -87,7 +92,8 @@ body{
     width: 100%;
 }
 .profile-1{
-    width: 500px;    
+    width: 500px;   
+    padding: 0 2.1875rem 0 1.25rem; 
 }
 .profile-2{
     /* border: solid rgb(168, 164, 164) 1px; */
@@ -140,7 +146,7 @@ div > label{
 }
 
 .product-spe > label{
-    width: 100px;
+    width: 150px;
 }
 .spe{
     width: 300px;
@@ -160,7 +166,7 @@ div > label{
     width: 100px;
 }
 .product-volume > label{
-    width: 100px;
+    width: 110px;
 }
 .amount{
     width: 250px;
@@ -232,7 +238,7 @@ div > label{
 .invant{
     font-size: 0.8rem;
 }
-.spe_1_choice_button_button{
+.spe_1_choiced_button{
     text-align: left;
     cursor: pointer;
     padding: .25rem .75rem;

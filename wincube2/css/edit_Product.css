@@ -16,16 +16,18 @@ body{
 }
 /* 新增規格結束  */
 .body-1{
-    width: 100%;
+    width: 95%;
     min-height: 100%;
-    margin-top:5rem;
+    margin:5rem auto 0 auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 /* profile */
 .profile{
+    background-color: #fff;
     width: 100%;
+    padding: 10px 0 10px 0;
     display: flex;
     justify-content: center;
 }
@@ -84,7 +86,7 @@ body{
     cursor: pointer;
 }
 .photo-button > div > img{
-    border: solid black 1px;
+    /* border: solid black 1px;*/
     width: 100%;
 }
 .profile-1{

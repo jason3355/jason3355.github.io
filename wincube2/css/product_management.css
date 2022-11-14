@@ -1,0 +1,475 @@
+body{
+    margin: 0px;
+}
+.product_management{
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: #e0e0e0;
+}
+/*  */
+.body-1{
+    background-color:#fff;
+    margin: 5rem 2rem 0.5rem 2rem;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;  
+    padding: 10px 5px 10px 5px; 
+    box-shadow: 1px 2px 1px #e0e0e0 ; 
+}
+/*  */
+/*  */
+.product-type{
+    background-color: rgba(0, 0, 0, 0.06);
+    display: flex;
+    width: 100%;
+    padding: 10px 5px 10px 5px;
+}
+/*  */
+/*  */
+.product-type > a{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    width: 100px;
+    padding: 0 20px 0 20px;
+    margin:0 10px 0 10px ;
+    border: 1px solid gray;
+    box-shadow: 0px 1px 3px #D0D0D0;
+    border-radius: 5px;
+}
+/*  */
+.product-type > a:hover{
+    background-color:rgb(219, 212, 212);
+}
+.title-title{
+    width: 100%;
+}
+.title-title>h1{
+    margin: 0;
+    padding:10px 0 15px 0;
+}
+.title-title>hr{
+    margin-bottom: 15px;
+}
+.filter{
+    display: flex;
+    border: 0.5px solid gray;
+    padding: 24px;
+    margin: 0 auto 20px auto;
+}
+select {
+    /* styling */
+    background-color: white;
+    border: thin solid blue;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5rem;
+    /* padding: 0.5em 3.5em 0.5em 1em; */
+    padding:0.3rem 3.5rem 0.1rem 0.3rem;  
+    /* reset */  
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+
+  /* arrows */
+
+select.classic {
+    background-image:
+      linear-gradient(45deg, transparent 50%, blue 50%),
+      linear-gradient(135deg, blue 50%, transparent 50%),
+      linear-gradient(to right, skyblue, skyblue);
+    background-position:
+      calc(100% - 20px) calc(1rem + 2px),
+      calc(100% - 15px) calc(1rem + 2px),
+      100% 0;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2.5rem 2.5rem;
+    background-repeat: no-repeat;
+  }
+  
+  select.classic:focus {
+    background-image:
+      linear-gradient(45deg, white 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, white 50%),
+      linear-gradient(to right, gray, gray);
+    background-position:
+      calc(100% - 15px) 1rem,
+      calc(100% - 20px) 1rem,
+      100% 0;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2.5rem 2.5rem;
+    background-repeat: no-repeat;
+    border-color: grey;
+    outline: 0;
+  }
+
+.product-select input{
+    /* width: 265px;
+    height: 25px; */
+    width: 16.3rem;
+    height: 1.3rem;
+    margin:0 10px 10px 0;
+    padding-top: 5px; 
+}
+
+.amount input{
+    /* height: 30px; */
+    height: 1.6rem;
+}
+
+.all-product-1{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+.product{
+    width: 184px;
+    text-align: center;
+    padding: 10px 15px 10px 15px;    
+}
+.product a{
+    color: black;
+    text-decoration: none;
+}
+.product-1{
+    width: 100%;
+    border: 1px solid black;
+}
+.product-img{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+}
+.product-img > img{
+    width: 100%;
+    height: 200px;
+    object-fit:cover;
+}
+.product-btn{
+    background-color: #ece4e5;
+    padding: 6px 0px 5px 0px;
+    width: 100%;
+}
+.btn{
+    border: 0.5px solid white ;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: white;
+}
+.product-type-2{
+    display: none;
+}
+
+.add-product{
+    width: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: 0.5s;
+}
+.add-pro{
+    width: 50px;    
+}
+.add-pro img{
+    width: 100%;
+}
+
+.add-product:hover{
+    transform:scale(1.04);
+}
+
+@media screen and (max-width:550px){
+    .body-1{
+        margin: 5rem 0.5rem 0.5rem 0.5rem;
+        min-height: 100%;
+    }
+    .product-type{
+        display: block;
+    }
+    .product-type a{
+        width: 50px;
+    }
+    .product-type > a{
+        font-size: 1rem;
+        background-color: rgb(219, 212, 212,0.6);
+        color: black;
+        text-decoration: none;
+        text-align: center;
+        width: 100px;
+        padding: 0;
+        margin:0 10px 0 10px ;
+        border: 1px solid gray;
+    }
+    select {
+        /* styling */
+        background-color: white;
+        border: thin solid blue;
+        border-radius: 4px;
+        display: inline-block;
+        font: inherit;
+        line-height: 1.5rem;
+        /* padding: 0.5em 3.5em 0.5em 1em; */
+        padding:0.3rem 0.5rem 0.1rem 0.3rem;     
+        /* reset */      
+        margin: 0;      
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+      /* arrows */    
+    select.classic {
+        background-image:
+          linear-gradient(45deg, transparent 50%, blue 50%),
+          linear-gradient(135deg, blue 50%, transparent 50%),
+          linear-gradient(to right, skyblue, skyblue);
+        background-position:
+          calc(100% - 20px) calc(1rem + 2px),
+          calc(100% - 15px) calc(1rem + 2px),
+          100% 0;
+        background-size:
+          5px 5px,
+          5px 5px,
+          2.5rem 2.5rem;
+        background-repeat: no-repeat;
+    }      
+    select.classic:focus {
+        background-image:
+          linear-gradient(45deg, white 50%, transparent 50%),
+          linear-gradient(135deg, transparent 50%, white 50%),
+          linear-gradient(to right, gray, gray);
+        background-position:
+          calc(100% - 15px) 1rem,
+          calc(100% - 20px) 1rem,
+          100% 0;
+        background-size:
+          5px 5px,
+          5px 5px,
+          2.5rem 2.5rem;
+        background-repeat: no-repeat;
+        border-color: grey;
+        outline: 0;
+    }
+    .product-select input{
+        width: 45px;
+        height: 10px;
+        margin:0 10px 10px 0;
+        padding-top: 5px; ;
+    }
+    .filter{
+        display: block;
+        border: 0.5px solid gray;
+        padding: 24px;
+        margin: 0 auto 20px auto;
+    }
+    .amount input{
+        height: 10px;
+        width: 45px;
+    }
+    .product-type > a:hover{
+        background-color:rgb(219, 212, 212);
+    }
+    .product-type-2{
+        display: block;
+    }
+    .title-title>h1{
+        margin: 0;
+        padding:10px 0 15px 0;
+    }
+    .title-title>hr{
+        margin-bottom: 15px;
+    }
+    .all-product-1{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .product{
+        width: 200px;
+        text-align: center;
+        padding: 10px;    
+    }
+    .product-1{
+        width: 100%;
+        border: 1px solid black;
+    }
+    .product-img{
+        width: 100%;
+        background-color: white;
+    }
+    .product-img > img{
+        width: 100%;
+        height: 200px;
+        object-fit:cover;
+    }
+    .product-btn{
+        background-color: #ece4e5;
+        padding: 6px 0px 5px 0px;
+        width: 100%;
+    }
+    .btn{
+        border: 0.5px solid white ;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: white;
+    }
+    .header-menu-logo{
+        display: none;
+    }
+    .header_logo{
+        display: none;
+    }
+}
+
+@media screen and (min-width:550px) and (max-width:1024px){
+    .body-1{
+        margin: 4rem 0.5rem 0.5rem 0.5rem;
+        min-height: 100%;
+    }
+    .product-type{
+        display: flex;
+    }
+    .product-type > a{
+        background-color: rgb(219, 212, 212,0.6);
+        color: black;
+        text-decoration: none;
+        text-align: center;
+        width: 100px;
+        padding: 0 20px 0 20px;
+        margin:0 10px 0 10px ;
+        border: 1px solid gray;
+    }
+    .product-type > a:hover{
+        background-color:rgb(219, 212, 212);
+    }
+    .title-title>h1{
+        margin: 0;
+        padding:10px 0 15px 0;
+    }
+
+    select {
+        /* styling */
+        background-color: white;
+        border: thin solid blue;
+        border-radius: 4px;
+        display: inline-block;
+        font: inherit;
+        line-height: 1.5rem;
+        /* padding: 0.5em 3.5em 0.5em 1em; */
+        padding:0.3rem 3.5rem 0.1rem 0.3rem;
+      
+        /* reset */
+      
+        margin: 0;      
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+    
+    
+      /* arrows */
+    
+    select.classic {
+        background-image:
+          linear-gradient(45deg, transparent 50%, blue 50%),
+          linear-gradient(135deg, blue 50%, transparent 50%),
+          linear-gradient(to right, skyblue, skyblue);
+        background-position:
+          calc(100% - 20px) calc(1rem + 2px),
+          calc(100% - 15px) calc(1rem + 2px),
+          100% 0;
+        background-size:
+          5px 5px,
+          5px 5px,
+          2.5rem 2.5rem;
+        background-repeat: no-repeat;
+      }
+      
+      select.classic:focus {
+        background-image:
+          linear-gradient(45deg, white 50%, transparent 50%),
+          linear-gradient(135deg, transparent 50%, white 50%),
+          linear-gradient(to right, gray, gray);
+        background-position:
+          calc(100% - 15px) 1rem,
+          calc(100% - 20px) 1rem,
+          100% 0;
+        background-size:
+          5px 5px,
+          5px 5px,
+          2.5rem 2.5rem;
+        background-repeat: no-repeat;
+        border-color: grey;
+        outline: 0;
+      }
+    
+    .product-select input{
+        width: 165px;
+        height: 25px;
+        margin:0 10px 10px 0;
+        padding-top: 5px; ;
+    }
+    
+    .amount input{
+        width: 165px;
+        height: 30px;
+    }
+
+    .title-title>hr{
+        margin-bottom: 15px;
+    }
+    .all-product-1{
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
+        padding-left: 55px;
+    }
+    .product{
+        width: 100px;
+        text-align: center;
+        padding: 10px;    
+    }
+    .product-1{
+        width: 100%;
+        border: 1px solid black;
+    }
+    .product-img{
+        width: 100%;
+        background-color: white;
+    }
+    .product-img > img{
+        width: 100%;
+        height: 100px;
+        object-fit:cover;
+    }
+    .product-btn{
+        background-color: #ece4e5;
+        padding: 6px 0px 5px 0px;
+        width: 100%;
+    }
+    .btn{
+        border: 0.5px solid white ;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: white;
+    }
+}
+
+
